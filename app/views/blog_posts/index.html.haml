@@ -1,0 +1,6 @@
+%h1 Blog
+
+%ul
+  - cache @blog_posts do
+    - @blog_posts.each do |b|
+      %li= link_to b.title, blog_post_path(id: b.slug)

@@ -1,0 +1,4 @@
+= cache @blog_post do
+  %h1= @blog_post.title
+
+  = parse_markdown(@blog_post.body)

@@ -105,6 +105,9 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
     http (2.2.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -241,6 +244,7 @@ DEPENDENCIES
   contentful_model (>= 1.0.0)
   contentful_rails!
   dotenv-rails
+  haml
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
