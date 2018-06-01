@@ -1,4 +1,5 @@
 class BlogPostsController < ApplicationController
+  caches_action :index, :show
   
   def index
     @blog_posts = BlogPost.all.load

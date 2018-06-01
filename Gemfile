@@ -37,6 +37,7 @@ gem 'contentful_rails', github: 'contentful/contentful_rails'
 gem 'contentful_model', '>= 1.0.0'
 gem 'dotenv-rails'
 gem 'haml'
+gem 'actionpack-action_caching'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
