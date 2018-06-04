@@ -1,3 +1,4 @@
+# :nocov:
 require 'rspec/core/formatters/console_codes'
 
 module Turnip
@@ -58,3 +59,4 @@ module Turnip
   
   end
 end
+# :nocov:
