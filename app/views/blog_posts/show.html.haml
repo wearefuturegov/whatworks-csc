@@ -1,3 +1,7 @@
 %h1= @blog_post.title
 
+%p.subheading= raw @blog_post.subheading
+
+%p.date= @blog_post.date.strftime('%e %B %Y')
+
 = parse_markdown(@blog_post.body)
