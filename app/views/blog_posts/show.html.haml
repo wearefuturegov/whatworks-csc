@@ -4,4 +4,6 @@
 
 %p.date= @blog_post.date.strftime('%e %B %Y')
 
+%p.author= "By #{@blog_post.author.name}"
+
 = parse_markdown(@blog_post.body)
