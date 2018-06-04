@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # :nocov:
 require 'rspec/core/formatters/console_codes'
 
@@ -21,7 +23,7 @@ module Turnip
             e.backtrace.push "#{feature_file}:#{step.line}:in `#{step.description}'"
             raise
           end
-          
+
           puts ::RSpec::Core::Formatters::ConsoleCodes.wrap(output, :pending)
 
           skip("No such step: '#{e}'")
@@ -30,7 +32,7 @@ module Turnip
           e.backtrace.push "#{feature_file}:#{step.line}:in `#{step.description}'"
           raise e
         end
-        
+
         puts ::RSpec::Core::Formatters::ConsoleCodes.wrap(output, :success)
       end
     end
@@ -56,7 +58,6 @@ module Turnip
         end
       end
     end
-  
   end
 end
 # :nocov:

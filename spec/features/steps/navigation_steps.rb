@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 step 'I access the blog post index page' do
   visit '/blog'
 end

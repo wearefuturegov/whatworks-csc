@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ContentfulRails.configure do |config|
   config.access_token = ENV['CONTENTFUL_API_KEY']
   config.preview_access_token = ENV['CONTENTFUL_PREVIEW_API_KEY']
