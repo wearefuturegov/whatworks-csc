@@ -72,6 +72,7 @@ group :test do
   gem 'turnip'
   gem 'vcr'
   gem 'webmock'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
