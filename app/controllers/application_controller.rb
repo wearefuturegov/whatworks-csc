@@ -6,11 +6,6 @@ class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token, only: :expire_cache
 
   def expire_cache
-    return unless request.headers['X-Contentful-Topic'] == 'ContentManagement.Entry.publish'
-    content_type = params[:sys][:contentType][:sys][:id]
-    controller = content_type.underscore.pluralize
-    slug = params[:fields][:slug].values.first
-    expire_action controller: controller, action: 'index'
-    expire_action controller: controller, action: 'show', id: slug
+    ExpireCache.new(self).perform
   end
 end

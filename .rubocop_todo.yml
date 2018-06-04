@@ -10,18 +10,6 @@
 Metrics/AbcSize:
   Max: 19
 
-# Offense count: 6
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/blog_posts_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/mailers/application_mailer.rb'
-    - 'app/models/blog_post.rb'
-    - 'config/application.rb'
-
 # Offense count: 2
 Style/MixinUsage:
   Exclude:
