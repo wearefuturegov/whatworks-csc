@@ -18,6 +18,7 @@ Object.send(:remove_const, :ActiveRecord)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 
 require 'rspec/rails'
+require 'support/vcr'
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = false

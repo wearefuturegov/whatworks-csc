@@ -70,6 +70,8 @@ group :test do
   gem 'coveralls', require: false
   gem 'rspec-rails'
   gem 'turnip'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
