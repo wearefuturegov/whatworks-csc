@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   helper ContentfulRails::MarkdownHelper
   helper_method :load_content
   
-  before_action :check_preview, only: :show
   skip_before_action :verify_authenticity_token, only: :expire_cache
 
   def expire_cache
