@@ -1,4 +1,4 @@
-@cache @vcr
+@cache @vcr @preview
 Feature: Previewing pages
   
   Scenario: Preview unpublished page
