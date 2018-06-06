@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 require 'support/turnip_formatter'
+require 'support/cache'
 
 RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers

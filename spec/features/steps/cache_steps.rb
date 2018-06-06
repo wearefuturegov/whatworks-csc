@@ -59,6 +59,10 @@ module CacheSteps
     expect(cache_data_for('views/www.example.com/blog')).to_not be_nil
     expect(cache_data_for("views/www.example.com/blog/#{@slug}")).to_not be_nil
   end
+  
+  step 'the content should not be cached' do
+    expect(cache_data_for("views/www.example.com/blog/#{@slug}")).to be_nil
+  end
 end
 
 RSpec.configure do |config|

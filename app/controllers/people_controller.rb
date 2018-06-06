@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
-  caches_action :show, skip_digest: true
+  caches_action :show, skip_digest: true, unless: :preview_enabled?
   
   def show
-    @person = Person.find_by(slug: params[:id]).load.first
+    @person = load_content(Person, params[:id])
   end
 end
