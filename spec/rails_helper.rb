@@ -3,7 +3,7 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 
 # Remove the ActiveRecord constant, because it is autloaded by
 # ActiveStorage and not needed for our application. The presence
