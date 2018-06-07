@@ -1,0 +1,47 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "7swdj0fkojyi"
+          }
+        },
+        "id": "xj8e29dFLiEaOa2y66cUI",
+        "type": "Entry",
+        "createdAt": "2018-06-04T15:03:15.547Z",
+        "updatedAt": "2018-06-04T15:03:15.547Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "person"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "Greg Wilkinson",
+        "slug": "greg-wilkinson",
+        "role": "Programme Director – Development Team",
+        "bio": "Bio goes here"
+      }
+    }
+  ]
+}

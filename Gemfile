@@ -42,6 +42,7 @@ gem 'dotenv-rails'
 gem 'haml'
 gem 'pry'
 gem 'rubocop'
+gem 'draper'
 
 group :production do
   gem 'dalli'

@@ -13,7 +13,7 @@ module ContentfulController
   def load_content
     check_preview
     content = class_name.find_by(slug: params[:id]).load.first
-    instance_variable_set("@#{controller_name.singularize}", content)
+    instance_variable_set("@#{controller_name.singularize}", content.decorate)
   end
   
   def list_content
