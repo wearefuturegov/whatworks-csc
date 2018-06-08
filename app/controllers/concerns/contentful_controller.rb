@@ -1,6 +1,8 @@
 module ContentfulController
   extend ActiveSupport::Concern
   
+  attr_accessor :index_query
+    
   included do
     helper ContentfulRails::MarkdownHelper
     caches_action :index, :show, skip_digest: true, unless: :preview_enabled?
@@ -17,7 +19,7 @@ module ContentfulController
   end
   
   def list_content
-    list = class_name.all.load
+    list = index_query.nil? ? class_name.all.load : class_name.params(index_query.call).load
     instance_variable_set("@#{controller_name}", list)
   end
   
@@ -31,5 +33,13 @@ module ContentfulController
   
   def check_preview
     ContentfulModel.use_preview_api = preview_enabled?
+  end
+  
+  module ClassMethods
+    def index_query(query)
+      prepend_before_action do
+        self.index_query = query
+      end
+    end
   end
 end

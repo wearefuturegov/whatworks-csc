@@ -1,0 +1,5 @@
+%h1 Jobs
+
+%ul
+  - @jobs.each do |j|
+    %li= link_to j.title, job_path(id: j.slug)

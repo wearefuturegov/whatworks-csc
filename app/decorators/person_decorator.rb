@@ -1,4 +1,4 @@
-class PersonDecorator < Draper::Decorator
+class PersonDecorator < ApplicationDecorator
   delegate_all
   
   def decorate_image

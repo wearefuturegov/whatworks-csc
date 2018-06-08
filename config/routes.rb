@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :blog_posts, path: 'blog', only: %i[index show]
   resources :team_members, path: 'team', only: %i[show]
   resources :board_members, path: 'board', only: %i[show]
-
+  resources :jobs, only: %i[index show]
+  
   post :expire_cache, to: 'application#expire_cache'
 end
