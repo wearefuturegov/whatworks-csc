@@ -5,7 +5,7 @@ RSpec.describe BlogPost, type: :model, vcr: true do
   
   context 'when author is a team member' do
     
-    before { stub_api_response('some-blog-post', 'blog_posts/with_a_team_member') }
+    before { stub_api_response('blog_post/with_a_team_member', 'fields.slug' => 'some-blog-post') }
     
     it 'it has an author' do
       expect(blog_post.author).to be_a(TeamMember)
@@ -15,7 +15,7 @@ RSpec.describe BlogPost, type: :model, vcr: true do
   
   context 'when author is a board member' do
     
-    before { stub_api_response('some-blog-post', 'blog_posts/with_a_board_member') }
+    before { stub_api_response('blog_post/with_a_board_member', 'fields.slug' => 'some-blog-post') }
     
     it 'it has an author' do
       expect(blog_post.author).to be_a(BoardMember)

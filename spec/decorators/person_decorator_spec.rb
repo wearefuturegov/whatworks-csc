@@ -9,7 +9,7 @@ RSpec.describe PersonDecorator, :vcr do
         
     context 'with image' do
       
-      before { stub_api_response(slug, 'board_member/with_image') }
+      before { stub_api_response('board_member/with_image', 'fields.slug' => slug) }
       
       it 'returns an image' do
         expect(subject.decorate_image).to eq('<img src="//example.com/image.jpg?w=200&amp;h=200&amp;f=face&amp;fit=thumb" />')
@@ -19,7 +19,7 @@ RSpec.describe PersonDecorator, :vcr do
     
     context 'without image' do
       
-      before { stub_api_response(slug, 'board_member/without_image') }
+      before { stub_api_response('board_member/without_image', 'fields.slug' => slug) }
       
       it 'returns nil' do
         expect(subject.decorate_image).to eq(nil)
