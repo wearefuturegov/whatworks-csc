@@ -1,0 +1,98 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "7swdj0fkojyi"
+          }
+        },
+        "id": "3LMw0xhv0s2IsQ6uCc6YyW",
+        "type": "Entry",
+        "createdAt": "2018-06-04T15:39:08.016Z",
+        "updatedAt": "2018-06-07T13:26:29.465Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMember"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "Ewan King",
+        "slug": "ewan-king",
+        "role": "Engagement Lead, Development Team",
+        "category": "Team",
+        "photo": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "xwFKoKcccCSYGqqE0QEei"
+          }
+        },
+        "bio": "Bio goes here"
+      }
+    }
+  ],
+  "includes": {
+    "Asset": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "7swdj0fkojyi"
+            }
+          },
+          "id": "xwFKoKcccCSYGqqE0QEei",
+          "type": "Asset",
+          "createdAt": "2018-06-07T13:07:17.042Z",
+          "updatedAt": "2018-06-07T13:07:17.042Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "image",
+          "file": {
+            "url": "//example.com/image.jpg",
+            "details": {
+              "size": 269940,
+              "image": {
+                "width": 900,
+                "height": 1200
+              }
+            },
+            "fileName": "image.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    ]
+  }
+}

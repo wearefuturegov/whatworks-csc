@@ -4,6 +4,6 @@
 
 %p.date= @blog_post.date.strftime('%e %B %Y')
 
-%p.author= "By #{link_to(@blog_post.author.name, person_path(id: @blog_post.author.slug))}".html_safe
+%p.author= "By #{link_to(@blog_post.author.name, @blog_post.author.path)}".html_safe
 
 = parse_markdown(@blog_post.body)

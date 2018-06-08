@@ -1,0 +1,2 @@
+class TeamMemberDecorator < PersonDecorator
+end

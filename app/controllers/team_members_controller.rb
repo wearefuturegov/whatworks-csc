@@ -1,4 +1,4 @@
-class PeopleController < ApplicationController
+class TeamMembersController < ApplicationController
   include ContentfulController
 
   def show; end

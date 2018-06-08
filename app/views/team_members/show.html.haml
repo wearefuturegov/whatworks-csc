@@ -1,0 +1,7 @@
+%h1= @person.name
+
+%h2= @person.role
+
+= @person.decorate_image
+
+= parse_markdown(@person.bio)
