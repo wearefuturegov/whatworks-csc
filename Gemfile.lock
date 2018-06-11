@@ -125,8 +125,13 @@ GEM
       activemodel-serializers-xml (~> 1.0)
       activesupport (~> 5.0)
       request_store (~> 1.0)
+    email_spec (2.2.0)
+      htmlentities (~> 4.3.3)
+      launchy (~> 2.1)
+      mail (~> 2.7)
     erubi (1.7.1)
     execjs (2.7.0)
+    ffaker (2.9.0)
     ffi (1.9.23)
     gherkin (5.1.0)
     globalid (0.4.1)
@@ -135,6 +140,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     hashdiff (0.3.7)
+    htmlentities (4.3.4)
     http (2.2.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -146,11 +152,15 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    i18n-debug (1.1.1)
+      i18n (< 2)
     io-like (0.3.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     json (1.8.6)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -160,6 +170,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mail_form (1.7.1)
+      actionmailer (>= 3.2, < 6)
+      activemodel (>= 3.2, < 6)
     marcel (0.3.2)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
@@ -266,6 +279,9 @@ GEM
     selenium-webdriver (3.12.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple_form (4.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -337,9 +353,13 @@ DEPENDENCIES
   dalli
   dotenv-rails
   draper
+  email_spec
+  ffaker
   haml
+  i18n-debug
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  mail_form
   pry
   puma (~> 3.11)
   rails (~> 5.2.0)
@@ -348,6 +368,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   timecop

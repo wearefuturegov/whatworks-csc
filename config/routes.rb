@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   resources :board_members, path: 'board', only: %i[show]
   resources :jobs, only: %i[index show]
   
+  get 'contact-us', to: 'contact_forms#new', as: :new_contact_forms
+  post 'contact-us', to: 'contact_forms#create', as: :contact_forms
+  
   post :expire_cache, to: 'application#expire_cache'
 end

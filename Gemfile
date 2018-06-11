@@ -43,6 +43,8 @@ gem 'haml'
 gem 'pry'
 gem 'rubocop'
 gem 'draper'
+gem 'mail_form'
+gem 'simple_form'
 
 group :production do
   gem 'dalli'
@@ -60,6 +62,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'i18n-debug'
 end
 
 group :test do
@@ -75,6 +78,8 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'timecop'
+  gem 'email_spec'
+  gem 'ffaker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
