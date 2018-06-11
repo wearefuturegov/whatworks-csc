@@ -45,6 +45,7 @@ gem 'rubocop'
 gem 'draper'
 gem 'mail_form'
 gem 'simple_form'
+gem 'sendgrid_actionmailer_adapter'
 
 group :production do
   gem 'dalli'
