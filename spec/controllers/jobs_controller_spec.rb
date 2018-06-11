@@ -6,8 +6,10 @@ RSpec.describe JobsController, type: :controller, vcr: true do
     it_behaves_like 'contenful controller #show', 'job', Job, 'some-job'
   end
   
-  describe '#index' do
+  describe '#index', :timecop do
     
+    before { Timecop.freeze(Date.parse('2018-06-08')) }
+
     it 'only gets current jobs' do
       get :index
       expect(WebMock).to have_requested(:get, "https://cdn.contentful.com/spaces/#{ENV['CONTENTFUL_SPACE_ID']}/environments/master/entries")

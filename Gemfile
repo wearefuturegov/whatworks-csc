@@ -74,6 +74,7 @@ group :test do
   gem 'turnip'
   gem 'vcr'
   gem 'webmock'
+  gem 'timecop'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
