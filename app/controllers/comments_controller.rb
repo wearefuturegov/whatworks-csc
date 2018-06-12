@@ -1,8 +1,17 @@
 class CommentsController < ApplicationController
+  helper ContentfulRails::MarkdownHelper
+
   def create
-    @comment = Comment.create(comment_params.to_h.symbolize_keys)
-    @comment.save
-    redirect_to blog_post_path(params[:blog_post_id]), notice: 'Your comment has been submitted!'
+    # We can't do normal Rails-y validation here because Contentful has to send
+    # content to the server first, and also allows us to save drafts with missing
+    # fields.
+    if comment_params[:name].blank? || comment_params[:email].blank?
+      flash[:notice] = 'Some required fields were missing'
+      render 'blog_posts/show'
+    else
+      @comment = Comment.create(comment_params.to_h.symbolize_keys)
+      redirect_to blog_post_path(params[:blog_post_id]), notice: 'Your comment has been submitted!'
+    end
   end
   
   private
@@ -14,7 +23,7 @@ class CommentsController < ApplicationController
   end
   
   def blog_post
-    BlogPost.find_by(slug: params[:blog_post_id]).load.first
+    @blog_post ||= BlogPost.find_by(slug: params[:blog_post_id]).load.first
   end
   
 end
