@@ -9,6 +9,11 @@ module CommentingSteps
     }
   end
   
+  step 'I leave my email blank' do
+    @comment[:name] = 'Batman Blank Email'
+    @comment[:email] = nil
+  end
+  
   step 'I leave a comment' do
     fill_in I18n.t('simple_form.labels.comment.name'), with: @comment[:name]
     fill_in I18n.t('simple_form.labels.comment.email'), with: @comment[:email]
@@ -16,6 +21,14 @@ module CommentingSteps
     fill_in I18n.t('simple_form.labels.comment.comment'), with: @comment[:comment]
     
     click_on I18n.t('simple_form.labels.comment.create')
+  end
+  
+  step 'the comment should not be stored' do
+    expect(Comment.preview.find_by(name: @comment[:name]).load.count).to eq(0)
+  end
+  
+  step 'I should see an error message' do
+    expect(page.body).to match(/Some required fields were missing/)
   end
   
   step 'the comment should be stored as a draft' do
