@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comment_params.to_h.symbolize_keys)
     @comment.save
+    redirect_to blog_post_path(params[:blog_post_id]), notice: 'Your comment has been submitted!'
   end
   
   private

@@ -7,3 +7,7 @@
 %p.author= "By #{link_to(@blog_post.author.name, @blog_post.author.path)}".html_safe
 
 = parse_markdown(@blog_post.body)
+
+%h4 Leave a Comment
+
+= render 'comments/form'
