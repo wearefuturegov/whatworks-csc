@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get 'contact-us', to: 'contact_forms#new', as: :new_contact_forms
   post 'contact-us', to: 'contact_forms#create', as: :contact_forms
   
+  get 'comments/:id/publish', to: 'comments#publish'
+  
   post :expire_cache, to: 'application#expire_cache'
 end
