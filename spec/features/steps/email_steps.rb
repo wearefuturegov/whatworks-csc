@@ -26,6 +26,17 @@ module EmailSteps
     expect(emails.first.body).to match(/#{@form.message}/)
   end
   
+  step 'the contact email address should recieve a comment alert' do
+    emails = unread_emails_for(ENV['CSC_CONTACT_EMAIL'])
+    blog_post = BlogPost.find_by(slug: @slug).load.first
+    expect(emails.count).to eq(1)
+    expect(emails.first.subject).to match(/#{blog_post.title}/)
+    expect(emails.first.body.raw_source).to match(/#{@comment[:name]}/)
+    expect(emails.first.body.raw_source).to match(/#{@comment[:email]}/)
+    expect(emails.first.body.raw_source).to match(/#{@comment[:organisation]}/)
+    expect(emails.first.body.raw_source).to match(/#{@comment[:comment]}/)
+  end
+  
   step 'the contact email address should not recieve an email' do
     emails = unread_emails_for(ENV['CSC_CONTACT_EMAIL'])
     expect(emails.count).to eq(0)

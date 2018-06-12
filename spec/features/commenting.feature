@@ -8,6 +8,11 @@ Feature: Commenting
     Given I access the blog post 'wanted-pioneer-partners-for-the-what-works-centre'
     And I leave a comment
     Then the comment should be stored as a draft
+    
+  Scenario: Email is recieved
+    Given I access the blog post 'wanted-pioneer-partners-for-the-what-works-centre'
+    And I leave a comment
+    Then the contact email address should recieve a comment alert
       
   Scenario: Missing required field
     Given I access the blog post 'wanted-pioneer-partners-for-the-what-works-centre'
