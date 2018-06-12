@@ -40,6 +40,16 @@ module CommentingSteps
     expect(comment.associated_record).to eq(BlogPost.find_by(slug: @slug).load.first)
   end
   
+  step 'the comment is approved' do
+    comment = Comment.preview.find_by(name: @comment[:name]).load.last
+    comment.publish
+  end
+  
+  step 'my comment should show underneath the blog post' do
+    visit("/blog/#{@slug}")
+    expect(page.body).to match(/#{@comment[:comment]}/)
+  end
+  
 end
 
 RSpec.configure do |config|
