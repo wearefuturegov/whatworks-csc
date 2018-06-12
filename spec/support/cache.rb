@@ -1,5 +1,5 @@
 RSpec.configure do |config|
-  config.after(:each, cache: true) do
+  config.before(:each, cache: true) do
     Rails.cache.clear
   end
   
