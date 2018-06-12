@@ -5,5 +5,6 @@ step 'I access the blog post index page' do
 end
 
 step 'I access the blog post :text' do |slug|
-  visit "/blog/#{slug}"
+  @slug = slug
+  visit "/blog/#{@slug}"
 end

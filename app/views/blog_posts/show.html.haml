@@ -11,3 +11,9 @@
 %h4 Leave a Comment
 
 = render 'comments/form'
+
+- if @blog_post.comments.count > 0
+  %h4 Comments
+
+  = render partial: 'comments/comment', collection: CommentsDecorator.decorate_collection(@blog_post.comments), as: :comment
+  
