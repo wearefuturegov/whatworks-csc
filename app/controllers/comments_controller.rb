@@ -10,7 +10,6 @@ class CommentsController < ApplicationController
       render 'blog_posts/show'
     else
       @comment = Comment.create(comment_params.to_h.symbolize_keys)
-      CommentMailer.with(comment_id: @comment.id).comment_alert.deliver_now
       redirect_to blog_post_path(params[:blog_post_id]), notice: 'Your comment has been submitted!'
     end
   end
