@@ -50,27 +50,27 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - 4867c48a838e27851f12d8c62a6238f2
+      - 67ae7e1201d1828ba712a0b5ce7886d2
       Content-Length:
       - '1041'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 12 Jun 2018 13:05:07 GMT
+      - Tue, 12 Jun 2018 14:08:18 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '0'
+      - '148'
       Connection:
       - close
       X-Served-By:
-      - cache-lcy19245-LCY
+      - cache-lcy19247-LCY
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1528808708.641365,VS0,VE0
+      - S1528812498.024974,VS0,VE0
       Vary:
       - Accept-Encoding
     body:
@@ -78,5 +78,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA+1aXW/aMBR9769AeV5RAgmEvAHtHqZ9VIWnTdVkEpe6JDGLTTdW9b/PTkiwY0ekLdBmAlUC+zq2z7Xjc891H89aLYOsieG1HtlPVqDrJWQlY5gkYG2wuqcPvA3FFISs3klLZIGWrGCmhRBFiLKSZZpZBaIw4j3+SHvM+i0Nkw5FlsDnY+UtskphMrwircwn9RnFC4MPuv2w4ePFdDPpSdpjqQEKOJ4++R3cm7cLfL9GHFb+eSp+p0Czj5E9M8MgCb7AaAYTodNiNmMcUxjTdHDhWT+BgMJgyH1idEzLPTd756Y7tUyvO/Acu+0MnO/iA6tl8LwHYPyAEhxHbPBa7svQRIBQCQjHWtu1l8KYO92XwAdEEI75rtg0LrxrBIgsQ7D+iGCYrkwMoq3/shKrHXHft0rONwJI/AQtada3UXjRuOW9bTcdhyZtq8wF0lAp/LSGDfdVnITkmMk6muFQ2lRGiH0Qor+Qz/8WhASKW85I4K8VSiqMDD2YhRVGzN4ktnXyXnVbU4OKhKu5PL8c1USx5G/S4VDRZCW742WgEhzKb3KxVNeK5fCg1EV+GSqfvehznKz1yzXWWveCTlmVA+zD5R2mWI/sSjVVnunHerukd1ZkkSEhkG45QuAFzcs3QxWQR2VDDngK/9A3Pk42B8tN+r3B12CevsczkU9zRz+Xnzte12J/bdty6/Fzx7Ndr9Nru7YpPdAkfu7s5GeKqHAUF8fwJ8Hpr+VleQiJmKfS6Ptj5mMciNXErFrqnvLKvIVoQ7EJh7xiexmBERCCKvqaaGx1YakEe+woisXGTLVIpJCHUVPV1BxcfogJiucXLLbQoxtnDVpqixykanlfAbCoCrQLeCHIBqnBiZMPpZ0pBNGepXPXaXfsQT1qtryO4zlue+D2G0vN3Z3UrJfOU+b6k3LmoUIR3PKfmuBdpeGTcs78xvN67yrJcRKXbGG22bGTuMz3Kf8+aBI4xPMrTETJ/oIMsHPetaamy9K/nu20zX59Gut6ltXu27IkbZLCdHfSWIXCHDHPtyTXl3RmvArDPJyrmQF+A6WpSpsD5N7IanYHQcACfX2QP6mwN0fHgBW9w+I9jHAcDjW2HJlyZ3QsYqvML17GlEnomsl9fjWkX1JVlTVFr/2XYdcMBxVp/ZFiOcnOQ8lOH0fptahwH5s7+znpYMuaWo5n9TyuOQe93ZqTPzDwLJc/YLvNTQfv1pxlDxcx6bjk+tcmhY9+WaukSA/A0zACqHSZnEvOS9W0F3Y+BiyczEHMbrbTi3ltCu5bZYu9gDxKkFXe+qn0yJevvP1T4x4O+mMsHyAE+4j/E8rPBPo4CfRryC5GN81a15pmzYm45PtPVro5ezr7B4/8P+EMJQAA
     http_version: 
-  recorded_at: Tue, 12 Jun 2018 13:05:07 GMT
+  recorded_at: Tue, 12 Jun 2018 14:08:18 GMT
 recorded_with: VCR 4.0.0

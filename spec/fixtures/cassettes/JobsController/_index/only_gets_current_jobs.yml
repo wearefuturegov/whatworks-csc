@@ -50,27 +50,27 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - bfd8926b4d515bb4f92f3244963bcbee
+      - 010cc6f04ba28a58749b6c0003458f4a
       Content-Length:
       - '651'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 12 Jun 2018 13:05:19 GMT
+      - Tue, 12 Jun 2018 14:08:26 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '0'
+      - '154'
       Connection:
       - close
       X-Served-By:
-      - cache-lcy19247-LCY
+      - cache-lcy19238-LCY
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
-      - '0'
+      - '1'
       X-Timer:
-      - S1528808719.044757,VS0,VE237
+      - S1528812507.900118,VS0,VE0
       Vary:
       - Accept-Encoding
     body:
