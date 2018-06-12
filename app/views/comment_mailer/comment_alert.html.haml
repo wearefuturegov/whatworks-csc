@@ -1,0 +1,13 @@
+%p
+  A new comment has been recieved on the blog post '#{@comment.associated_record.title}'.
+  The details are as follows:
+
+= @comment.name
+= @comment.email
+= @comment.organisation
+= @comment.comment
+
+%p
+  To publish this comment, click the link below:
+  
+%p= link_to("#{ENV['HOST_URL']}/comments/#{@comment.id}/publish", "#{ENV['HOST_URL']}/comments/#{@comment.id}/publish")
