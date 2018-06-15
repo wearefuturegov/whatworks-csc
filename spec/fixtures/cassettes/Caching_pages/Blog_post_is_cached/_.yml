@@ -2,24 +2,22 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/entries?content_type=blogPost&fields.slug=wanted-pioneer-partners-for-the-what-works-centre
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/content_types/teamMember
     body:
       encoding: US-ASCII
       string: ''
     headers:
       X-Contentful-User-Agent:
-      - sdk contentful.rb/2.8.0; integration contentful_model/1.0.0; platform ruby/2.5.0;
-        os macOS/17;
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
       Authorization:
-      - Bearer <CONTENTFUL_API_KEY>
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
       Content-Type:
-      - application/vnd.contentful.delivery.v1+json
-      Accept-Encoding:
-      - gzip
+      - application/vnd.contentful.management.v1+json
       Connection:
       - close
       Host:
-      - cdn.contentful.com
+      - api.contentful.com
       User-Agent:
       - http.rb/2.2.2
   response:
@@ -30,58 +28,1273 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
       Access-Control-Allow-Methods:
-      - GET,HEAD,OPTIONS
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Expose-Headers:
       - Etag
       Access-Control-Max-Age:
-      - '86400'
-      Cache-Control:
-      - max-age=0
-      Content-Encoding:
-      - gzip
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
       Content-Type:
-      - application/vnd.contentful.delivery.v1+json
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:37 GMT
       Etag:
-      - W/"4642e142f5b6d3c320ce63fd1630a54d"
+      - '"dbc5bd92071261f9517d5fbbee1e3320"'
       Server:
       - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
       X-Content-Type-Options:
       - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35699'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '9'
       X-Contentful-Request-Id:
-      - e3319d3dec1fe943cc50afb4aea8e60f
+      - dbe62a37c272acfb08a2740e5e2e084a
       Content-Length:
-      - '2884'
-      Accept-Ranges:
-      - bytes
-      Date:
-      - Tue, 12 Jun 2018 14:08:27 GMT
-      Via:
-      - 1.1 varnish
-      Age:
-      - '155'
+      - '2229'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=xZsgCtu5RBc3uxS0nrkdC2CQI1sAAAAAXPnIK80OtEbwwi/+9KTEgg==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=hirIaZyiOUzx5b4F6lKYhQAAAAA/iUn2icX55pLqOwtPKAEx; path=/; Domain=.contentful.com
+      - visid_incap_673446=MuWdjyTOQYeZs5eNm0AWbGCQI1sAAAAAQUIPAAAAAAD9ZL6Ok7xXSKnqOOqQZzwp;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 9-4881480-4881482 NNNN CT(0 0 0) RT(1529057373651 21) q(0 0 0 -1) r(32 32)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "teamMember",
+            "type": "ContentType",
+            "createdAt": "2018-06-08T10:39:34.719Z",
+            "updatedAt": "2018-06-08T11:25:58.987Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedCounter": 3,
+            "version": 6,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedVersion": 5,
+            "firstPublishedAt": "2018-06-08T10:39:35.249Z",
+            "publishedAt": "2018-06-08T11:25:58.987Z"
+          },
+          "displayField": "name",
+          "name": "Team Member",
+          "description": "",
+          "fields": [
+            {
+              "id": "name",
+              "name": "Name",
+              "type": "Symbol",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            },
+            {
+              "id": "slug",
+              "name": "Slug",
+              "type": "Symbol",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": true,
+              "omitted": false
+            },
+            {
+              "id": "role",
+              "name": "Role",
+              "type": "Symbol",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            },
+            {
+              "id": "photo",
+              "name": "Photo",
+              "type": "Link",
+              "localized": false,
+              "required": false,
+              "validations": [
+                {
+                  "linkMimetypeGroup": [
+                    "image"
+                  ]
+                }
+              ],
+              "disabled": false,
+              "omitted": false,
+              "linkType": "Asset"
+            },
+            {
+              "id": "bio",
+              "name": "Bio",
+              "type": "Text",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:37 GMT
+- request:
+    method: post
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries
+    body:
+      encoding: UTF-8
+      string: '{"fields":{"name":{"en-GB":"Person"},"slug":{"en-GB":"person"}}}'
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Content-Type:
+      - teamMember
+      Content-Type-Id:
+      - teamMember
       Connection:
       - close
-      X-Served-By:
-      - cache-lcy19237-LCY
-      X-Cache:
-      - HIT
-      X-Cache-Hits:
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:37 GMT
+      Etag:
+      - '"196fd03a42998dd054ee87963446f743"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35698'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '8'
+      X-Contentful-Request-Id:
+      - 6b0661cfe377862c80b0a149b2ad6bba
+      Content-Length:
+      - '966'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=Xba4YnowM0a0uxS0nrkdC2GQI1sAAAAAHJVAsuY5rQe1DHHzYuKDkQ==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=/SgoZphwmQYmSDML6lKYhQAAAADh7HcdgMQ/DZS9m02snigd; path=/; Domain=.contentful.com
+      - visid_incap_673446=HvBa9iV2TKuTNx3cVZM85mGQI1sAAAAAQUIPAAAAAACAHg4lUXAQlK+CAkJK7Acf;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 5-15595595-15595597 NNNN CT(79 79 0) RT(1529057376930 27) q(0 0 2 -1) r(4
+        4) U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "7L0EKRENpuOMccGUeQKKmO",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:37.790Z",
+            "updatedAt": "2018-06-15T10:09:37.790Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "version": 1,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "teamMember"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-GB": "Person"
+            },
+            "slug": {
+              "en-GB": "person"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:37 GMT
+- request:
+    method: put
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries/7L0EKRENpuOMccGUeQKKmO
+    body:
+      encoding: UTF-8
+      string: '{"fields":{"name":{"en-GB":"Person"},"slug":{"en-GB":"person"}}}'
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Version:
       - '1'
-      X-Timer:
-      - S1528812507.341506,VS0,VE0
-      Vary:
-      - Accept-Encoding
+      Version:
+      - '1'
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:38 GMT
+      Etag:
+      - '"3c0a0885b64eaf242a42f3eea96e4a24"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35697'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '9'
+      X-Contentful-Request-Id:
+      - a4401a2fea013b97b97ab9166c767ef7
+      Content-Length:
+      - '966'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=+PtgCY/5OE3puxS0nrkdC2GQI1sAAAAAukaL6ldKPa0AJBfKDKe8/Q==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=hOoOZDU4r2Upu+Vy6lKYhQAAAACoHc6pt51iB4v7dZIKWRt1; path=/; Domain=.contentful.com
+      - visid_incap_673446=cdK7Q7nyRQun03CLOydFqGGQI1sAAAAAQUIPAAAAAAAA9yueFDipuCmx8ef8j0Zt;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 9-4881660-4881661 NNNN CT(0 0 0) RT(1529057377397 24) q(0 0 0 -1) r(2 2) U5
+      X-Cdn:
+      - Incapsula
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "7L0EKRENpuOMccGUeQKKmO",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:37.790Z",
+            "updatedAt": "2018-06-15T10:09:38.088Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "version": 2,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "teamMember"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-GB": "Person"
+            },
+            "slug": {
+              "en-GB": "person"
+            }
+          }
+        }
     http_version: 
-  recorded_at: Tue, 12 Jun 2018 14:08:27 GMT
+  recorded_at: Fri, 15 Jun 2018 10:09:38 GMT
+- request:
+    method: put
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries/7L0EKRENpuOMccGUeQKKmO/published
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Version:
+      - '2'
+      Version:
+      - '2'
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:38 GMT
+      Etag:
+      - '"8e7346d0d1072f002b1dce2a6ab2219b"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35696'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '8'
+      X-Contentful-Request-Id:
+      - f92bf59efc4235e507f56d78cfabfa52
+      Content-Length:
+      - '1261'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=NLgibJztIWQyvBS0nrkdC2KQI1sAAAAAyIN6dG1I2bY0lkvDLbjYQg==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=NfDQXmppBkLKmrCr6lKYhQAAAAAIFzvU0zoWlTTVgkdaUIyA; path=/; Domain=.contentful.com
+      - visid_incap_673446=HtmUiu8+Rni0vIH0fbs5gGKQI1sAAAAAQUIPAAAAAABZILp6lMkOyryrnelPz+y+;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 14-33338040-33338053 NNNN CT(0 0 0) RT(1529057377662 23) q(0 0 0 -1) r(4 4)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "7L0EKRENpuOMccGUeQKKmO",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:37.790Z",
+            "updatedAt": "2018-06-15T10:09:38.368Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedCounter": 1,
+            "version": 3,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedVersion": 2,
+            "firstPublishedAt": "2018-06-15T10:09:38.368Z",
+            "publishedAt": "2018-06-15T10:09:38.368Z",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "teamMember"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-GB": "Person"
+            },
+            "slug": {
+              "en-GB": "person"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:38 GMT
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/content_types?limit=1000
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/content_types/blogPost
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:38 GMT
+      Etag:
+      - '"8e0f70d164e86891e0f7a1436b0de75f"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35695'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '7'
+      X-Contentful-Request-Id:
+      - ac774acd8cc89d2557d3645de50b94b5
+      Content-Length:
+      - '2479'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=UkOCdfbxsyuovBS0nrkdC2KQI1sAAAAAdvkcx8JjcLHPLWpvBPUKlQ==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=2etSIqLpYGVXsFv66lKYhQAAAAD2hcOCGhYnHipgCX9zPKmN; path=/; Domain=.contentful.com
+      - visid_incap_673446=xnDKLNveRbi1AucFgaajtWKQI1sAAAAAQUIPAAAAAADC48Au2IovjnH3sXmFQUJJ;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 12-20259700-20259711 NNNN CT(0 0 0) RT(1529057378237 28) q(0 0 0 -1) r(2 2)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "blogPost",
+            "type": "ContentType",
+            "createdAt": "2018-05-31T08:54:43.431Z",
+            "updatedAt": "2018-06-08T11:23:11.748Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedCounter": 8,
+            "version": 16,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedVersion": 15,
+            "firstPublishedAt": "2018-05-31T08:54:45.079Z",
+            "publishedAt": "2018-06-08T11:23:11.748Z"
+          },
+          "displayField": "title",
+          "name": "Blog Post",
+          "description": null,
+          "fields": [
+            {
+              "id": "title",
+              "name": "Title",
+              "type": "Symbol",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            },
+            {
+              "id": "subheading",
+              "name": "Subheading",
+              "type": "Symbol",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            },
+            {
+              "id": "author",
+              "name": "Author",
+              "type": "Link",
+              "localized": false,
+              "required": false,
+              "validations": [
+                {
+                  "linkContentType": [
+                    "boardMember",
+                    "teamMember"
+                  ]
+                }
+              ],
+              "disabled": false,
+              "omitted": false,
+              "linkType": "Entry"
+            },
+            {
+              "id": "date",
+              "name": "Date",
+              "type": "Date",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            },
+            {
+              "id": "slug",
+              "name": "Slug",
+              "type": "Symbol",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": true,
+              "omitted": false
+            },
+            {
+              "id": "body",
+              "name": "Body",
+              "type": "Text",
+              "localized": false,
+              "required": false,
+              "validations": [],
+              "disabled": false,
+              "omitted": false
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:39 GMT
+- request:
+    method: post
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries
+    body:
+      encoding: UTF-8
+      string: '{"fields":{"title":{"en-GB":"example-blog-post"},"subheading":{"en-GB":"subheading"},"date":{"en-GB":"2018-06-15"},"slug":{"en-GB":"example-blog-post"},"body":{"en-GB":"Some
+        Text"},"author":{"en-GB":{"sys":{"type":"Link","linkType":"Entry","id":"7L0EKRENpuOMccGUeQKKmO"}}}}}'
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Content-Type:
+      - blogPost
+      Content-Type-Id:
+      - blogPost
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:39 GMT
+      Etag:
+      - '"ea0427efbe10dfdc271bfbcec7c96b5f"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35694'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '9'
+      X-Contentful-Request-Id:
+      - 43b507a06ddce628eafa4c594cbb2fcd
+      Content-Length:
+      - '1312'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=mIGQGv0bsBTjvBS0nrkdC2KQI1sAAAAA/f0yj1J3i92Sg+Ni+ePZZQ==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=XegsTv5uDijCMP1S6lKYhQAAAAAiCz09wVpplGLe6wgYO3GE; path=/; Domain=.contentful.com
+      - visid_incap_673446=UuQ/IvIaRy+StLG7lsuIomKQI1sAAAAAQUIPAAAAAAARhuk163BvpJr6SZn4vbL4;
+        expires=Sat, 15 Jun 2019 07:58:03 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 13-25784713-25784724 NNNN CT(0 0 0) RT(1529057378470 27) q(0 0 0 -1) r(3 3)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "2gyR7bzmWE84WaGaSiaGkm",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:39.232Z",
+            "updatedAt": "2018-06-15T10:09:39.232Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "version": 1,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "blogPost"
+              }
+            }
+          },
+          "fields": {
+            "title": {
+              "en-GB": "example-blog-post"
+            },
+            "subheading": {
+              "en-GB": "subheading"
+            },
+            "author": {
+              "en-GB": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7L0EKRENpuOMccGUeQKKmO"
+                }
+              }
+            },
+            "date": {
+              "en-GB": "2018-06-15"
+            },
+            "slug": {
+              "en-GB": "example-blog-post"
+            },
+            "body": {
+              "en-GB": "Some Text"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:39 GMT
+- request:
+    method: put
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries/2gyR7bzmWE84WaGaSiaGkm
+    body:
+      encoding: UTF-8
+      string: '{"fields":{"title":{"en-GB":"example-blog-post"},"subheading":{"en-GB":"subheading"},"author":{"en-GB":{"sys":{"type":"Link","linkType":"Entry","id":"7L0EKRENpuOMccGUeQKKmO"}}},"date":{"en-GB":"2018-06-15T00:00:00.000+00:00"},"slug":{"en-GB":"example-blog-post"},"body":{"en-GB":"Some
+        Text"}}}'
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Version:
+      - '1'
+      Version:
+      - '1'
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:39 GMT
+      Etag:
+      - '"9ad346f5949020b29082b944d760aa70"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35693'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '8'
+      X-Contentful-Request-Id:
+      - 6e89afe754a4fbf246aba7369fb5e119
+      Content-Length:
+      - '1331'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=lOPyBhOwRycNvRS0nrkdC2KQI1sAAAAAO7CESARMeyBif8Qn4hAXww==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=FpntDWv1ynvUXQ6I6lKYhQAAAADa+179gL5tokN1JpPGnLVr; path=/; Domain=.contentful.com
+      - visid_incap_673446=XQI9VOnwT0aEST9PeNcExGKQI1sAAAAAQUIPAAAAAAAz/sZhI8YbTntUElIyDFsn;
+        expires=Sat, 15 Jun 2019 07:58:03 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 13-25784776-25784786 NNNN CT(0 0 0) RT(1529057378781 25) q(0 0 0 -1) r(1 1)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "2gyR7bzmWE84WaGaSiaGkm",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:39.232Z",
+            "updatedAt": "2018-06-15T10:09:39.478Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "version": 2,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "blogPost"
+              }
+            }
+          },
+          "fields": {
+            "title": {
+              "en-GB": "example-blog-post"
+            },
+            "subheading": {
+              "en-GB": "subheading"
+            },
+            "author": {
+              "en-GB": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7L0EKRENpuOMccGUeQKKmO"
+                }
+              }
+            },
+            "date": {
+              "en-GB": "2018-06-15T00:00:00.000+00:00"
+            },
+            "slug": {
+              "en-GB": "example-blog-post"
+            },
+            "body": {
+              "en-GB": "Some Text"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:39 GMT
+- request:
+    method: put
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries/2gyR7bzmWE84WaGaSiaGkm/published
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Version:
+      - '2'
+      Version:
+      - '2'
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:39 GMT
+      Etag:
+      - '"9019fd1f1065b777beb611cbd79304e2"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35692'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '7'
+      X-Contentful-Request-Id:
+      - 0b7bb174e27d23079a99bca4771703d9
+      Content-Length:
+      - '1626'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=zl+jd1qDgkWIvRS0nrkdC2OQI1sAAAAAIM4pB+9ORjYA6jYB7yUCFQ==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=6rYhMBmLziBXzJCZ6lKYhQAAAAB+m3IjDW3w2kyUSmPzAZ8q; path=/; Domain=.contentful.com
+      - visid_incap_673446=FxV6JcvWTfSuJy4OowMr0WOQI1sAAAAAQUIPAAAAAADH4evTQNzaFr+J8chA+Ohn;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 5-15595916-15595921 NNNN CT(72 72 0) RT(1529057378989 23) q(0 0 1 -1) r(4
+        4) U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "2gyR7bzmWE84WaGaSiaGkm",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:39.232Z",
+            "updatedAt": "2018-06-15T10:09:39.887Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedCounter": 1,
+            "version": 3,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedVersion": 2,
+            "firstPublishedAt": "2018-06-15T10:09:39.887Z",
+            "publishedAt": "2018-06-15T10:09:39.887Z",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "blogPost"
+              }
+            }
+          },
+          "fields": {
+            "title": {
+              "en-GB": "example-blog-post"
+            },
+            "subheading": {
+              "en-GB": "subheading"
+            },
+            "author": {
+              "en-GB": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7L0EKRENpuOMccGUeQKKmO"
+                }
+              }
+            },
+            "date": {
+              "en-GB": "2018-06-15T00:00:00.000+00:00"
+            },
+            "slug": {
+              "en-GB": "example-blog-post"
+            },
+            "body": {
+              "en-GB": "Some Text"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:40 GMT
+- request:
+    method: get
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries?content_type=blogPost&fields.slug=example-blog-post
     body:
       encoding: US-ASCII
       string: ''
@@ -123,44 +1336,44 @@ http_interactions:
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
       Etag:
-      - W/"4c481ad8bbece908d88a6f615edeb2e8"
+      - W/"e787d0907c2f9c752761cb44533c6b81"
       Server:
       - Contentful
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - 67ae7e1201d1828ba712a0b5ce7886d2
+      - 61d99c09a126a9618451a69dabb88d4f
       Content-Length:
-      - '1041'
+      - '600'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 12 Jun 2018 14:08:27 GMT
+      - Fri, 15 Jun 2018 10:09:40 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '157'
+      - '0'
       Connection:
       - close
       X-Served-By:
-      - cache-lcy19244-LCY
+      - cache-lcy19223-LCY
       X-Cache:
-      - HIT
+      - MISS
       X-Cache-Hits:
-      - '3'
+      - '0'
       X-Timer:
-      - S1528812507.453389,VS0,VE0
+      - S1529057380.092518,VS0,VE177
       Vary:
       - Accept-Encoding
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
     http_version: 
-  recorded_at: Tue, 12 Jun 2018 14:08:27 GMT
+  recorded_at: Fri, 15 Jun 2018 10:09:40 GMT
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/entries?content_type=comment&include=0&limit=1&links_to_entry=3RL2cqs7GgE4wOSYKqmc0w
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/content_types?limit=1000
     body:
       encoding: US-ASCII
       string: ''
@@ -202,23 +1415,23 @@ http_interactions:
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
       Etag:
-      - W/"ddec6fb2f26ab965edb784968e2bb5eb"
+      - W/"4c9bdade9e3695867f331767cdf7645d"
       Server:
       - Contentful
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - d8b74cd4cbea58725572530a1053ca3f
+      - bd7ffe43e50ae5a03eb1eabf56ace86c
       Content-Length:
-      - '438'
+      - '1002'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 12 Jun 2018 14:08:27 GMT
+      - Fri, 15 Jun 2018 10:09:40 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '153'
+      - '8'
       Connection:
       - close
       X-Served-By:
@@ -226,20 +1439,20 @@ http_interactions:
       X-Cache:
       - HIT
       X-Cache-Hits:
-      - '2'
+      - '1'
       X-Timer:
-      - S1528812508.513167,VS0,VE0
+      - S1529057380.450493,VS0,VE1
       Vary:
       - Accept-Encoding
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA61TXWvCMBR991d0eZ5S67dPc0NEJjimUNwYI0tTiTaJJlEp4n9fPqwG2dDB8lB6b3PPOff03n0pCIDMJegGe/2qA5WvsI5ATwiYA5073Js7iiuY6XxkI7kkKx2ENsgIJUpHVRsRhamBe7dwDvSCw/LIFUSGqLjhkp4Sk7DJQtGIsCUwHOejudlyelQ8sYgXF0himmnJXbII0yVf5MT0VJzD6d126Q5wNdEorsfDGYMhHbbJJibxGg58ASdhfaZE7hEDJDBUOOkZV0AUVtvlsFmuRtNqrdvodBu1SqvTfPMLNqvkbwWYbYngjGJmOK576FqiUCosLi261d++x3nVQ4G3RBLOirk4Wos4U1rz8Zdd132rticP98cJQJxas64KzziCmd0AzMqDx6LgNB8gJThLzgtjGgMMUlsy4RQHL1hI3bg3UJhCYpYHpJw/fEFR0Wr871zMISMSKmeYgxn7SQ+s6ETDDcycBVJt0vTOx4NSckTMRH0KjLgwO/B/Xl+Ou3XADVjtdRShtWwN5v36bjyZPa8pCne/mH78FW4HzfOjdCh9A+lSmeyRBAAA
+        H4sIAAAAAAAAA+1ZS3ObMBC+51d4ODcesMHB3JxHD50+MjGndjIdAYqjGJAr5LRuJv+9kjAYITlh/EiDx0wOllavb7Xab3fzdNLpGNkiM7zOE/vJGnQxg6xljAgBC4P1PX/gYyimIGb9jmhlUzRjDVM0YpQgylqWaeYdiMKEr/hDrJivW9tGbJXNQMj3KkbknZXD8A7RWRzqM0qnBt909bHt06m/PPRYrFgbgCKO5yz7HT2Yd1P8sEAcVvE9l78F0Pwz8jkhThKY0sqC5UkucEqZSGxcmRcSCCiMRlwfRs+03FNzcGpZvuV41sDrO93ecPC9OmE+i/QThp7l8gm2a0oTYPqICE7FuZqoLkdCYVaFwVE2VupVZcdXFUfgI8oQTtnZ+svBpV6NCGWzGCw+IhiLO6nr10hBIozvoqZ4I4JZSNCM5isbpQaNO77Wytg4MMmccvhi3apZlDt9VSSFrY0XSYBjeVaMQxCjv5Cf/g7EGZTWJPDXHBEhpGQuyxh0EMRrJmL2gJjVFIvqLFIDCiYA1c5X6O9KFbUGFiYTkDJtibvW3tm3tSN2AlK92D1cXt30xYtcZ/7Sc/XhH/kpG+/KKkGW4RBxn/aTwBCTSH+Ho3JY50YzbK3Dbw52u2uUDK9KMVcpJYIX86+gj1vRs3R1Laa8BxxsS3em61s9r2+xv65tua/TXT7Bdr3eoOvabaW73qt0RxGNVzRUvvZPFZVvS3TyFpJT8aXdJZfy7qkui+cTvR9RJU05QKHohvStzNuMvTMQA+ZItAQ31siawlLdXgWXKtwDtVFIWPivBearovbgCmOcoXRyybhNj+4iH9BRRxQgVUlj7n6Tq6uG2doLvKzE4dKAAuEW0cmuEC798KEwchDjyTWW0rcNslDntG/5pus5tmc7XfNs2IyWLa/X9yyre2bLPN6eLNTdlJbPmd47kuJr5JzO47h4Aw3z0P9Az7t6VavXrklFs3lwD0HEvKPeM47XyNvj/MGc3mOiRzfSyNqTwLx4sbw4pQetUllbSE4NGYu8e6yEmfs30B2FkwGO1gST54rkyNX7KhhTCJIvMAlg1VNswNaDU54Tm15/KGrGdnO2djzH7Q7ds4OtGUul3DKH9pniOzXNb5tLv3nR+G2oWvFxB+D9CK4UVqSqx40i2b9LV+9xsxLB7B5TrGffa1X0fiMOVuuFtFIyfTHiCNAayOd1wZHG9kVjAQYk2jGPOXbXGTrNsk5BfJoJ7ck6rVezTj2PnXPNH4ls+b+VFx3FQYbxh0lkIcsiJ3hdtftCK90JTSvJ1R7K3UeWZq+1DMTbw9LMQ9+ePJ/8A+cMPbgCJQAA
     http_version: 
-  recorded_at: Tue, 12 Jun 2018 14:08:27 GMT
+  recorded_at: Fri, 15 Jun 2018 10:09:40 GMT
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/entries?content_type=comment&include=2&limit=100&links_to_entry=3RL2cqs7GgE4wOSYKqmc0w&order=sys.updatedAt&skip=0
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries?content_type=comment&include=0&limit=1&links_to_entry=2gyR7bzmWE84WaGaSiaGkm
     body:
       encoding: US-ASCII
       string: ''
@@ -276,44 +1489,431 @@ http_interactions:
       - '86400'
       Cache-Control:
       - max-age=0
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
       Etag:
-      - W/"2ae31d5990cc76a0745e54dbecb4411c"
+      - '"7811d6aca5f5ee099a7c2f1c18ad8a76"'
       Server:
       - Contentful
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - b4a370da87371dbdfc32236602a508f5
+      - 17528247dcf655903c5f2bd483ac20c9
       Content-Length:
-      - '3154'
+      - '95'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 12 Jun 2018 14:08:27 GMT
+      - Fri, 15 Jun 2018 10:09:40 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '153'
+      - '0'
       Connection:
       - close
       X-Served-By:
-      - cache-lcy19234-LCY
+      - cache-lcy19220-LCY
       X-Cache:
-      - HIT
+      - MISS
       X-Cache-Hits:
-      - '1'
+      - '0'
       X-Timer:
-      - S1528812508.569883,VS0,VE0
+      - S1529057381.503896,VS0,VE207
       Vary:
       - Accept-Encoding
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
+      string: |
+        {
+          "sys": {
+            "type": "Array"
+          },
+          "total": 0,
+          "skip": 0,
+          "limit": 1,
+          "items": []
+        }
     http_version: 
-  recorded_at: Tue, 12 Jun 2018 14:08:27 GMT
+  recorded_at: Fri, 15 Jun 2018 10:09:40 GMT
+- request:
+    method: get
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries?content_type=comment&include=2&limit=100&links_to_entry=2gyR7bzmWE84WaGaSiaGkm&order=sys.updatedAt&skip=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful.rb/2.8.0; integration contentful_model/1.0.0; platform ruby/2.5.0;
+        os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Accept-Encoding:
+      - gzip
+      Connection:
+      - close
+      Host:
+      - cdn.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Etag:
+      - '"29f2c21be26360c424f617d8592cf6f9"'
+      Server:
+      - Contentful
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Request-Id:
+      - 45a491f7ee8e3c5c11c98aa3dda613dd
+      Content-Length:
+      - '97'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 15 Jun 2018 10:09:41 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - close
+      X-Served-By:
+      - cache-lcy19245-LCY
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1529057381.010693,VS0,VE176
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "type": "Array"
+          },
+          "total": 0,
+          "skip": 0,
+          "limit": 100,
+          "items": []
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:41 GMT
+- request:
+    method: delete
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries/7L0EKRENpuOMccGUeQKKmO/published
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Version:
+      - '3'
+      Version:
+      - '3'
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:41 GMT
+      Etag:
+      - '"11072a7d52b540ccb34cc6e542e022fb"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35691'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '9'
+      X-Contentful-Request-Id:
+      - b39e82075c77e8be2a7c3c1943fe9de5
+      Content-Length:
+      - '1045'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=OTRMASC/qDMMvxS0nrkdC2WQI1sAAAAAgOJNUtkd00zEIeYV6shdkw==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=m1uAEabnmjoTgsAk6lKYhQAAAABoe6lHgJR8hTGQjutU5mjo; path=/; Domain=.contentful.com
+      - visid_incap_673446=wvibPGFaRSu6WRMF+dpbbGWQI1sAAAAAQUIPAAAAAAA5snFT+HFtfz6p3dQliUV+;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 4-10441862-10441864 NNNN CT(0 0 0) RT(1529057380700 25) q(0 0 0 -1) r(3 3)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "7L0EKRENpuOMccGUeQKKmO",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:37.790Z",
+            "updatedAt": "2018-06-15T10:09:41.395Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedCounter": 1,
+            "version": 4,
+            "firstPublishedAt": "2018-06-15T10:09:38.368Z",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "teamMember"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-GB": "Person"
+            },
+            "slug": {
+              "en-GB": "person"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:41 GMT
+- request:
+    method: delete
+    uri: https://api.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries/2gyR7bzmWE84WaGaSiaGkm/published
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful-management.rb/2.2.0; integration contentful_model/1.0.0; platform
+        ruby/2.5.0; os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_MANAGEMENT_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      X-Contentful-Version:
+      - '3'
+      Version:
+      - '3'
+      Connection:
+      - close
+      Host:
+      - api.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - DELETE,GET,HEAD,POST,PUT,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '1728000'
+      Cf-Space-Id:
+      - "<CONTENTFUL_SPACE_ID>"
+      Content-Type:
+      - application/vnd.contentful.management.v1+json
+      Date:
+      - Fri, 15 Jun 2018 10:09:41 GMT
+      Etag:
+      - '"a7e5a14dae624fe123e97baa39824ae3"'
+      Server:
+      - Contentful
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Ratelimit-Hour-Limit:
+      - '36000'
+      X-Contentful-Ratelimit-Hour-Remaining:
+      - '35690'
+      X-Contentful-Ratelimit-Reset:
+      - '0'
+      X-Contentful-Ratelimit-Second-Limit:
+      - '10'
+      X-Contentful-Ratelimit-Second-Remaining:
+      - '8'
+      X-Contentful-Request-Id:
+      - d5e079f3f23f7cfe90c597169a7d9fdd
+      Content-Length:
+      - '1410'
+      Connection:
+      - Close
+      Set-Cookie:
+      - incap_ses_801_673446=jfavDVqxX2ORvxS0nrkdC2WQI1sAAAAAuo3LClFHL6vdIPukrbdjGA==;
+        path=/; Domain=.contentful.com
+      - nlbi_673446=GFvPBlcHQhXz6Dq66lKYhQAAAADN3tI3N6SYkjXBVsDCEMHE; path=/; Domain=.contentful.com
+      - visid_incap_673446=SVuF4PXCT7GzmgB9URsIjWWQI1sAAAAAQUIPAAAAAAA+fqcRZw7EqsPE7fvO+tSd;
+        expires=Sat, 15 Jun 2019 07:58:04 GMT; path=/; Domain=.contentful.com
+      X-Iinfo:
+      - 14-33339274-33339283 NNNN CT(1 0 0) RT(1529057381029 24) q(0 0 0 -1) r(3 3)
+        U5
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "<CONTENTFUL_SPACE_ID>"
+              }
+            },
+            "id": "2gyR7bzmWE84WaGaSiaGkm",
+            "type": "Entry",
+            "createdAt": "2018-06-15T10:09:39.232Z",
+            "updatedAt": "2018-06-15T10:09:41.729Z",
+            "environment": {
+              "sys": {
+                "id": "<CONTENTFUL_ENVIRONMENT>",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "0YPGZGiUm0o1pdmXHCjf2S"
+              }
+            },
+            "publishedCounter": 1,
+            "version": 4,
+            "firstPublishedAt": "2018-06-15T10:09:39.887Z",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "blogPost"
+              }
+            }
+          },
+          "fields": {
+            "title": {
+              "en-GB": "example-blog-post"
+            },
+            "subheading": {
+              "en-GB": "subheading"
+            },
+            "author": {
+              "en-GB": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7L0EKRENpuOMccGUeQKKmO"
+                }
+              }
+            },
+            "date": {
+              "en-GB": "2018-06-15T00:00:00.000+00:00"
+            },
+            "slug": {
+              "en-GB": "example-blog-post"
+            },
+            "body": {
+              "en-GB": "Some Text"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 10:09:42 GMT
 recorded_with: VCR 4.0.0

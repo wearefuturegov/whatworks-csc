@@ -41,8 +41,9 @@ module CommentingSteps
   end
   
   step 'the comment is approved' do
-    comment = Comment.preview.find_by(name: @comment[:name]).load.last
+    comment = Comment.preview.all.load.last
     comment.publish
+    Rails.cache.clear
   end
   
   step 'my comment should show underneath the blog post' do

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/entries?content_type=job&fields.closingDate%5Bgte%5D=2018-06-08
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries?content_type=job&fields.closingDate%5Bgte%5D=2018-06-08
     body:
       encoding: US-ASCII
       string: ''
@@ -44,39 +44,39 @@ http_interactions:
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
       Etag:
-      - W/"f15b983ced15d76a0fe4277b26e5cdf1"
+      - W/"96a8acc4414f736c2c6f861a92d25ed4"
       Server:
       - Contentful
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - 010cc6f04ba28a58749b6c0003458f4a
+      - e063a91adfe9e4536ba3ddb6833b74b9
       Content-Length:
-      - '651'
+      - '649'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 12 Jun 2018 14:08:26 GMT
+      - Fri, 15 Jun 2018 10:18:55 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '154'
+      - '0'
       Connection:
       - close
       X-Served-By:
-      - cache-lcy19238-LCY
+      - cache-lcy19244-LCY
       X-Cache:
-      - HIT
+      - MISS
       X-Cache-Hits:
-      - '1'
+      - '0'
       X-Timer:
-      - S1528812507.900118,VS0,VE0
+      - S1529057935.240146,VS0,VE145
       Vary:
       - Accept-Encoding
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA5VUTU8bMRC98ytGe2qlBG2gFEpPFBCqhFTURqraqgdnPckO67Vd25uwQvz3ju18LKhSqA+Rxzsfb968yeMBQOF7X5zDI1/ZCL1FtooL50Rf8NvTKPoEE4Ti90myfEOWjTIZiloK8VOZbQrYxoS/UsKc9kWVVMlbUcVSG4/8OMASH9LjBtMt6aaINXeHq+tmusb8LWV84UAytnPqV/K+nDfmvqfY1eY8be+pz3yKHDM5vb344Jbzh+svrcebz1X1w7zzg/xbYNc6uH74oXIoAsqLyEtxVE7OxuX7cXk2nRydn5ycl0eHx+XZz2FAZ+X/BaBekjO6RR1r7Ocwt9QKH9C9pOi1/F4Pau7l0OGSPBm9Ec2a2srowJjXI9uP+7XYLgd5/6mAezPbP3hlKqGS/lGPbz5tArbaKOaESu7WJTZVBAo55s4Z3pPekl7Ad+MaH1gGLdyikDActlfdItawO//xaus/Vuz/zF0owfLigEvTWuRytBzKvOCRpo0r3kPLNNQQSXaiCrAitqzxnmYKAR+Y+jiTEVjhwjhQi9BZCAaOQYreg0UHK8QGhAeHfzpyKA+fYa+U8dzfFat1qO3jcohYoq8c2ZDHX0xr4nSGEaxIKYj9gdEgcYnKJLaElmwq7stFM9QIA3LifeFE2+JHCOjDLsLTQkdL0nyOjnUFwrKzqGr0sa20h+wwgk5LdD5woU10F/sAVqlEXeEhJJRxDBnljKmJMUE0qIF0okxzjpps5jWhzI+QhAOiC7VxPB+u/oYpjNvJHKAEMTNLfDtKnTluAcw83a8yB9ERpiyWUaLCdA6+okfhqhrucgkew3rn8n9W/P198HTwF+Z7b9LDBQAA
+        H4sIAAAAAAAAA5VUTU8bMRC98ytGe2qlBG2gFEpPFBCqhFTURqraqgdnPcma9dqu7U1YIf57Z+x8LKhSqA+Rxzsfb968yeMBQBH6UJzDI13JiL1DsooL70Vf0NvTiH2ijULT+yRZoVGOjDIZWrUq8qcy2ypiywl/pYQ57YsqqVJwouJSG4/8OMDCD+lxg+lWmabgmrtD1U0zXWP+ljK+cFCS2zkNK3lfzht73yvuanOetvfUZz5Fjpmc3l588Mv5w/WXNuDN56r6Yd+FQf4tsGsTfT/8UHkUEeUF81IclZOzcfl+XJ5NJ0fnJyfn5dHhcXn2cxjQOfl/AWiWylvTouEa+znMLUUM8SVBr2X3elBxL4MelyooazaSWRNbWRMJ8Xpg+1G/FtvlIO8/539vZ/vHrm0ldFI/mvHNp03AVhnFXKGWu2XhpoqoYo6585a2pHfKLOC79U2IJIIWblFIGI466G7BNdzOf7za+o81+T9zF1qQuCjg0rYOqZxaDkVeRPRp34r30BINNTDJXlQRVoosZ0NQM42AD0Q9z2QETvg4jqpF6BxEC8cgRR/AoYcVYgMigMc/nfIoD59hr7QN1N8VaXWo7ONyiFhiqLxyMY+/mNaK0llCsFJaA/cH1oDEJWqb2BJGkqmpL89mrBEG5PB94UXb4kdg/e4igloYtqSaz9GTrkA4chZVjYHbSltIDiPojEQfIhXaRHfcB5BKJZoKDyGh5DFklDOihmOiaNCAMokyQzlq5TKvCWV+hCQcEF2sraf5UPU3RCHvJnGAEsTMLvHtKHXmqQWw83S/yhywI0xJLKNEhe08fMWAwlc13OUSNIb1zuV/LP79ffB08BcI21+QwQUAAA==
     http_version: 
   recorded_at: Fri, 08 Jun 2018 00:00:00 GMT
 recorded_with: VCR 4.0.0
