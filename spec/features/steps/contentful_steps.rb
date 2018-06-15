@@ -3,13 +3,13 @@ module ContentfulSteps
   def create_team_member
     member = TeamMember.create(name: 'Person', slug: 'person')
     member.save && member.publish
-    member
+    TeamMember.find(member.id)
   end
   
   def create_blog_post(slug, author = create_team_member)
     post = BlogPost.create(title: slug, subheading: 'subheading', date: Date.today, slug: slug, body: 'Some Text', author: author)
     post.save && post.publish
-    post
+    BlogPost.find(post.id)
   end
   
   step 'there is a blog post with the title :title' do |title|
