@@ -3,6 +3,8 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
+require 'support/contentful_cleaner'
+
 require File.expand_path('../config/environment', __dir__)
 
 # Remove the ActiveRecord constant, because it is autloaded by
@@ -32,5 +34,21 @@ RSpec.configure do |config|
   
   config.after(:each, timecop: true) do
     Timecop.return
+  end
+  
+  config.after(contentful: true) do
+    ContentfulModel::Base::OBJECTS_TO_DELETE.reject! do |i|
+      if i.published?
+        i.unpublish
+      else
+        begin
+          i.destroy
+        rescue Contentful::Management::BadRequest
+          i.unpublish
+          i.destroy
+        end
+      end
+      true
+    end
   end
 end

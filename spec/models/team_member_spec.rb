@@ -1,10 +1,14 @@
 require 'rails_helper'
+require 'features/steps/contentful_steps'
 
 RSpec.describe TeamMember, type: :model, vcr: true do
-  let(:person) { TeamMember.all.load.first }
+  include ContentfulSteps
+
+  let(:person) { TeamMember.find(create_team_member.id) }
 
   it 'has blog posts' do
-    expect(person.blog_posts.count).to eq(2)
+    create_blog_post('some-blog-post', person)
+    expect(person.blog_posts.count).to eq(1)
     expect(person.blog_posts.first).to be_a(BlogPost)
   end
 end

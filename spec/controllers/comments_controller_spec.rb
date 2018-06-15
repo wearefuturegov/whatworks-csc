@@ -1,6 +1,8 @@
 require 'rails_helper'
+require 'features/steps/contentful_steps'
 
-RSpec.describe CommentsController, type: :controller, vcr: true do
+RSpec.describe CommentsController, type: :controller, vcr: true, contentful: true do
+  include ContentfulSteps
   
   let(:params) do
     {
@@ -13,7 +15,7 @@ RSpec.describe CommentsController, type: :controller, vcr: true do
       }
     }
   end
-  let(:blog_post) { BlogPost.find_by(slug: params[:blog_post_id]).load.first }
+  let(:blog_post) { create_blog_post(params[:blog_post_id]) }
   
   describe '#create' do
     let(:subject) { post :create, params: params }
@@ -29,7 +31,7 @@ RSpec.describe CommentsController, type: :controller, vcr: true do
       expect(comment.email).to eq(params[:comment][:email])
       expect(comment.organisation).to eq(params[:comment][:organisation])
       expect(comment.comment).to eq(params[:comment][:comment])
-      expect(comment.associated_record).to eq(blog_post)
+      expect(comment.associated_record.slug).to eq(blog_post.slug)
     end
     
   end
