@@ -37,7 +37,7 @@ RSpec.configure do |config|
   end
   
   config.after(contentful: true) do
-    ContentfulModel::Base::OBJECTS_TO_DELETE.reject! do |i|
+    Contentful::Cleaner.instance.objects_to_delete.reject! do |i|
       if i.published?
         i.unpublish
       else
