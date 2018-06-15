@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     # fields.
     if comment_params[:name].blank? || comment_params[:email].blank?
       flash[:notice] = 'Some required fields were missing'
+      @blog_post = @blog_post.decorate
       render 'blog_posts/show'
     else
       @comment = Comment.create(comment_params.to_h.symbolize_keys)
