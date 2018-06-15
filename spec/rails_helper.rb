@@ -38,15 +38,11 @@ RSpec.configure do |config|
   
   config.after(contentful: true) do
     Contentful::Cleaner.instance.objects_to_delete.reject! do |i|
-      if i.published?
+      begin
+        i.destroy
+      rescue Contentful::Management::BadRequest
         i.unpublish
-      else
-        begin
-          i.destroy
-        rescue Contentful::Management::BadRequest
-          i.unpublish
-          i.destroy
-        end
+        i.destroy
       end
       true
     end
