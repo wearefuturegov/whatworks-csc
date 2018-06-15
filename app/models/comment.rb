@@ -8,8 +8,4 @@ class Comment < ApplicationRecord
     CommentMailer.with(comment_id: comment.id).comment_alert.deliver_now
     comment
   end
-      
-  def send_email
-    CommentMailer.with(comment_id: id).comment_alert.deliver_now
-  end
 end
