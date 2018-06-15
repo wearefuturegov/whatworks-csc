@@ -1,0 +1,16 @@
+nav.nav {
+  line-height: $logo;
+  ul li {
+    display: inline;
+    margin-left: $gutter*0.5;
+    a {
+      color: $black;
+    }
+  }
+}
+
+footer.footer {
+  nav.nav {
+    line-height: $logo*0.75;
+  }
+}

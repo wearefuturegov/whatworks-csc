@@ -1,0 +1,14 @@
+$neat-grid: (
+  columns: 14,
+  gutter: $gutter,
+);
+
+body,
+header.header,
+footer.footer,
+section.section,
+section.collection,
+.hero  {
+  // @include grid-visual;
+  @include grid-container;
+}

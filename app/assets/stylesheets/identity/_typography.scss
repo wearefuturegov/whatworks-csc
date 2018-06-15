@@ -1,0 +1,30 @@
+body, p {
+  font-family: $stack;
+  color: $black;
+  font-size: $body;
+  font-weight: 400;
+  line-height: $baseline;
+}
+
+a, a:hover, a:active, a:visited {
+  color: $brand;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1;
+  line-height: calc(#{$h1} + #{$baseline*0.125});
+}
+
+h2 {
+  font-size: $h2;
+  line-height: calc(#{$h2} + #{$baseline*0.125});
+}
+
+h3 {
+  font-size: $h3;
+  line-height: calc(#{$h3} + #{$baseline*0.125});
+}

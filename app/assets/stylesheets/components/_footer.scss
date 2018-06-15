@@ -1,0 +1,14 @@
+footer.footer {
+  padding-top: $baseline*0.5;
+  padding-bottom: $baseline*0.5;
+  background: $black;
+  .logo {
+
+  }
+  nav.nav {
+    text-align: right;
+    ul li a {
+      color: $white;
+    }
+  }
+}

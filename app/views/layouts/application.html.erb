@@ -13,6 +13,8 @@
     <% flash.each do |key, value| %>
       <%= content_tag :div, value, class: "flash #{key}" %>
     <% end %>
+    <%= render template: "partials/header" %>
     <%= yield %>
+    <%= render template: "partials/footer" %>
   </body>
 </html>

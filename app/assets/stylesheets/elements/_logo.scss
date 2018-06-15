@@ -1,0 +1,19 @@
+.logo {
+  text-indent: -9999px;
+  h1 {
+    line-height: 0;
+  }
+  img {
+    @include borderbox;
+    height: $logo;
+    width: $logo;
+    border: $border-width $border-style $black;
+  }
+}
+
+footer.footer {
+  img {
+    height: $logo*0.75;
+    width: $logo*0.75;
+  }
+}
