@@ -37,7 +37,7 @@ module CommentingSteps
     expect(comment.email).to eq(@comment[:email])
     expect(comment.organisation).to eq(@comment[:organisation])
     expect(comment.comment).to eq(@comment[:comment])
-    expect(comment.associated_record).to eq(BlogPost.find_by(slug: @slug).load.first)
+    expect(comment.associated_record.slug).to eq(BlogPost.find_by(slug: @slug).load.last.slug)
   end
   
   step 'the comment is approved' do
