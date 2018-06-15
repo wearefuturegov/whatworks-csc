@@ -43,6 +43,8 @@ http_interactions:
       - gzip
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
+      Contentful-Api:
+      - cda_cached
       Etag:
       - W/"96a8acc4414f736c2c6f861a92d25ed4"
       Server:
@@ -50,13 +52,13 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Contentful-Request-Id:
-      - e063a91adfe9e4536ba3ddb6833b74b9
+      - 35414f4d453f742eb1e168b97c0d53c5
       Content-Length:
       - '649'
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 15 Jun 2018 10:18:55 GMT
+      - Fri, 15 Jun 2018 13:09:11 GMT
       Via:
       - 1.1 varnish
       Age:
@@ -64,13 +66,13 @@ http_interactions:
       Connection:
       - close
       X-Served-By:
-      - cache-lcy19244-LCY
+      - cache-lcy19243-LCY
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1529057935.240146,VS0,VE145
+      - S1529068152.839561,VS0,VE132
       Vary:
       - Accept-Encoding
     body:
