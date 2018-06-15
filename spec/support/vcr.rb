@@ -8,6 +8,9 @@ VCR.configure do |c|
   c.ignore_localhost = true
   c.cassette_library_dir = 'spec/fixtures/cassettes'
   c.configure_rspec_metadata!
+  c.default_cassette_options = {
+    record: ENV['VCR_RECORD'] ? :all : :none
+  }
   filter_vars.each do |key, value|
     c.filter_sensitive_data("<#{key}>") { value }
   end
