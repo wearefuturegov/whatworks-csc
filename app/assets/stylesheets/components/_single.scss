@@ -1,0 +1,6 @@
+section.collection.border {
+  .single {
+    border-bottom: $border-style $border-width $black;
+    padding-bottom: $baseline*2;
+  }
+}

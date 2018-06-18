@@ -1,12 +1,12 @@
 .impact {
-  background: $brand;
   padding-top: $baseline*3;
   padding-bottom: $baseline*3;
   h2 {
 
   }
   p {
-    font-size: $p * 1.75;
+    color: $brand;
+    font-size: $p * 2;
     font-weight: 300;
   }
 }

@@ -1,4 +1,5 @@
 footer.footer {
+  margin-top: $baseline*4;
   .logo {
     @include grid-column(2);
     @include grid-push(1);

@@ -4,11 +4,9 @@ $neat-grid: (
 );
 
 body,
-header.header,
-footer.footer,
-section.section,
-section.collection,
-.hero  {
+header,
+footer,
+section  {
   // @include grid-visual;
   @include grid-container;
 }

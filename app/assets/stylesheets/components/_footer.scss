@@ -1,7 +1,10 @@
 footer.footer {
-  padding-top: $baseline*0.5;
   padding-bottom: $baseline*0.5;
   background: $black;
+  .top {
+    background: $brand;
+    height: $baseline;
+  }
   .logo {
 
   }

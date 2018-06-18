@@ -1,9 +1,15 @@
 .hero {
-  h1 {
-    @include grid-column(6);
-    @include grid-push(1);
-  }
-  p {
-    @include grid-column(6);
+  section.section {
+    h1 {
+      @include grid-column(6);
+      @include grid-push(1);
+    }
+    p {
+      @include grid-column(12);
+      @include grid-push(1);
+    }
+    .button {
+      @include grid-push(1);
+    }
   }
 }

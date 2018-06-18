@@ -1,4 +1,15 @@
-section.section {
-  margin-top: $baseline*2;
-  margin-bottom: $baseline*2;
+section.bar {
+  padding-top: $baseline;
+  padding-bottom: $baseline;
+  border: $border-style $border-width $black;
+  h2, p {
+    font-weight: 700;
+  }
+}
+
+section.title.border {
+  // h2 {
+  //   border-top: $border-style $border-width $black;
+  //   padding-top: $baseline;
+  // }
 }

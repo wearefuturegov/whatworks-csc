@@ -10,8 +10,13 @@ a, a:hover, a:active, a:visited {
   color: $brand;
 }
 
-h1, h2 {
+p {
+  margin-bottom: $baseline*0.5;
+}
+
+h1, h2, h3 {
   font-weight: 700;
+  margin-bottom: $baseline*0.25;
 }
 
 h1 {
