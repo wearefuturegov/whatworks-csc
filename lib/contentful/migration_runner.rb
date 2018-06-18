@@ -12,7 +12,7 @@ module Contentful
     end
     
     def require_all
-      Dir["#{dirname}/*.rb"].each do |file|
+      Dir["#{dirname}/*.rb"].sort.each do |file|
         klass = extract_classname(file)
         require file
         Object.const_get(klass).new.up
