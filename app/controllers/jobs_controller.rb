@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   include ContentfulController
-  index_query -> { { 'fields.closingDate[gte]' => Date.today } }
+  index_query -> { { 'fields.closing_date[gte]' => Date.today } }
 
   def show; end
   

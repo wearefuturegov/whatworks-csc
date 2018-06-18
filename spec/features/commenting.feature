@@ -9,11 +9,7 @@ Feature: Commenting
     Given I access the blog post 'example-blog-post'
     And I leave a comment
     Then the comment should be stored as a draft
-    
-  Scenario: Email is recieved
-    Given I access the blog post 'example-blog-post'
-    And I leave a comment
-    Then the contact email address should recieve a comment alert
+    And the contact email address should recieve a comment alert
       
   Scenario: Missing required field
     Given I access the blog post 'example-blog-post'
@@ -21,9 +17,8 @@ Feature: Commenting
     And I leave a comment
     Then the comment should not be stored
     And I should see an error message
-
-  Scenario: Comments show on blog post
-    Given I access the blog post 'example-blog-post'
-    And I leave a comment
+  
+  Scenario: Comments are published under a blog post
+    Given I have commented on the blog post 'my-amazing-blog-post'
     And the comment is approved
     Then my comment should show underneath the blog post

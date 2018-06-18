@@ -9,6 +9,18 @@ module CommentingSteps
     }
   end
   
+  step 'I have commented on the blog post :slug' do |slug|
+    @slug = slug
+    blog_post = create_blog_post(slug)
+    Comment.create(
+      name: 'Batman',
+      email: 'foo@example.com',
+      organisation: 'Some Org',
+      comment: 'Comment goes here',
+      associated_record: blog_post
+    )
+  end
+  
   step 'I leave my email blank' do
     @comment[:name] = 'Batman Blank Email'
     @comment[:email] = nil

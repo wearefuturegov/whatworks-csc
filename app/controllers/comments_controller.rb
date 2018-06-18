@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   helper ContentfulRails::MarkdownHelper
 
-  def create
+  def create # rubocop:disable Metrics/AbcSize
     # We can't do normal Rails-y validation here because Contentful has to send
     # content to the server first, and also allows us to save drafts with missing
     # fields.
@@ -10,7 +10,8 @@ class CommentsController < ApplicationController
       @blog_post = @blog_post.decorate
       render 'blog_posts/show'
     else
-      @comment = Comment.create(comment_params.to_h.symbolize_keys)
+      comment = Comment.create(comment_params.to_h.symbolize_keys)
+      CommentMailer.with(comment_id: comment.id).comment_alert.deliver_now
       redirect_to blog_post_path(params[:blog_post_id]), notice: 'Your comment has been submitted!'
     end
   end

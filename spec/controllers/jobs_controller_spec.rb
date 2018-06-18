@@ -13,7 +13,7 @@ RSpec.describe JobsController, type: :controller, vcr: true do
     it 'only gets current jobs' do
       get :index
       expect(WebMock).to have_requested(:get, "https://cdn.contentful.com/spaces/#{ENV['CONTENTFUL_SPACE_ID']}/environments/#{ENV['CONTENTFUL_ENVIRONMENT']}/entries")
-        .with(query: { 'fields.closingDate[gte]' => Date.today.to_s, content_type: 'job' }).once
+        .with(query: { 'fields.closing_date[gte]' => Date.today.to_s, content_type: 'job' }).once
     end
     
   end
