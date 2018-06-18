@@ -11,3 +11,9 @@ Bundler/OrderedGems:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*_spec.rb'
+Layout/IndentHeredoc:
+  Exclude:
+    - 'lib/contentful/migration_generator.rb'
+Metrics/MethodLength:
+  Exclude:
+    - 'db/contentful/*.rb'
