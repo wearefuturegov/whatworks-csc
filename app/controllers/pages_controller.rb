@@ -11,13 +11,13 @@ class PagesController < ApplicationController
   end
   
   def load_subpage
-    @parent_page = Page.find_by(slug: params[:page_id]).load.first
+    @parent_page = Page.load_children(10).find_by(slug: params[:page_id]).load.first
     content = @parent_page.sub_pages.find { |p| p.slug == params[:id] }
     @page = content.decorate
   end
   
   def load_page
-    content = Page.find_by(slug: params[:id]).load.first
+    content = Page.load_children(10).find_by(slug: params[:id]).load.first
     @page = content.decorate
   end
 end
