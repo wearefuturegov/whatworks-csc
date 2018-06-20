@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   get 'comments/:id/publish', to: 'comments#publish'
   
   post :expire_cache, to: 'application#expire_cache'
+  
+  resources :pages, path: '/', only: :show do
+    resources :pages, only: :show
+  end
 end
