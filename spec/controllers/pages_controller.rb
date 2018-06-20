@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller, vcr: true, contenful: true do
-
   describe '#show' do
     let(:page) { Page.create(title: 'Some page', slug: 'some-page', content: 'Blah', sub_pages: sub_pages).publish }
     let(:slug) { page.slug }
