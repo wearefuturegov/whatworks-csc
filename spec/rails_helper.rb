@@ -43,6 +43,9 @@ RSpec.configure do |config|
       rescue Contentful::Management::BadRequest
         i.unpublish
         i.destroy
+      rescue VCR::Errors::UnhandledHTTPRequestError
+        # We don't care about VCR here
+        nil
       end
       true
     end
