@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   post :expire_cache, to: 'application#expire_cache'
   
   resources :pages, path: '/', only: :show do
-    resources :pages, only: :show
+    resources :pages, path: '/', only: :show
   end
 end
