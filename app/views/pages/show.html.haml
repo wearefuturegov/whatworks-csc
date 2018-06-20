@@ -1,3 +1,11 @@
 %h1= @page.title
 
 = parse_markdown(@page.content)
+
+- if @page.sub_pages.count > 0
+  
+  %h3 In this section
+  
+  %ul
+    - @page.sub_pages.each do |p|
+      %li= link_to p.title, page_page_path(@page.slug, p.slug)
