@@ -1,7 +1,7 @@
-%h1= @person.name
+%h1= @team_member.name
 
-%h2= @person.role
+%h2= @team_member.role
 
-= @person.decorate_image
+= @team_member.decorate_image
 
-= parse_markdown(@person.bio)
+= parse_markdown(@team_member.bio)
