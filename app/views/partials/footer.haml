@@ -1,8 +1,20 @@
-%footer.footer
+%footer.footer.container
   %section.top
   %section.section
-    .logo
-      %h1
-        What Works Centre
-      = image_tag('logo.svg')
-    = render template: "partials/nav"
+    = render template: "partials/footer_nav"
+    .contact_details
+      %h4 Contact us
+      %p=mail_to "wwccsc@nesta.org.uk"
+      %p
+        For Press enquiries
+        =mail_to "media@scie.org.uk"
+      %p Sign-up for our updates
+
+      %p Follow us on twitter link
+
+    .terms
+      %ul
+        %li Terms and conditions
+        %li Privacy
+
+      %p &copy; Nesta, 2018
