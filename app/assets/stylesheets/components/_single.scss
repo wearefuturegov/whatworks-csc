@@ -1,5 +1,5 @@
 section.collection.border {
-  .single {
+  .single:not(.title) {
     border-bottom: $border-style $border-width $black;
     padding-bottom: $baseline*2;
   }

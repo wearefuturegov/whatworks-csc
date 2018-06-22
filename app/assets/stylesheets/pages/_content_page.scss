@@ -1,0 +1,12 @@
+.content_page {
+  h1 {
+    margin-bottom: $baseline;
+    @include grid-column(12);
+  }
+
+}
+
+.indented {
+  @include grid-column(11);
+  @include grid-push(1);
+}

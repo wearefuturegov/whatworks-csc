@@ -1,10 +1,14 @@
 footer.footer {
   margin-top: $baseline*4;
-  .logo {
-    @include grid-column(2);
-    @include grid-push(1);
+  padding: 0;
+
+  nav.footer_nav {
+    @include grid-column(6);
   }
-  nav.nav {
-    @include grid-column(10);
+  .contact_details {
+    @include grid-column(6);
+  }
+  .terms {
+    @include grid-column(12);
   }
 }

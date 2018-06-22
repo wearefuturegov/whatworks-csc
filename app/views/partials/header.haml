@@ -1,6 +1,5 @@
-%header.header
-  .logo
-    %h1
-      What Works Centre
-    = image_tag('logo.svg')
+%header.header.container
+  =link_to root_path do
+    .logo
+      = image_tag('logo.svg')
   = render template: "partials/nav"

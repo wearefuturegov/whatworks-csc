@@ -1,66 +1,86 @@
-.hero
-  %section.section
+.container
+  %section.section.tagline
     %h1
-      = link_to "Better"
-      outcomes for children and their families.
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  %section.cta
-    = link_to "Keep updated about our development", "link", class: 'button'
-%section.bar
-  %h2
-    The new centre will
-  %p
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-%section.impact
-  %h2
-    Improving how we support them can impact on the rest of their lives.
-  %p
-    700,000 children and young people, along with their families have contact with the children’s social care sector every year in England.
-%section.title
-  %h2
-    How we are setting up the new centre
-%section.collection
-  .single
-    %h3
-      Evidence and Research
-    %p
-      Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-    = link_to "Learn about our evidence", "link"
-  .single
-    %h3
-      Co-designing services
-    %p
-      Working with local authorities and partners to co-design and test ways to generate, share and embed evidence.
-    = link_to "Learn about our services", "link"
-  .single
-    %h3
-      Working with you
-    %p
-      Developing our strategy, services and team with children, young people, families, social workers,
-    = link_to "Learn how we work with you", "link"
-%section.title.border
-  %h2
-    What's new
-%section.collection.border
-  .single
-    %h3
-      Evidence and Research
-    %p
-      Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-    = link_to "Keep updated about our development", "link"
-  .single
-    %h3
-      Evidence and Research
-    %p
-      Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-    = link_to "Keep updated about our development", "link"
-  .single
-    %h3
-      Evidence and Research
-    %p
-      Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-    = link_to "Keep updated about our development", "link"
-%section.title
-  %h2
-    Who's involved
+      Better outcomes for children and their families.
+    %h2
+      The new What Works Centre for Children’s Social Care will help leaders and practitioners to make evidence-informed decisions about how they plan and deliver support to children, young people and families.
+
+  %section.section.homepage_link
+    .dash
+    .about_link
+      %h3 We will help to generate, share and increase the use of reliable evidence across the public, private and voluntary sectors.
+    .link
+      =link_to "Sign up for news, findings and opportunities to shape the Centre"
+
+  %section.collection
+    .single.title
+      %h2
+        How we are setting up the new centre
+    .single
+      %h3
+        Evidence and Research
+      %p
+        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
+      = link_to "Learn about our evidence", "link"
+    .single
+      %h3
+        Co-designing services
+      %p
+        Working with local authorities and partners to co-design and test ways to generate, share and embed evidence.
+      = link_to "Learn about our services", "link"
+    .single
+      %h3
+        Working with you
+      %p
+        Developing our strategy, services and team with children, young people, families, social workers,
+      = link_to "Learn how we work with you", "link"
+
+  %section.collection.border
+    .single.title
+      %h2
+        What's new
+    .single
+      %h3
+        Evidence and Research
+      %p
+        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
+      = link_to "Keep updated about our development", "link"
+    .single
+      %h3
+        Evidence and Research
+      %p
+        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
+      = link_to "Keep updated about our development", "link"
+    .single
+      %h3
+        Evidence and Research
+      %p
+        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
+      = link_to "Keep updated about our development", "link"
+
+  %section.section.impact
+    %h2
+      The decisions that social care leaders and practitioners make can impact on children, young people and their families throughout their lives.
+    %h2
+      Basing those decisions on reliable evidence about what works is critical.
+
+  %section.sign_up.color_block
+    %h3 Sign up to keep updated
+    %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
+    .button Sign up now
+
+  %section.twitter.color_block
+    =fa_icon "twitter"
+    most recent tweet goes here
+
+  %section.section
+    %h2 Who's involved
+    .inner_container.involved_logos
+      .development
+        %h4 Development team
+      .research
+        %h4 Research partner
+      .funders
+        %h4 Funders
+      .network
+        %h4 Network

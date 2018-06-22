@@ -1,66 +1,57 @@
 section.section {
   margin-top: $baseline;
   margin-bottom: $baseline;
-  h2 {
-    @include grid-column(4);
-    @include grid-push(1);
-  }
-  p {
-    @include grid-column(6);
-    @include grid-push(2);
-  }
+  @include grid-column(12);
 }
 
 section.bar {
   margin-top: $baseline;
   margin-bottom: $baseline;
-  h2 {
-    @include grid-column(4);
-    @include grid-push(1);
-  }
-  p {
-    @include grid-column(6);
-    @include grid-push(2);
-  }
+
 }
 
 section.impact {
   margin-top: $baseline;
   margin-bottom: $baseline;
-  h2 {
-    @include grid-column(12);
-    @include grid-push(1);
-  }
-  p {
-    @include grid-column(12);
-    @include grid-push(1);
-  }
+
 }
 
 section.title {
   margin-top: $baseline;
   margin-bottom: $baseline;
-  h2 {
-    @include grid-column(12);
-    @include grid-push(1);
-  }
+
 }
 
 section.collection {
   margin-top: $baseline;
   margin-bottom: $baseline*4;
   .single {
-    @include grid-column(4);
-    &:first-child {
-      @include grid-push(1);
-    }
+    @include grid-column(3);
   }
 }
 
 section.cta {
   margin-top: $baseline;
   margin-bottom: $baseline;
-  .button {
-    @include grid-push(1);
+}
+
+section.sign_up {
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  @include grid-column(8);
+}
+
+section.twitter {
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  @include grid-column(4);
+}
+
+.involved_logos {
+  .development {
+    @include grid-column(6);
+  }
+  .research, .funders, .network {
+    @include grid-column(2);
   }
 }
