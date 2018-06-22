@@ -1,7 +1,6 @@
 header.header {
   .logo {
     @include grid-column(2);
-    @include grid-push(1);
   }
   nav.nav {
     @include grid-column(10);
