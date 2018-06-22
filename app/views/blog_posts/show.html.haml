@@ -1,15 +1,18 @@
-= @blog_post.decorate_title
-= @blog_post.decorate_subheading
-= @blog_post.decorate_date
-= @blog_post.decorate_author
-= @blog_post.decorate_body
+.container.content_page.single_blog
+  = @blog_post.decorate_title
+  = @blog_post.decorate_date
+  = @blog_post.decorate_author
+  .indented
 
-%h4 Leave a Comment
+    = @blog_post.decorate_subheading
+    = @blog_post.decorate_body
 
-= render 'comments/form'
+    %h4 Leave a Comment
 
-- if @blog_post.comments.count > 0
-  %h4 Comments
-  
-  = render partial: 'comments/comment', collection: CommentsDecorator.decorate_collection(@blog_post.comments), as: :comment
-  
+    = render 'comments/form'
+
+    - if @blog_post.comments.count > 0
+      %h4 Comments
+
+      = render partial: 'comments/comment', collection: CommentsDecorator.decorate_collection(@blog_post.comments), as: :comment
+

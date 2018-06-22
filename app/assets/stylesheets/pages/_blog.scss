@@ -1,0 +1,9 @@
+.blog_list {
+  li {
+    @include grid-column(4);
+
+    &:first-child {
+      @include grid-column(8);
+    }
+  }
+}

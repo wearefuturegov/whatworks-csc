@@ -1,5 +1,10 @@
-%h1 Blog
+.container.content_page.blog
 
-%ul
-  - @blog_posts.each do |b|
-    %li= link_to b.title, blog_post_path(id: b.slug)
+  %h1 Blog
+
+  %ul.blog_list
+    - @blog_posts.each_with_index do |b, i|
+      %li
+        -if i == 0
+          .featured Featured
+        =link_to b.title, blog_post_path(id: b.slug)
