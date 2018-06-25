@@ -1,8 +1,22 @@
 header.header {
   .logo {
     @include grid-column(2);
+    @include mobile {
+      @include grid-column(12);
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      img {
+        margin: 0 auto;
+      }
+    }
   }
   nav.nav {
     @include grid-column(10);
+    @include mobile {
+      @include grid-column(12);
+      text-align: center !important;
+      line-height: 40px;
+    }
   }
 }
