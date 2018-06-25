@@ -21,3 +21,8 @@ $border-width: 4px;
 $border-style: solid;
 
 $base-border-radius: 0;
+
+$no_gutter_grid: (
+  columns: 12,
+  gutter: 0px,
+);
