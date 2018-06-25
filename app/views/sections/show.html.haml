@@ -1,0 +1,14 @@
+.container.content_page
+
+  %h1= @section.title
+
+  .indented
+    = parse_markdown(@page.content)
+
+    - if @pages.count > 0
+
+      %h3 In this section
+
+      %ul
+        - @pages.each do |p|
+          %li= link_to p.title, section_page_path(@section.slug, p.slug)
