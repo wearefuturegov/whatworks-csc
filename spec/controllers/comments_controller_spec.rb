@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'features/steps/contentful_steps'
 
-RSpec.describe CommentsController, type: :controller, vcr: true, contentful: true do
+RSpec.describe CommentsController, type: :controller, vcr: true, contentful: true, preview: true do
   include ContentfulSteps
   
   let(:params) do

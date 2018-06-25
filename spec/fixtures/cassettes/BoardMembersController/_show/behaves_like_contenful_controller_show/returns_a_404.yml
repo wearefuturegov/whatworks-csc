@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/content_types?limit=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful.rb/2.8.0; integration contentful_model/1.0.0; platform ruby/2.5.0;
+        os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Accept-Encoding:
+      - gzip
+      Connection:
+      - close
+      Host:
+      - cdn.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Contentful-Api:
+      - cda_cached
+      Etag:
+      - W/"cd12920fbb57ce7aae05d9a4b6a6ffd5"
+      Server:
+      - Contentful
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Request-Id:
+      - bb23a9eff61c4cd174d1e528812cb436
+      Content-Length:
+      - '995'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 25 Jun 2018 13:27:48 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '81'
+      Connection:
+      - close
+      X-Served-By:
+      - cache-lcy19243-LCY
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1529933269.593583,VS0,VE0
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+1aS1PbMBC+8ysyPheP5Zjg+BYoPfXBQE7tMB3ZFkHEtlxJoU07/PdK8iOWH5CGQONMfEmk1WtX0vdJu/pzNBgYbMkMb/BH/BUJvkyRSBkTSuHSEHmP72QZTjiMRP5IpdgcpyJhqUSEY8xFClhWloE5imWL31SLWbu1blRXLIWB7KsokWVWBiMzVGYxqI84mRuy09Unuk/m03zQ16rFWgEcSn1O2c/w3rqdk/sllmoV32P5XymafUZWxyeQhp9Q7CNaabQczTlJOEq46rxSN6AIchROpE0M2wLusTU6Bu4UAM8ae45lurb7tVphkYZdFYDlDR3THltaBZQ8YEqSWHS+lvkybThivG6bdQ17UenxWeNR9IAZJokYm50XLm1rhJilEVx+wChS85LAeGW9LCVyz6TlBzXTGyFiAcUpz9pOFlFUmN24le2tFp2cRm1ZZSbQOpNlyg4/V4ehJIVprpexTyLNcEZEAhjh30hqcAsjhqpLzqDoxwLTDqHQH/pRh5CInSSWTtFq29Js0YpFi5k+PqWnMON1Q/L6WnG60M2xmVKURPpOLqfqqiF5faWak7yZVukd4aR9ri6bos7d+VYLUFvWVaCdMIb4CkYr0NmyPn3cofJZXVAoPEW/dKh6K4VXOy7/d6N+c/16TGUpnGkkVVj6XzjMtqZg6Nm2B8am6+qU1Mph9okiPVHBMcfA7imHuc9yGMe8AlYlUF1Wbf5y8tJ70dhrqg3gQF8vIOUt0VeQnQ3boT7fdLpwh7BvBfstaM5QoA5gGjeUB4424e7S2EXCqbrkZF9xF9gX0G9O1UZ3lxzGgecMzZGlw3gn7g8F6HtgZLrOqKe472yK+9e1TXCAfrW92rCkcT/5nzeXbR3ye439e3bu9SMyuySa42MjDJT+G8tzhP/m1HSADmmtGJhVOBF1HHMIQE8x8Hn/TcfZ90zYfaAZ/oCC/UDBLR2A2cK/QzDESZdrqkPeH18OXPA7UnUMV9yJkxZZf47BT57/pa+6/fDflBQqv2/U2S0Pqk/CZbtOTckO3dP2jKsDEquQRiWWsombKgu1gLFnn5rgZLxuqMW2hGvLtBxnb6m6bt/SUXVeM/zLqXo/Ay0ohrgWCSruKxdNUX+YjNAZTERcqtuv86WzRH+0rC9/5SYt5q++BZRwh6D+SUqGjJEAyxjyd4oCQsN2LhNBm7zY4KqlWH/OJ3vGexzBeHuvDLJb6si0wBoRmvyWKoI0IkIz1J8l7P8rg6kw/OGRgbqWiu/pIO7hkUHxxmjn34McHhlI8i6YvT+PDASt3Rw9Hv0FXljX5ZQnAAA=
+    http_version: 
+  recorded_at: Mon, 25 Jun 2018 13:27:48 GMT
+- request:
+    method: get
+    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/<CONTENTFUL_ENVIRONMENT>/entries?content_type=boardMember&fields.slug=i-dont-exist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful.rb/2.8.0; integration contentful_model/1.0.0; platform ruby/2.5.0;
+        os macOS/17;
+      Authorization:
+      - Bearer <CONTENTFUL_API_KEY>
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Accept-Encoding:
+      - gzip
+      Connection:
+      - close
+      Host:
+      - cdn.contentful.com
+      User-Agent:
+      - http.rb/2.2.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Contentful-Api:
+      - cda_cached
+      Etag:
+      - '"29f2c21be26360c424f617d8592cf6f9"'
+      Server:
+      - Contentful
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Request-Id:
+      - b09da056b7de0e9943c0238ef3b05a2b
+      Content-Length:
+      - '97'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 25 Jun 2018 13:27:48 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - close
+      X-Served-By:
+      - cache-lcy19230-LCY
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1529933269.656843,VS0,VE132
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "sys": {
+            "type": "Array"
+          },
+          "total": 0,
+          "skip": 0,
+          "limit": 100,
+          "items": []
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jun 2018 13:27:48 GMT
+recorded_with: VCR 4.0.0

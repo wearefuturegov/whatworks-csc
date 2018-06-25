@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PagesController, type: :controller, vcr: true, contenful: true do
+RSpec.describe PagesController, type: :controller, vcr: true, contentful: true, cache: true do
   describe '#show' do
     let(:section) { Section.create(title: 'Some section', slug: 'some-section', content: 'Blah').publish }
     let(:page) { Page.create(title: 'Some page', slug: 'some-page', content: 'Blah', section: Section.find(section.id)).publish }
