@@ -1,0 +1,46 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "7swdj0fkojyi"
+          }
+        },
+        "id": "3RL2cqs7GgE4wOSYKqmc0w",
+        "type": "Entry",
+        "createdAt": "2018-06-04T14:47:57.202Z",
+        "updatedAt": "2018-06-08T11:29:12.022Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Some Section",
+        "slug": "some-section",
+        "content": "Section Content Here"
+      }
+    }
+  ]
+}

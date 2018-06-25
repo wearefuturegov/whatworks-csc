@@ -1,0 +1,2 @@
+class SectionDecorator < PersonDecorator
+end
