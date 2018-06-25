@@ -3,7 +3,7 @@
   %h1= @section.title
 
   .indented
-    = parse_markdown(@page.content)
+    = parse_markdown(@section.content)
 
     - if @pages.count > 0
 
