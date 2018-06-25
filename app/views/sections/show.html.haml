@@ -7,8 +7,11 @@
 
     - if @pages.count > 0
 
-      %h3 In this section
-
-      %ul
+      .sub_pages
         - @pages.each do |p|
-          %li= link_to p.title, section_page_path(@section.slug, p.slug)
+          .single_sub_page
+            .half
+              %h2=p.title
+              %p Summary would go here
+            .half
+              = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'
