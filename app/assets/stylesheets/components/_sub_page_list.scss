@@ -2,12 +2,12 @@
   margin-top: 75px;
 
   .single_sub_page {
-    border-top: 2px solid $black;
+    border-top: $border-width solid $black;
     margin-top: 45px;
     margin-bottom: 45px;
     padding-top: 45px;
     &:last-child {
-      border-bottom: 2px solid $black;
+      border-bottom: $border-width solid $black;
       padding-bottom: 45px;
     }
     .title_container {

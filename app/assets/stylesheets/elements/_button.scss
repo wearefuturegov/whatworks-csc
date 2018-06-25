@@ -1,6 +1,26 @@
 .button {
   border: $border-style $border-width $black;
-  background: $black;
+  background: transparent;
   text-align: center;
   padding: $baseline*0.5 $baseline;
+  color: $black;
+  position: relative;
+
+  &:focus {
+    outline: $brand $border-width/2 solid;
+  }
+
+  &:hover {
+    background: $black;
+  }
+
+  &:active {
+    top: $border-width;
+    border-bottom: none;
+    background: $black;
+  }
+
+  a.button {
+    color: $black;
+  }
 }
