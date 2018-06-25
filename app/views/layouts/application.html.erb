@@ -13,7 +13,7 @@
     <%= render template: "partials/header" %>
     <% flash.each do |name, msg| %>
       <% next unless msg.is_a?(String) && msg.present? %>
-      <div id="alerts">
+      <%= content_tag :div, :class => "flash_#{name}", :id => "alerts" do %>
         <div class="container">
           <div class="full_width">
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
     <%= yield %>
     <%= render template: "partials/footer" %>
