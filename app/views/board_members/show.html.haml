@@ -1,7 +1,11 @@
-%h1= @person.name
+.container.board_member
+  .single_person.full_width
+    .person_details
+      = @team_member.decorate_image
 
-%h2= @person.role
+      %h1= @team_member.name
 
-= @person.decorate_image
+      %h4= @team_member.role
 
-= parse_markdown(@person.bio)
+    .person_bio
+      = parse_markdown(@team_member.bio)

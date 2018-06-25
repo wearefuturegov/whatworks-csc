@@ -1,0 +1,21 @@
+.single_person {
+  .person_details {
+    margin-bottom: 30px;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 150px;
+      height: auto;
+      border: $border-style $border-width $black;
+    }
+    .text {
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 25px;
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
