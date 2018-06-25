@@ -15,6 +15,7 @@ module ContentfulController
   def load_content
     check_preview
     content = class_name.find_by(slug: params[:id]).load.first
+    raise(ActionController::RoutingError, 'Not Found') if content.nil?
     instance_variable_set("@#{controller_name.singularize}", content.decorate)
   end
   

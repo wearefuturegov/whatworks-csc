@@ -9,6 +9,10 @@ RSpec.shared_examples 'contenful controller #show' do |controller_name, class_na
     expect(assigns(:"#{controller_name}")).to be_a(class_name)
   end
   
+  it 'returns a 404' do
+    expect { get :show, params: { id: 'i-dont-exist' } }.to raise_error(ActionController::RoutingError)
+  end
+  
 end
 
 RSpec.shared_examples 'contenful controller #index' do |controller_name, class_name|
