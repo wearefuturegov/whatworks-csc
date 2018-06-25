@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   resources :sections, path: '/', only: :show do
     resources :pages, path: '/', only: :show
   end
+  
+  get 'about-us/who-we-are', to: 'who_we_are#show'
 end
