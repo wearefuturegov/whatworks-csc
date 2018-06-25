@@ -1,12 +1,15 @@
 .sub_pages {
-  margin-top: 50px;
+  margin-top: 75px;
 
   .single_sub_page {
     border-top: 2px solid $black;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 25px 0;
-
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding-top: 45px;
+    &:last-child {
+      border-bottom: 2px solid $black;
+      padding-bottom: 45px;
+    }
     .title_container {
       @include grid-column(8, $no_gutter_grid);
       @include mobile {

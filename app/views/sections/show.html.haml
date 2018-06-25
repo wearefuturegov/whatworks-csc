@@ -12,6 +12,6 @@
             .single_sub_page.inner_container
               .title_container
                 %h2=p.title
-                %p Summary would go here
+                .summary Summary would go here
               .button_container
                 = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'
