@@ -2,6 +2,10 @@
   h1 {
     margin-bottom: $baseline;
     @include grid-column(12);
+
+    @include mobile {
+      @include grid-column(12);
+    }
   }
 
 }
@@ -9,4 +13,9 @@
 .indented {
   @include grid-column(11);
   @include grid-push(1);
+
+  @include mobile {
+    @include grid-column(12);
+    @include grid-push(0);
+  }
 }
