@@ -4,9 +4,15 @@ footer.footer {
 
   nav.footer_nav {
     @include grid-column(6);
+    @include mobile {
+      @include grid-column(12);
+    }
   }
   .contact_details {
     @include grid-column(6);
+    @include mobile {
+      @include grid-column(12);
+    }
   }
   .terms {
     @include grid-column(12);
