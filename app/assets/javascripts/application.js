@@ -15,4 +15,5 @@
 //= require activestorage
 //= require turbolinks
 //= require geff/alerts
+//= require geff/accordion
 //= require public
