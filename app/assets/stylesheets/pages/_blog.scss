@@ -13,7 +13,17 @@
   h1 {
     margin-bottom: 0 !important;
   }
-  .author, .date {
-    @include grid-column(12);
+  .blog_details {
+    margin: 25px 0;
+    color: $gray;
+    font-weight: 300;
+    .date, .author {
+      display: inline;
+    }
+  }
+
+  .blog_container {
+    padding-bottom: 25px;
+    border-bottom: $border-style $border-width $black;
   }
 }

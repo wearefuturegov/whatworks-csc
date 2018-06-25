@@ -12,7 +12,7 @@
 
   .comments.full_width
     - if @blog_post.comments.count > 0
-      %h4=pluralize(@blog_post.comments.count, 'comment')
+      %h3="#{pluralize(@blog_post.comments.count, 'comment')}:"
 
       = render partial: 'comments/comment', collection: CommentsDecorator.decorate_collection(@blog_post.comments), as: :comment
 
