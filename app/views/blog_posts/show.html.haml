@@ -1,18 +1,27 @@
-.container.content_page.single_blog
-  = @blog_post.decorate_title
-  = @blog_post.decorate_date
-  = @blog_post.decorate_author
-  .indented
+.container.single_blog
+  .blog_container.full_width
+    = @blog_post.decorate_title
+    .blog_details
+      %h3
+        = @blog_post.decorate_date
+        = @blog_post.decorate_author
+    .blog_sub_heading
+      %h4= @blog_post.decorate_subheading
+    .blog_content
+      = @blog_post.decorate_body
 
-    = @blog_post.decorate_subheading
-    = @blog_post.decorate_body
-
-    %h4 Leave a Comment
-
-    = render 'comments/form'
-
+  .comments.full_width
     - if @blog_post.comments.count > 0
-      %h4 Comments
+      %h3="#{pluralize(@blog_post.comments.count, 'comment')}:"
 
       = render partial: 'comments/comment', collection: CommentsDecorator.decorate_collection(@blog_post.comments), as: :comment
 
+    .accordion#add_comment
+      .accord-single
+        .accord-toggle
+          %h4
+            =fa_icon "comment"
+            Add your comment
+
+        .accord-cont
+          = render 'comments/form'
