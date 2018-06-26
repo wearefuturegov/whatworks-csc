@@ -16,7 +16,7 @@ class BlogPostDecorator < Draper::Decorator
 
   def decorate_author
     h.content_tag :p, '', class: 'author' do
-      "By #{h.link_to(object.author.name, object.author.path)}".html_safe
+      "#{h.link_to(object.author.name, object.author.path)}".html_safe
     end
   end
 
