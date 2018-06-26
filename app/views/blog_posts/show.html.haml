@@ -5,10 +5,11 @@
       %h3
         = @blog_post.decorate_date
         = @blog_post.decorate_author
-    .blog_sub_heading
-      %h4= @blog_post.decorate_subheading
-    .blog_content
-      = @blog_post.decorate_body
+    .indented
+      .blog_sub_heading
+        %h4= @blog_post.decorate_subheading
+      .blog_content
+        = @blog_post.decorate_body
 
   .comments.full_width
     - if @blog_post.comments.count > 0
