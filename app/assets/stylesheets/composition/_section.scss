@@ -55,9 +55,18 @@ section.cta {
 }
 
 section.sign_up {
+  text-align: center;
   margin-top: $baseline;
   margin-bottom: $baseline;
-  @include grid-column(8);
+  min-height: 250px;
+  p {
+    max-width: 400px;
+    margin: 10px auto;
+  }
+  .button {
+    margin-top: 25px;
+  }
+  @include grid-column(7);
   @include mobile {
     @include grid-column(12);
   }
@@ -66,7 +75,8 @@ section.sign_up {
 section.twitter {
   margin-top: $baseline;
   margin-bottom: $baseline;
-  @include grid-column(4);
+  min-height: 250px;
+  @include grid-column(5);
   @include mobile {
     @include grid-column(12);
   }

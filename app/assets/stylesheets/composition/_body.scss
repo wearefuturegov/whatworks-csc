@@ -7,3 +7,13 @@ ul {
   margin-bottom: .75em;
   padding-left: 1.5em;
 }
+
+.container {
+  @include desktop {
+    padding: $container-padding;
+    max-width: $desktop-width + 200;
+  }
+  @include mobile {
+    padding: 5px;
+  }
+}
