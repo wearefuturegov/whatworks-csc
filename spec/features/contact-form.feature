@@ -1,3 +1,4 @@
+@vcr
 Feature: Sending Contact Form
 
   Background:
