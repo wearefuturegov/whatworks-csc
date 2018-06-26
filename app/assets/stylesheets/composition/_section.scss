@@ -33,6 +33,20 @@ section.collection {
       margin-bottom: 50px;
     }
   }
+
+  .title {
+    padding-left: 75px;
+    position: relative;
+
+    &:before {
+      content:"";
+      position: absolute;
+      width: 25px;
+      left: 0;
+      top: 17px;
+      border-top: 3px solid $black;
+    }
+  }
 }
 
 section.cta {
