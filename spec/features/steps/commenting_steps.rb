@@ -47,7 +47,7 @@ module CommentingSteps
   end
   
   step 'my comment should show underneath the blog post' do
-    visit("/blog/#{@slug}")
+    visit blog_post_path(@slug)
     expect(page.body).to match(/#{@comment[:comment]}/)
   end
   

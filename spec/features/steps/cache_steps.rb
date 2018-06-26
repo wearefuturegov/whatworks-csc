@@ -19,16 +19,16 @@ module CacheSteps
   end
 
   step 'the data for the blog post index page should be cached' do
-    expect(cache_data_for('views/www.example.com/blog')).to_not be_nil
+    expect(cache_data_for('views/www.example.com/whats-new')).to_not be_nil
   end
 
   step 'the data for the blog post :text should be cached' do |slug|
-    expect(cache_data_for("views/www.example.com/blog/#{slug}")).to_not be_nil
+    expect(cache_data_for("views/www.example.com/whats-new/blog/#{slug}")).to_not be_nil
   end
 
   step 'the data for the blog post :text is cached' do |slug|
-    visit '/blog'
-    visit "/blog/#{slug}"
+    visit blog_posts_path
+    visit blog_post_path(slug)
   end
 
   step 'I :text my blog post :text' do |method, slug|
@@ -51,17 +51,17 @@ module CacheSteps
   end
 
   step 'the cache should be cleared' do
-    expect(cache_data_for('views/www.example.com/blog')).to be_nil
-    expect(cache_data_for("views/www.example.com/blog/#{@slug}")).to be_nil
+    expect(cache_data_for('views/www.example.com/whats-new')).to be_nil
+    expect(cache_data_for("views/www.example.com/whats-new/blog/#{@slug}")).to be_nil
   end
   
   step 'the cache should not be cleared' do
-    expect(cache_data_for('views/www.example.com/blog')).to_not be_nil
-    expect(cache_data_for("views/www.example.com/blog/#{@slug}")).to_not be_nil
+    expect(cache_data_for('views/www.example.com/whats-new')).to_not be_nil
+    expect(cache_data_for("views/www.example.com/whats-new/blog/#{@slug}")).to_not be_nil
   end
   
   step 'the content should not be cached' do
-    expect(cache_data_for("views/www.example.com/blog/#{@slug}")).to be_nil
+    expect(cache_data_for("views/www.example.com/whats-new/blog/#{@slug}")).to be_nil
   end
 end
 

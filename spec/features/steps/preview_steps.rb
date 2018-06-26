@@ -1,6 +1,6 @@
 step 'I visit the preview link for the blog post :text' do |slug|
   @slug = slug
-  visit "/blog/#{@slug}?preview_token=#{ENV['PREVIEW_TOKEN']}"
+  visit blog_post_path(@slug, preview_token: ENV['PREVIEW_TOKEN'])
 end
 
 step 'I should see the draft content' do
