@@ -28,7 +28,7 @@ h1 {
   font-size: $h1;
   font-weight: 900;
   line-height: calc(#{$h1} + #{$baseline*0.125});
-  margin-bottom: $baseline*0.25;
+  margin-bottom: $baseline*0.3;
 }
 
 h2 {
@@ -48,7 +48,8 @@ h3 {
 h4 {
   font-family: $stack;
   font-size: $h4;
-  line-height: calc(#{$h4} + #{$baseline*0.125});
+  font-weight: 300;
+  line-height: calc(#{$h4} + #{$baseline*0.3});
   margin-bottom: $baseline*2;
 }
 
