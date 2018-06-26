@@ -2,9 +2,10 @@ nav.nav {
   line-height: $logo;
   ul li {
     display: inline;
-    margin-left: $gutter*0.5;
+    margin-left: $gutter*2;
     a {
-      color: $black;
+      color: $black !important;
+      text-decoration: none !important;
     }
   }
 }
