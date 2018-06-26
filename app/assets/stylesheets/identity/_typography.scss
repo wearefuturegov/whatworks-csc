@@ -14,28 +14,40 @@ p {
   margin-bottom: $baseline*0.5;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
+h2, h3 {
   margin-bottom: $baseline*0.25;
 }
 
-h1, h2 {
-  font-family: $stack-b;  
-}
+
+// these calculations are not complete, just placeholder for now.
 
 h1 {
+  font-family: $stack-b;  
   font-size: $h1;
+  font-weight: 700;
   line-height: calc(#{$h1} + #{$baseline*0.125});
+  margin-bottom: $baseline*0.25;
 }
 
 h2 {
+  font-family: $stack-b;
   font-size: $h2;
+  font-weight: 700;
   line-height: calc(#{$h2} + #{$baseline*0.125});
 }
 
 h3 {
+  font-family: $stack;
   font-size: $h3;
+  font-weight: 700;
   line-height: calc(#{$h3} + #{$baseline*0.125});
+}
+
+h4 {
+  font-family: $stack;
+  font-size: $h4;
+  line-height: calc(#{$h4} + #{$baseline*0.125});
+  margin-bottom: $baseline*2;
 }
 
 blockquote {
