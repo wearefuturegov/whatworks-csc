@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title WhatWorksCentre
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body{:class => page_class, :id => @page&.slug}
+    = render template: "partials/header"
+    - flash.each do |name, msg|
+      - next unless msg.is_a?(String) && msg.present?
+      = content_tag :div, :class => "flash_#{name}", :id => "alerts" do
+        .container
+          .full_width
+            = content_tag :div, msg, :id => "flash_#{name}"
+            #alert_close
+              = fa_icon "times"
+    = yield
+    = render template: "partials/footer"
