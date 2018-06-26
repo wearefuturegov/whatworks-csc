@@ -14,5 +14,4 @@ class CommentsDecorator < ApplicationDecorator
       h.content_tag(:blockquote, h.parse_markdown(object.comment))
     end
   end
-
 end
