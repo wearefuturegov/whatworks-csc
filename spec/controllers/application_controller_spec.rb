@@ -18,5 +18,4 @@ RSpec.describe ApplicationController, type: :controller, vcr: true, contentful: 
     end
     
   end
-
 end

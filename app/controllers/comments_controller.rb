@@ -32,5 +32,4 @@ class CommentsController < ApplicationController
   def blog_post
     @blog_post ||= BlogPost.find_by(slug: params[:blog_post_id]).load.first
   end
-
 end
