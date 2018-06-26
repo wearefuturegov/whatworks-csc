@@ -1,12 +1,12 @@
 %nav.nav
   %ul
-    %li
+    %li{ class: @section.slug == 'about-us' ? 'selected' : '' }
       = link_to "About", section_path(id: 'about-us')
-    %li
+    %li{ class: @section.slug == 'working-with' ? 'selected' : '' }
       = link_to "Working with", section_path(id: 'working-with')
-    %li
+    %li{ class: @section.slug == 'whats-new' ? 'selected' : '' }
       = link_to "What's new", section_path(id: 'whats-new')
-    %li
+    %li{ class: @section.slug == 'evidence' ? 'selected' : '' }
       = link_to "Evidence", section_path(id: 'evidence')
     %li
       = link_to "Sign up"

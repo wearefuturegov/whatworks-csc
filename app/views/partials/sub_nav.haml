@@ -1,5 +1,7 @@
 %nav.sub_nav
   %ul
+    %li{ class: @page.nil? ? 'selected' : '' }
+      = link_to @section.title, section_path(@section.slug)
     - @section.pages.each do |p|
       %li{ class: p.slug == @page&.slug ? 'selected' : '' }
         = link_to p.title, section_page_path(@section.slug, p.slug)

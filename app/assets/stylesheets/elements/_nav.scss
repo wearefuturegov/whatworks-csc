@@ -12,6 +12,9 @@ nav.nav {
       &:last-child {
         margin-right: 0;
       }
+      &.selected {
+        font-weight: 600;
+      }
       a {
         color: $black !important;
         text-decoration: none !important;

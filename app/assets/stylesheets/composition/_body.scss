@@ -16,4 +16,7 @@ ul {
   @include mobile {
     padding: 5px;
   }
+  @include hd-desktop {
+    max-width: $hd-desktop-width - 50;
+  }
 }
