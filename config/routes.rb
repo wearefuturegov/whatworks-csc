@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'application#index'
   
-  resources :blog_posts, path: 'blog', only: %i[index show] do
+  get 'whats-new', to: 'blog_posts#index'
+  
+  resources :blog_posts, path: '/whats-new/blog', only: %i[index show] do
     resources :comments, only: %i[create]
   end
   resources :team_members, path: 'team', only: %i[show]

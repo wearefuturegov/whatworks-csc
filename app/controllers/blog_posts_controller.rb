@@ -3,7 +3,9 @@
 class BlogPostsController < ApplicationController
   include ContentfulController
 
-  def index; end
+  def index
+    @section = Section.find_by(slug: 'whats-new').load.first
+  end
 
   def show; end
 end
