@@ -3,3 +3,4 @@
     .logo
       = image_tag('logo.svg')
   = render template: "partials/nav"
+= render template: "partials/sub_nav" if @section
