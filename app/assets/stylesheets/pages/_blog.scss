@@ -1,9 +1,14 @@
-.blog_list {
-  li {
+section.collection.blog_list {
+  .single {
     @include grid-column(4);
+    margin-bottom: 50px;
+  }
+  .featured {
+    @include grid-column(8);
 
-    &:first-child {
-      @include grid-column(8);
+    h3 {
+      font-size: 34px;
+      line-height: 44px;
     }
   }
 }
