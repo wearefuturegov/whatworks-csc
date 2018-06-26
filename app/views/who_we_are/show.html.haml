@@ -16,7 +16,7 @@
                 =tm.decorate.decorate_image
                 .details
                   %h3=tm.name
-                  .role=tm.role
+                  .role=tm.try(:role)
 
 
     .board.members_list.full_width
@@ -30,7 +30,7 @@
                 =bm.decorate.decorate_image
                 .details
                   %h3=bm.name
-                  .role=bm.role
+                  .role=bm.try(:role)
 
     .members_list.full_width
       .inner_container
