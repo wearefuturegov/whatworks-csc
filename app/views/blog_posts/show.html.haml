@@ -19,10 +19,9 @@
 
     .accordion#add_comment
       .accord-single
-        .accord-toggle
-          %h4
-            =fa_icon "comment"
-            Add your comment
+        %h4.accord-toggle
+          =fa_icon "comment"
+          Add your comment
 
         .accord-cont
           = render 'comments/form'
