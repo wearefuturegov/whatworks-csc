@@ -1,7 +1,7 @@
 = simple_form_for :comment, url: blog_post_comments_path(@blog_post.slug) do |f|
   = f.input :name
   = f.input :email
-  = f.input :organisation
+  = f.input :organisation, required: false
   = f.input :comment, as: :text
 
   = f.button :submit, t('simple_form.labels.comment.create'), class: 'button cta'
