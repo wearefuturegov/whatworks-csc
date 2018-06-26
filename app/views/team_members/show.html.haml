@@ -1,11 +1,12 @@
 .container.team_member
   .single_person.full_width
-    .person_details
-      = @team_member.decorate_image
+    .person_details.full_width
+      .inner_container
+        = @team_member.decorate_image
 
-      .text
-        %h1= @team_member.name
-        %h4= @team_member.role
+        .text
+          %h1= @team_member.name
+          %h4= @team_member.role
 
-    .person_bio
+    .person_bio.indented
       = parse_markdown(@team_member.bio)
