@@ -16,22 +16,73 @@ p {
   margin-bottom: $baseline*0.5;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
+h2, h3 {
   margin-bottom: $baseline*0.25;
 }
 
+
+// these calculations are not complete, just placeholder for now.
+
 h1 {
+  font-family: $stack-b;  
   font-size: $h1;
+  font-weight: 700;
   line-height: calc(#{$h1} + #{$baseline*0.125});
+  margin-bottom: $baseline*0.25;
 }
 
 h2 {
+  font-family: $stack-b;
   font-size: $h2;
+  font-weight: 700;
   line-height: calc(#{$h2} + #{$baseline*0.125});
 }
 
 h3 {
+  font-family: $stack;
   font-size: $h3;
+  font-weight: 700;
   line-height: calc(#{$h3} + #{$baseline*0.125});
+}
+
+h4 {
+  font-family: $stack;
+  font-size: $h4;
+  line-height: calc(#{$h4} + #{$baseline*0.125});
+  margin-bottom: $baseline*2;
+}
+
+blockquote {
+  border-top: $border-width*0.25 $border-style $gray;
+  padding: $baseline 0 0 0;
+  margin-top: $baseline*1.5;
+  p {
+    font-family: $stack-b;
+    font-size: $body*1.5;
+    line-height: $baseline;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    &:before {
+      content: "“";
+      margin-right: $gutter*0.25;
+    }
+    &:after {
+      content: "”";
+      margin-left: $gutter*0.25;
+    }
+  }
+}
+
+cite {
+  color: $gray;
+  font-size: $small;
+  font-style: italic;
+  display: block;
+  padding-left: $gutter;
+  padding-bottom: $baseline;
+  border-bottom: $border-width*0.25 $border-style $gray;
+  margin-bottom: $baseline*1.5;
+  &:before {
+    content: "– ";
+  }
 }

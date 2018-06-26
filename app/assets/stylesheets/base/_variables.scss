@@ -1,8 +1,11 @@
-$stack: 'Lato', sans-serif;
+$stack: 'Source Sans Pro', sans-serif;
+$stack-b: 'Playfair Display', serif;
 
 $body: 18px;
-$baseline: 1.5em;
+$baseline: 1.45em;
 $gutter: 20px;
+
+$small: 16px;
 
 $black: #000;
 $white: #fff;
@@ -11,6 +14,7 @@ $gray: #E9E9E9;
 $h1: 50px;
 $h2: 30px;
 $h3: 22px;
+$h4: 32px;
 $p: $body;
 
 $brand: #FFAA41;
