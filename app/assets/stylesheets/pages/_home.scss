@@ -26,3 +26,17 @@
   }
 }
 
+#involved {
+  margin-top: 75px;
+  padding-left: 75px;
+  position: relative;
+
+  &:before {
+    content:"";
+    position: absolute;
+    width: 25px;
+    left: 0;
+    top: 17px;
+    border-top: 3px solid $black;
+  }
+}
