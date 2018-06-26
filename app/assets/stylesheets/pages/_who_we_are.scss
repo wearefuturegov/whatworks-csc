@@ -1,0 +1,34 @@
+.members_list {
+  padding: 30px 0;
+  a {
+    color: $black !important;
+  }
+  .single_member {
+    @include grid-column(4);
+    @include mobile {
+      @include grid-column(12, $no_gutter_grid);
+    }
+    margin: 15px 0;
+    padding-right: 15px;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 34%;
+      height: auto;
+      border: $border-style $border-width $black;
+      border-radius: 100%;
+    }
+    .details {
+      vertical-align: middle;
+      width: 60%;
+      display: inline-block;
+      margin-left: 3%;
+
+
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
