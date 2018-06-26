@@ -19,12 +19,18 @@
   }
   .comment {
     margin-top: 10px;
+
+    blockquote {
+      margin-top: 0;
+      padding-top: 0;
+      p {
+        padding-left: 0;
+      }
+    }
   }
 }
 
 #add_comment {
-  margin-top: 50px;
-
   @include grid-column(6, $no_gutter_grid);
   @include grid-push(3);
   @include mobile {
