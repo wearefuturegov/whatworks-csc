@@ -24,9 +24,9 @@ h2, h3 {
 // these calculations are not complete, just placeholder for now.
 
 h1 {
-  font-family: $stack-b;  
+  font-family: $stack-b;
   font-size: $h1;
-  font-weight: 700;
+  font-weight: 900;
   line-height: calc(#{$h1} + #{$baseline*0.125});
   margin-bottom: $baseline*0.25;
 }
