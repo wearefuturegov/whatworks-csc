@@ -27,7 +27,7 @@ h1 {
   font-family: $stack-b;
   font-size: $h1;
   font-weight: 900;
-  line-height: calc(#{$h1} + #{$baseline*0.125});
+  line-height: calc(#{$h1} + #{$baseline*0.2});
   margin-bottom: $baseline*0.3;
 }
 
@@ -35,14 +35,14 @@ h2 {
   font-family: $stack-b;
   font-size: $h2;
   font-weight: 700;
-  line-height: calc(#{$h2} + #{$baseline*0.125});
+  line-height: calc(#{$h2} + #{$baseline*0.2});
 }
 
 h3 {
   font-family: $stack;
   font-size: $h3;
   font-weight: 700;
-  line-height: calc(#{$h3} + #{$baseline*0.125});
+  line-height: calc(#{$h3} + #{$baseline*0.2});
 }
 
 h4 {

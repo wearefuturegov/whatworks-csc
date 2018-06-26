@@ -40,24 +40,15 @@
     .single.title
       %h2
         What's new
-    .single
-      %h3
-        Evidence and Research
-      %p
-        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-      = link_to "Keep updated about our development", "link"
-    .single
-      %h3
-        Evidence and Research
-      %p
-        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-      = link_to "Keep updated about our development", "link"
-    .single
-      %h3
-        Evidence and Research
-      %p
-        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-      = link_to "Keep updated about our development", "link"
+    - @blog_posts.each do |b|
+      .single
+        =link_to blog_post_path(id: b.slug) do
+          %h3=b.title
+        .sub_text
+          .author=b.decorate.decorate_author
+          .date=b.decorate.decorate_date
+
+
 
   %section.section.impact
     %h2
