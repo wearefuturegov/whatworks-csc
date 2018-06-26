@@ -12,10 +12,11 @@
         - @team_members.each do |tm|
           =link_to team_member_path(id: tm.slug) do
             .single_member
-              =tm.decorate.decorate_image
-              .details
-                %h3=tm.name
-                .role=tm.role
+              .inner_container
+                =tm.decorate.decorate_image
+                .details
+                  %h3=tm.name
+                  .role=tm.role
 
 
     .board.members_list.full_width
@@ -25,10 +26,11 @@
         - @board_members.each do |bm|
           =link_to board_member_path(id: bm.slug) do
             .single_member
-              =bm.decorate.decorate_image
-              .details
-                %h3=bm.name
-                .role=bm.role
+              .inner_container
+                =bm.decorate.decorate_image
+                .details
+                  %h3=bm.name
+                  .role=bm.role
 
     .members_list.full_width
       .inner_container
