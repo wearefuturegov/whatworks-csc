@@ -53,7 +53,7 @@
 
 .stakeholder.members_list {
   .single_member {
-    &:nth-child(3) {
+    &:nth-child(3n) {
       clear: both;
     }
   }
