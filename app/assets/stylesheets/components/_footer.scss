@@ -1,8 +1,11 @@
 footer.footer {
   background: $black;
   color: $white;
-  a, p {
+  a, a:visited, p {
     color: $white;
+  }
+  a:hover {
+    color: $brand;
   }
   .top {
     background: $brand;
