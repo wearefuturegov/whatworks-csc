@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   def publish
     comment = Comment.preview.find_by(id: params[:id]).load.first
     comment.publish
-    redirect_to "/blog/#{comment.associated_record.slug}", notice: 'Comment Published!'
+    redirect_to blog_post_path(id: comment.associated_record.slug), notice: 'Comment Published!'
   end
 
   private
