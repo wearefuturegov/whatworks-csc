@@ -83,6 +83,29 @@ section.twitter {
 }
 
 .involved_logos {
+  h3 {
+    text-align: left;
+  }
+  img {
+    max-width: 160px;
+    max-height: 150px;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 15px 20px 15px 0px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+
+    &:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+  .development {
+    img {
+      width: 32%;
+    }
+  }
+
   .development {
     @include grid-column(6);
     @include mob_tab {
