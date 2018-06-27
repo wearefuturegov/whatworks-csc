@@ -17,7 +17,7 @@ Feature: Commenting
       
   Scenario: Missing required field
     Given I access the blog post 'example-blog-post'
-    And I leave my email blank
+    And I don't enter my email
     And I leave a comment
     Then the comment should not be stored
     And I should see an error message

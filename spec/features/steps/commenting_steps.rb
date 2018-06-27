@@ -9,7 +9,7 @@ module CommentingSteps
     }
   end
   
-  step 'I leave my email blank' do
+  step 'I don\'t enter my email' do
     @comment[:name] = 'Batman Blank Email'
     @comment[:email] = nil
   end

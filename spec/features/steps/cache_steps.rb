@@ -30,8 +30,17 @@ module CacheSteps
     visit blog_posts_path
     visit blog_post_path(slug)
   end
+  
+  step 'the data for the page is cached' do
+    visit section_page_path(@page.section.slug, @page.slug)
+  end
+  
+  step 'the index cache should be left alone' do
+    # We're not actually testing anything here, this step is just here for
+    # readability
+  end
 
-  step 'I :text my blog post :text' do |method, slug|
+  step 'I :text my :text :text' do |method, content_type, slug|
     @slug = slug
     rack_test_session_wrapper = Capybara.current_session.driver
     rack_test_session_wrapper.header('X-Contentful-Topic', get_topic(method))
@@ -39,7 +48,7 @@ module CacheSteps
                                      sys: {
                                        contentType: {
                                          sys: {
-                                           id: 'blogPost'
+                                           id: content_type.camelize
                                          }
                                        }
                                      },

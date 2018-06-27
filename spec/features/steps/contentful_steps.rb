@@ -24,8 +24,24 @@ module ContentfulSteps
     BlogPost.find(post.id)
   end
   
+  def create_section
+    section = Section.create(title: 'Some section', slug: 'some-section', content: 'Blah')
+    section.save && section.publish
+    Section.find(section.id)
+  end
+  
+  def create_page(slug)
+    page = Page.create(title: slug, slug: slug, section: create_section, content: 'Foo')
+    page.save && page.publish
+    Page.find(page.id)
+  end
+  
   step 'there is a blog post with the title :title' do |title|
     create_blog_post(title)
+  end
+  
+  step 'there is a page called :title' do |title|
+    @page = create_page(title)
   end
   
 end

@@ -7,8 +7,22 @@ class ExpireCache
 
   def perform
     return unless topic_applicable?
-    @controller.send(:expire_action, controller: controller_name, action: 'index')
-    @controller.send(:expire_action, controller: controller_name, action: 'show', id: slug)
+    clear_index_cache
+    clear_content_cache(slug)
+  end
+  
+  def clear_content_cache(slug)
+    clear_cache(controller: controller_name, action: 'show', id: slug)
+  end
+  
+  def clear_index_cache
+    clear_cache(controller: controller_name, action: 'index')
+  end
+  
+  def clear_cache(*path_options)
+    @controller.send(:expire_action, *path_options)
+  rescue ActionController::UrlGenerationError
+    nil
   end
 
   def controller_name
