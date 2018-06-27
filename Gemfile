@@ -51,6 +51,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'sendgrid_actionmailer_adapter'
 gem 'twitter'
+gem 'appsignal'
 
 group :production do
   gem 'dalli'
