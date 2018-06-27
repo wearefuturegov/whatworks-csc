@@ -1,6 +1,6 @@
 header.header {
   .logo {
-    @include grid-column(2);
+    @include grid-column(2, $no_gutter_grid);
     @include mobile {
       @include grid-column(12);
       text-align: center;
@@ -12,7 +12,7 @@ header.header {
     }
   }
   nav.nav {
-    @include grid-column(10);
+    @include grid-column(10, $no_gutter_grid);
     @include mobile {
       @include grid-column(12);
       text-align: center !important;
