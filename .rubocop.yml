@@ -17,3 +17,5 @@ Layout/IndentHeredoc:
 Metrics/MethodLength:
   Exclude:
     - 'db/contentful/*.rb'
+Performance/RedundantBlockCall:
+  Enabled: false

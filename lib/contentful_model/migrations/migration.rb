@@ -12,6 +12,14 @@ module ContentfulModel
         end
       end
       
+      def update_content_type_field(content_type, field_name, &block)
+        content_type = ContentfulModel::Migrations::ContentTypeFactory.find(content_type)
+        management_content_type = content_type.instance_variable_get('@management_content_type')
+        field = management_content_type.fields.find { |f| f.name == field_name }
+        block.call(field)
+        management_content_type.save
+      end
+      
     end
   end
 end
