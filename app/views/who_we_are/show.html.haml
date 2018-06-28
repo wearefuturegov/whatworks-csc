@@ -2,7 +2,6 @@
   %h1= @page.title
 
   .indented
-    %h4=@page.summary
     = parse_markdown(@page.content)
 
     .team.members_list.full_width
