@@ -1,9 +1,9 @@
 #{$all-buttons}, .button {
-  border: $border-style $border-width $black;
-  background: transparent;
+  border: $border-style $border-width $brand;
+  background: $brand;
   text-align: center;
   padding: $baseline*0.5 $baseline;
-  color: $black;
+  color: $white;
   position: relative;
 
   &:focus {
@@ -12,6 +12,7 @@
 
   &:hover {
     background: $black;
+    border-color: $black;
   }
 
   &:active {
