@@ -8,6 +8,6 @@ class SectionsController < ApplicationController
   private
   
   def load_pages
-    @pages = @section.pages
+    @pages = @section.pages.sort_by(&:title)
   end
 end
