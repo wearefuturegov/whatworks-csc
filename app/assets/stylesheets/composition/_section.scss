@@ -14,6 +14,11 @@ section.impact {
   margin-top: $baseline;
   margin-bottom: $baseline;
 
+  @include grid-column(10);
+  @include grid-push(1);
+  @include mobile {
+    @include grid-column(12);
+  }
 }
 
 section.title {
