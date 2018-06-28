@@ -1,12 +1,12 @@
 .container
-  %section.sign_up.color_block
-    %h3 Sign up to keep updated
-    %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
-    =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
+  / %section.sign_up.color_block
+  /   %h3 Sign up to keep updated
+  /   %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
+  /   =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
 
-  %section.twitter.color_block
-    =fa_icon "twitter"
-    most recent tweet goes here
+  / %section.twitter.color_block
+  /   =fa_icon "twitter"
+  /   most recent tweet goes here
 
   %section.section#involved
     %h2 Who's involved
@@ -31,22 +31,27 @@
 %footer.footer.container
   %section.top
   %section.section
-    = render template: "partials/footer_nav"
+    / = render template: "partials/footer_nav"
+    .sign_up
+      %h2 Sign up to keep updated
+      %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
+      =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
     .contact_details
-      %h4 Contact us
-      %p=mail_to "wwccsc@nesta.org.uk"
+      %h2 Contact us
+      %p
+        %span.chevron.r
+        =mail_to "wwccsc@nesta.org.uk"
       %p
         For Press enquiries
         =mail_to "media@scie.org.uk"
-      %p Sign-up for our updates
-
       %p
-        =fa_icon "twitter"
-        Follow us on twitter link
+        =link_to "https://twitter.com/WhatWorksUK", target: "_blank" do
+          =fa_icon "twitter"
+          Follow us on Twitter
 
     .terms
       %ul
         %li Terms and conditions
         %li Privacy
 
-      %p &copy; Nesta, 2018
+      %span &copy; Nesta, 2018

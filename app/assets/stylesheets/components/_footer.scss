@@ -17,4 +17,26 @@ footer.footer {
       list-style-type: none;
     }
   }
+
+  .sign_up, .contact_details {
+    padding-left: 75px;
+    position: relative;
+
+    &:before {
+      content:"";
+      position: absolute;
+      width: 25px;
+      left: 0;
+      top: 17px;
+      border-top: 3px solid $white;
+    }
+  }
+
+  .button {
+    &:hover {
+      background: $white;
+      color: $black;
+      border-color: $white;
+    }
+  }
 }

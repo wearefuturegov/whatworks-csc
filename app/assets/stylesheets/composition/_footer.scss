@@ -1,17 +1,21 @@
 footer.footer {
-  margin-top: $baseline*2;
   padding: 0;
 
-  nav.footer_nav {
-    @include grid-column(6);
-    @include mobile {
+  .sign_up {
+    @include grid-column(5);
+    margin-bottom: $baseline;
+
+    @include mob_tab {
       @include grid-column(12);
     }
   }
   .contact_details {
     @include grid-column(6);
-    @include mobile {
+    @include grid-push(1);
+    margin-bottom: $baseline;
+    @include mob_tab {
       @include grid-column(12);
+
     }
   }
   .terms {
