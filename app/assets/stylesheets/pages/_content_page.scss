@@ -18,7 +18,12 @@
       @include grid-column(12);
     }
   }
-
+  h2 {
+    margin-top: 50px;
+  }
+  h3 {
+    margin-top: 25px;
+  }
 }
 
 .indented {
