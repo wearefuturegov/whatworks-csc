@@ -3,6 +3,6 @@
   %h1= @page.title
 
   .indented
-    -if @page.try(:summary)
-      %h4=@page.summary
+    / -if @page.try(:summary)
+    /   %h4=@page.summary
     = parse_markdown(@page.content)
