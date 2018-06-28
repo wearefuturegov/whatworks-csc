@@ -35,17 +35,17 @@
     .members_list.full_width
       .inner_container
         %h2 Department for Education Steering Group
-        %p The Centre is funded by the Department for Education. During this set up phase and prior to formal incorporation of the Centre as an independent organisation, the development team and research partner report on progress to the Department’s Steering Group.
-
+        %p The Centre is initially funded by the Department for Education. During its set up phase and prior to formal incorporation of the Centre as an independent organisation, the development team and research partner report on progress and value for money considerations to the Department’s Steering Group.
+        
     .stakeholder.members_list.full_width
       .inner_container
         %h2 Stakeholder Panels
-        %p We are working very closely with a wide range of stakeholders to advise on the Centre’s approach, research, products and services.
-
+        %p We are working very closely with a wide range of stakeholders to advise on the Centre’s strategy, research priorities, and future products and services.
+        
         - @stakeholder_panels.each do |sp|
           .single_member
             %h3=sp.title
             %p=sp.content
 
     .link
-      %p Find out more about who we are working with (LINK)
+      %p= link_to section_page_link('working-with', 'whos-involved'), 'Find out more about who we are working with'
