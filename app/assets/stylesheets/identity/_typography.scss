@@ -1,6 +1,6 @@
 body {
   font-family: $stack;
-  color: $black;
+  color: $off-black;
   font-size: $body;
   font-weight: 400;
   line-height: $baseline;
@@ -50,7 +50,7 @@ h4 {
   font-size: $h4;
   font-weight: 300;
   line-height: calc(#{$h4} + #{$baseline*0.3});
-  margin-bottom: $baseline*0.3;
+  margin-bottom: $baseline*0.4;
 }
 
 blockquote {
