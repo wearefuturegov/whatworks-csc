@@ -3,13 +3,17 @@ body {
   color: $off-black;
   font-size: $body;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 29px;
 }
 
 a, a:hover, a:active, a:visited {
   &:not(.button) {
     color: $brand;
   }
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 p {

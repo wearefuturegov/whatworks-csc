@@ -18,6 +18,10 @@
       @include mobile {
         @include grid-column(12);
       }
+
+      h2 {
+        margin-top: 0;
+      }
     }
 
     .button_container {
