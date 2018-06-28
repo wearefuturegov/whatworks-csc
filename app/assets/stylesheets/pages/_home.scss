@@ -21,8 +21,9 @@
 }
 
 .tagline {
+  margin-bottom: $baseline*4 !important;
   h4 {
-    margin-bottom: 50px;
+    margin-bottom: $baseline*0.3;
   }
 }
 
