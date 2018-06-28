@@ -5,6 +5,7 @@
   padding: $baseline*0.5 $baseline;
   color: $white;
   position: relative;
+  transition: none;
 
   &:focus {
     outline: $brand $border-width/2 solid;
