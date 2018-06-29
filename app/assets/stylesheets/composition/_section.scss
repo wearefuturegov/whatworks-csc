@@ -40,18 +40,25 @@ section.collection {
 
 section.title {
   h1 {
-    @include grid-column(3);
+    @include grid-column(6);
+  }
+  &.page h1 {
+    @include grid-column(12);
   }
 }
 
-section .page {
-  @include grid-column(9);
-  @include grid-push(3);
+section.page {
+  @include grid-column(8);
+  @include grid-push(2);
+}
+
+img {
+  width: 100%
 }
 
 section.overview {
   @include grid-column(8);
-  @include grid-push(3);
+  @include grid-push(2);
   margin-bottom: $baseline*2;
 }
 
@@ -61,8 +68,8 @@ section.overview {
 }
 
 .summary {
-  @include grid-column(4);
-  @include grid-push(3);
+  @include grid-column(5);
+  @include grid-push(2);
 }
 .action {
   @include grid-column(4);
