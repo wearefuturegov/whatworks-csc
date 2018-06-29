@@ -24,8 +24,8 @@ module ContentfulSteps
     BlogPost.find(post.id)
   end
   
-  def create_section
-    section = Section.create(title: 'Some section', slug: 'some-section', content: 'Blah')
+  def create_section(slug = 'some-section', title = 'Some Section')
+    section = Section.create(title: title, slug: slug, content: 'Blah')
     section.save && section.publish
     Section.find(section.id)
   end

@@ -2,6 +2,7 @@
 
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
+ENV['CONTENTFUL_ENVIRONMENT'] = 'test'
 
 require 'support/contentful_cleaner'
 
