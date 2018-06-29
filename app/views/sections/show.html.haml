@@ -1,17 +1,12 @@
-.container.content_page
-
-  %h1= @section.title
-
-  .indented
+.container
+  %section.title
+    %h1= @section.title
+  %section.overview
     = parse_markdown(@section.content)
-
-    - if @pages.count > 0
-      .full_width
-        .sub_pages
-          - @pages.each do |p|
-            .single_sub_page.inner_container
-              .title_container
-                %h2=p.title
-                .summary= p.try(:summary)
-              .button_container
-                = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'
+  - if @pages.count > 0
+    - @pages.each do |p|
+      .summary
+        %h2=p.title
+        = p.try(:summary)
+      .action
+        = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'

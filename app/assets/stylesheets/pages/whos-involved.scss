@@ -12,10 +12,6 @@
     }
     ul {
       @include grid-column(6);
-      @include mob_tab {
-        @include grid-column(12);
-        margin-left: 0;
-      }
 
       li {
         list-style-type: none;
@@ -37,11 +33,6 @@
     }
     p {
       @include grid-column(6);
-      @include mob_tab {
-        @include grid-column(12);
-        margin-bottom: 50px;
-      }
-
       margin: 0;
       padding: 0;
       font-weight: 600;

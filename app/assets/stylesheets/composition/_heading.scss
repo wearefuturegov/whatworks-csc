@@ -1,0 +1,7 @@
+.heading {
+  margin-top: $baseline*4;
+  h1, h2, h3 {
+    @include grid-column(12);
+    @include grid-push(1);
+  }
+}

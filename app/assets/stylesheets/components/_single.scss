@@ -14,10 +14,6 @@ section.collection.border {
   h3 {
     margin-bottom: 25px;
     min-height: 112px;
-
-    @include mob_tab {
-      min-height: 30px;
-    }
   }
   .sub_text {
     color: rgba($black, 0.5);

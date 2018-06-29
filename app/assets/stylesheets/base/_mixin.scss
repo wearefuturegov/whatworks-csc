@@ -3,3 +3,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+@mixin max-width {
+  margin: 0 auto;
+  width: 1200px;
+}
