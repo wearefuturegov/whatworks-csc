@@ -6,7 +6,10 @@ section.section {
 section.tagline {
   margin-top: $baseline;
   margin-bottom: $baseline*4;
-  h1, h4, p {
+  h1 {
+    @include grid-column(8);
+  }
+  h4, p {
     @include grid-column(12);
   }
 }
@@ -37,8 +40,13 @@ section.collection {
 
 section.title {
   h1 {
-    @include grid-column(12);
+    @include grid-column(3);
   }
+}
+
+section .page {
+  @include grid-column(9);
+  @include grid-push(3);
 }
 
 section.overview {

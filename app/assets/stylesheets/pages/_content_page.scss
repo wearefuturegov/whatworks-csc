@@ -1,21 +1,21 @@
-.content_page {
-  h1 {
-    margin-bottom: $baseline*0.75;
-    @include grid-column(12);
-    position: relative;
-    padding-bottom: 20px;
-    &:after {
-      content:"";
-      position: absolute;
-      width: 25px;
-      left: 0;
-      bottom: 0;
-      border-top: 3px solid $black;
-    }
-  }
-}
+// .content_page {
+//   h1 {
+//     margin-bottom: $baseline*0.75;
+//     @include grid-column(12);
+//     position: relative;
+//     padding-bottom: 20px;
+//     &:after {
+//       content:"";
+//       position: absolute;
+//       width: 25px;
+//       left: 0;
+//       bottom: 0;
+//       border-top: 3px solid $black;
+//     }
+//   }
+// }
 
-.indented {
-  @include grid-column(11);
-  @include grid-push(1);
-}
+// .indented {
+//   @include grid-column(11);
+//   @include grid-push(1);
+// }
