@@ -1,8 +1,6 @@
-.container.content_page
-
-  %h1= @page.title
-
-  .indented
-    / -if @page.try(:summary)
-    /   %h4=@page.summary
-    = parse_markdown(@page.content)
+.container
+  %section.title
+    %h1= @page.title
+  %section
+    .page
+      = parse_markdown(@page.content)
