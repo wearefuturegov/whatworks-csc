@@ -1,5 +1,11 @@
 module ContentfulSteps
   
+  def create_contributor(slug = 'some-contributor', name = 'Some Name')
+    contributor = Contributor.create(name: name, slug: slug)
+    contributor.save && contributor.publish
+    Contributor.find(contributor.id)
+  end
+  
   def create_team_member
     member = TeamMember.create(name: 'Person', slug: 'person')
     member.save && member.publish
