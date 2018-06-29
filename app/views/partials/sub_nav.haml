@@ -3,5 +3,5 @@
     %li{ class: @page.nil? ? 'selected' : '' }
       = link_to @section.title, section_path(@section.slug)
     - @section.pages.sort_by(&:title).each do |p|
-      %li{ class: p.slug == @page&.slug ? 'selected' : '' }
+      %li{ class: p.slug == @page&.slug ? "selected #{p.slug}" : p.slug }
         = link_to p.title, section_page_path(@section.slug, p.slug)

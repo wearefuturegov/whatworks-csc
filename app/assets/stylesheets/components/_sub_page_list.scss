@@ -1,15 +1,13 @@
 .sub_pages {
   margin-top: 75px;
+  display:flex;
+  flex-flow: column;
 
   .single_sub_page {
     border-top: 2px solid $black;
     margin-top: 45px;
     margin-bottom: 45px;
     padding-top: 45px;
-    &:last-child {
-      border-bottom: $border-width solid $black;
-      padding-bottom: 45px;
-    }
     .summary {
       margin-bottom: 15px;
     }
