@@ -1,0 +1,2 @@
+class ContributorDecorator < PersonDecorator
+end
