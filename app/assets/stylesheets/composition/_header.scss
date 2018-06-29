@@ -5,4 +5,13 @@ header.header {
   nav.nav {
     @include grid-column(10);
   }
+  + .container {
+    margin-top: $baseline*4;
+  }
+}
+
+nav.nav.sub {
+  + .container {
+    margin-top: $baseline*4;
+  }
 }

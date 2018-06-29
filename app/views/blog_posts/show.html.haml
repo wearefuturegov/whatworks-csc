@@ -1,17 +1,13 @@
-.container.single_blog
-  .blog_container.full_width
+.container
+  %section.title
     = @blog_post.decorate_title
-    .blog_details
-      %h3
-        = @blog_post.decorate_date
-        = @blog_post.decorate_author
-    .indented
-      .blog_sub_heading
-        %h4= @blog_post.decorate_subheading
-      .blog_content
-        = @blog_post.decorate_body
+  %section.page
+    %h3
+      = @blog_post.decorate_date
+      = @blog_post.decorate_author
+    %h4= @blog_post.decorate_subheading
+    = @blog_post.decorate_body
 
-  .comments.full_width
     - if @blog_post.comments.count > 0
       %h3="#{pluralize(@blog_post.comments.count, 'comment')}:"
 

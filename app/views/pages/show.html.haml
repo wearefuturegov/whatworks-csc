@@ -1,6 +1,5 @@
 .container
   %section.title
     %h1= @page.title
-  %section
-    .page
-      = parse_markdown(@page.content)
+  %section.page
+    = parse_markdown(@page.content)
