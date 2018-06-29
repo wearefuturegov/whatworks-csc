@@ -9,7 +9,7 @@
       .full_width.inner_container
         .sub_pages
           - @pages.each do |p|
-            .single_sub_page.inner_container
+            .single_sub_page.inner_container{ class: p.slug }
               .title_container
                 %h3=p.title
                 .summary= p.try(:summary)
