@@ -18,7 +18,15 @@ gem 'uglifier', '>= 1.3.0'
 # neat grids
 gem 'jquery-rails'
 
-gem 'geff', github: 'wearefuturegov/geff'
+gem 'neat'
+
+# gem 'geff', github: 'wearefuturegov/geff'
+
+# if ENV['USE_LOCAL_GEFF']
+#   gem 'geff', path: '~/futuregov/geff'
+# else
+#   gem 'geff', git: 'https://github.com/wearefuturegov/geff', branch: 'basic' # rubocop:disable Bundler/DuplicatedGem
+# end
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

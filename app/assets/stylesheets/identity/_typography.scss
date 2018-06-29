@@ -1,19 +1,20 @@
 body {
   font-family: $stack;
-  color: $off-black;
+  color: $black;
   font-size: $body;
   font-weight: 400;
   line-height: 29px;
 }
 
-a, a:hover, a:active, a:visited {
-  &:not(.button) {
+a {
+  &:not(.button), a:active, a:visited  {
+    color: $black;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  &:hover {
     color: $brand;
   }
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 p {
@@ -89,5 +90,19 @@ cite {
   margin-bottom: $baseline*1.5;
   &:before {
     content: "– ";
+  }
+}
+
+.impact {
+  h2 {
+    line-height: 43px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
+  p {
+    color: $brand;
+    font-size: $p * 2;
+    font-weight: 300;
   }
 }

@@ -1,34 +1,10 @@
 nav.nav {
   line-height: $logo;
   ul {
-    padding-left: 0;
     li {
       display: inline;
-      margin: 0 15px;
+      margin-left: $gutter;
       white-space: nowrap;
-      @include tablet {
-        margin: 0 4.5px;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-
-      a {
-        color: $black !important;
-        text-decoration: none !important;
-        font-size: 20px;
-        letter-spacing: 0.25px;
-
-        &:hover {
-          color: $brand !important;
-        }
-      }
-      &.selected {
-        font-weight: 600;
-        a {
-          letter-spacing: 0;
-        }
-      }
     }
   }
 }

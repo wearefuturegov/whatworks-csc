@@ -19,28 +19,3 @@
     line-height: calc(29px + 0.18125em)
   }
 }
-
-.tagline {
-  margin-bottom: $baseline*4 !important;
-  h4 {
-    margin-bottom: $baseline*0.3;
-  }
-}
-
-#involved {
-  padding-left: 75px;
-  position: relative;
-
-  &:before {
-    content:"";
-    position: absolute;
-    width: 25px;
-    left: 0;
-    top: 17px;
-    border-top: 3px solid $black;
-  }
-
-  h2 {
-    margin-bottom: 25px;
-  }
-}

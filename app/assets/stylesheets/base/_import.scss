@@ -3,11 +3,8 @@
 @import "reset";
 
 /* Import the variables and mixin */
-@import 'geff/variables';
 @import "variables"; // Base variables
 @import "mixin";
-
-@import 'geff/style';
 
 /* Import all imports */
 @import "layout/import"; // Layout: Design principles, grid system, slide ins, baseline to sections etc

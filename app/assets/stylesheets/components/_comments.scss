@@ -9,11 +9,6 @@
   margin-left: 25px;
   padding: 15px;
   background: $gray;
-
-  @include mobile {
-    margin-left: 0px;
-  }
-
   p {
     margin-bottom: 0;
   }
@@ -31,19 +26,9 @@
 }
 
 #add_comment {
-  @include grid-column(6, $no_gutter_grid);
-  @include grid-push(3);
-  @include mobile {
-    @include grid-column(12);
-  }
-
-  #{$all-text-inputs} {
-    width: 100%;
-  }
   .accord-toggle {
     color: $brand;
     text-align: center;
-
     &:hover {
       color: $black;
     }

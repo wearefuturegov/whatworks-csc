@@ -1,14 +1,21 @@
-%nav.footer_nav
-  %ul
-    %li
-      = link_to "Home", root_path
-    %li
-      = link_to "About", section_path(id: 'about-the-centre')
-    %li
-      = link_to "Working with", section_path(id: 'working-with')
-    %li
-      = link_to "What's new", section_path(id: 'whats-new')
-    %li
-      = link_to "Evidence", section_path(id: 'evidence')
-    %li
-      = link_to "Sign up", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", target: '_blank'
+%footer.footer
+  %nav.nav
+    %ul
+      %li
+        = link_to "Home", root_path
+      %li
+        = link_to "About", section_path(id: 'about-the-centre')
+      %li
+        = link_to "Working with", section_path(id: 'working-with')
+      %li
+        = link_to "What's new", section_path(id: 'whats-new')
+      %li
+        = link_to "Evidence", section_path(id: 'evidence')
+      %li
+        = link_to "Sign up", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", target: '_blank'
+      %li
+        Terms and conditions
+      %li
+        Privacy
+      %li
+        &copy; Nesta, 2018

@@ -1,0 +1,13 @@
+section.collection {
+  .title h2 {
+    position: relative;
+    &:before {
+      content:"";
+      position: absolute;
+      width: $gutter;
+      left: -$gutter;
+      top: -$baseline*0.5;
+      border-top: 3px solid $black;
+    }
+  }
+}

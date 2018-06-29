@@ -1,21 +1,11 @@
 GIT
   remote: https://github.com/contentful/contentful_rails.git
-  revision: 9b9b051aa42667e6c969fb5cd55f7c37aaa3fffa
+  revision: 36f90a9976d870f7e5576ef0368bb613d1eb5bd8
   specs:
     contentful_rails (0.4.2)
       contentful_model (~> 1.0)
       rails (>= 4.2)
       redcarpet (~> 3.2)
-
-GIT
-  remote: https://github.com/wearefuturegov/geff.git
-  revision: ce12c2db8ad2cf4c5d8aa67455bc445142e241a0
-  specs:
-    geff (0.1.0)
-      bourbon
-      font-awesome-rails
-      mountain_view (~> 0.12)
-      neat
 
 GEM
   remote: https://rubygems.org/
@@ -78,9 +68,6 @@ GEM
     bindex (0.5.0)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
-    bourbon (5.0.1)
-      sass (~> 3.4)
-      thor (~> 0.19)
     buftok (0.2.0)
     builder (3.2.3)
     byebug (10.0.2)
@@ -108,7 +95,7 @@ GEM
     contentful (2.8.0)
       http (> 0.8, < 3.0)
       multi_json (~> 1)
-    contentful-management (2.2.0)
+    contentful-management (2.2.1)
       http (> 1.0, < 3.0)
       json (~> 1.8)
       multi_json (~> 1)
@@ -152,8 +139,6 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffaker (2.9.0)
     ffi (1.9.25)
-    font-awesome-rails (4.7.0.4)
-      railties (>= 3.2, < 6.0)
     gherkin (5.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -208,14 +193,12 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    mountain_view (0.13.0)
-      rails (>= 3.2.0)
     msgpack (1.2.4)
     multi_json (1.13.1)
     multipart-post (2.0.0)
     mustermann (1.0.2)
     naught (1.1.0)
-    neat (2.1.0)
+    neat (3.0.0)
       sass (~> 3.4)
       thor (~> 0.19)
     nio4r (2.3.1)
@@ -417,13 +400,13 @@ DEPENDENCIES
   draper
   email_spec
   ffaker
-  geff!
   haml
   i18n-debug
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mail_form
+  neat
   pry
   puma (~> 3.11)
   rails (~> 5.2.0)
@@ -450,4 +433,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.2
+   1.16.1
