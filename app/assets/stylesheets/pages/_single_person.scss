@@ -1,22 +1,22 @@
-.single_person {
-  .person_details {
-    margin-bottom: 30px;
-    img {
-      @include grid-column(2);
-      max-width: 140px;
-      display: inline-block;
-      vertical-align: middle;
-      height: auto;
-      border: $border-style $border-width $black;
-      border-radius: 100%;
-    }
-    .text {
-      @include grid-column(10);
-      vertical-align: middle;
-      display: inline-block;
-      h4 {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
+// .single_person {
+//   .person_details {
+//     margin-bottom: 30px;
+//     img {
+//       @include grid-column(2);
+//       max-width: 140px;
+//       display: inline-block;
+//       vertical-align: middle;
+//       height: auto;
+//       border: $style $thin $black;
+//       border-radius: 100%;
+//     }
+//     .text {
+//       @include grid-column(10);
+//       vertical-align: middle;
+//       display: inline-block;
+//       h4 {
+//         margin-bottom: 0;
+//       }
+//     }
+//   }
+// }

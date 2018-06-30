@@ -8,3 +8,9 @@
   margin: 0 auto;
   width: 1200px;
 }
+
+@mixin grid-reset {
+  float: none;
+  margin-left: 0;
+  width: initial;
+}

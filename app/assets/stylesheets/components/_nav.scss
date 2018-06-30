@@ -1,12 +1,22 @@
 nav.nav {
   line-height: $logo;
   ul {
+    margin-top: 0;
+    margin-bottom: 0;
     li {
       display: inline;
       margin-left: $gutter;
       white-space: nowrap;
+      a {
+        font-weight: 400;
+        text-decoration: none;
+      }
     }
   }
+}
+
+.sub nav.nav {
+  line-height: $logo*0.5;
 }
 
 footer.footer {

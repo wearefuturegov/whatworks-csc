@@ -1,0 +1,15 @@
+section.overview {
+  @include grid-column(8);
+  @include grid-push(2);
+  margin-bottom: $baseline*2;
+}
+
+.action {
+  @include grid-column(4);
+  .button {
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+    width: 100%;
+  }
+}

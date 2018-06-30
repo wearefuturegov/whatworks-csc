@@ -1,0 +1,6 @@
+section.impact {
+  margin-top: $baseline*4;
+  margin-bottom: $baseline*4;
+  @include grid-column(10);
+  @include grid-push(1);
+}

@@ -17,20 +17,40 @@
       %h3 Network
       =image_tag "partners/4.png"
 
-%footer.footer
-  .signup
-    %h2 Sign up to keep updated
-    %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
-    =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
-  .contact
-    %h2 Contact us
-    %p
-      =mail_to "wwccsc@nesta.org.uk"
-    %p
-      For Press enquiries
-      =mail_to "media@scie.org.uk"
-    %p
-      =link_to "https://twitter.com/WhatWorksUK", target: "_blank" do
-        / =fa_icon "twitter"
-        Follow us on Twitter
-  = render template: "partials/footer_nav"
+%footer
+  .footer
+    .signup
+      %strong Sign up to keep updated
+      %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
+      =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
+    .contact
+      %strong Contact us
+      %p
+        =mail_to "wwccsc@nesta.org.uk"
+      %p
+        For Press enquiries
+        =mail_to "media@scie.org.uk"
+      %p
+        =link_to "https://twitter.com/WhatWorksUK", target: "_blank" do
+          / =fa_icon "twitter"
+          Follow us on Twitter
+    %nav.nav
+      %ul
+        / %li
+        /   = link_to "Home", root_path
+        / %li
+        /   = link_to "About", section_path(id: 'about-the-centre')
+        / %li
+        /   = link_to "Working with", section_path(id: 'working-with')
+        / %li
+        /   = link_to "What's new", section_path(id: 'whats-new')
+        / %li
+        /   = link_to "Evidence", section_path(id: 'evidence')
+        / %li
+        /   = link_to "Sign up", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", target: '_blank'
+        %li
+          Terms and conditions
+        %li
+          Privacy
+        %li
+          &copy; Nesta, 2018

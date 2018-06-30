@@ -3,14 +3,19 @@ body {
   color: $black;
   font-size: $body;
   font-weight: 400;
-  line-height: 29px;
+  line-height: $baseline;
+}
+
+strong {
+  font-weight: 700;
 }
 
 a {
   &:not(.button), a:active, a:visited  {
     color: $black;
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: $medium $style transparentize($brand, $amount);
   }
   &:hover {
     color: $brand;
@@ -29,18 +34,19 @@ h2, h3 {
 // these calculations are not complete, just placeholder for now.
 
 h1 {
+  // color: $brand;
   font-family: $stack-b;
   font-size: $h1;
   font-weight: 900;
   line-height: calc(#{$h1} + #{$baseline*0.2});
-  margin-bottom: $baseline*0.3;
+  margin-bottom: $baseline*0.125;
 }
 
 h2 {
   font-family: $stack-b;
   font-size: $h2;
   font-weight: 700;
-  line-height: calc(#{$h2} + #{$baseline*0.2});
+  line-height: calc(#{$h2} + #{$baseline*0.05});
 }
 
 h3 {
@@ -54,12 +60,16 @@ h4 {
   font-family: $stack;
   font-size: $h4;
   font-weight: 300;
-  line-height: calc(#{$h4} + #{$baseline*0.3});
+  line-height: calc(#{$h4} + #{$baseline*0.23});
   margin-bottom: $baseline*0.4;
 }
 
+p + h2 {
+  margin-top: $baseline;
+}
+
 blockquote {
-  border-top: $border-width*0.25 $border-style $gray;
+  border-top: $thin*0.25 $style $gray;
   padding: $baseline 0 0 0;
   margin-top: $baseline*1.5;
   p {
@@ -86,7 +96,7 @@ cite {
   display: block;
   padding-left: $gutter;
   padding-bottom: $baseline;
-  border-bottom: $border-width*0.25 $border-style $gray;
+  border-bottom: $thin $style $gray;
   margin-bottom: $baseline*1.5;
   &:before {
     content: "– ";
@@ -104,5 +114,12 @@ cite {
     color: $brand;
     font-size: $p * 2;
     font-weight: 300;
+  }
+}
+
+footer.footer {
+  p, ul li {
+    font-size: $small;
+    line-height: $baseline*0.9;
   }
 }

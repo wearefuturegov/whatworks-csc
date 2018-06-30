@@ -1,0 +1,35 @@
+.profile {
+  @include grid-column(2);
+  @include grid-push(2);
+}
+.details {
+  @include grid-column(6);
+}
+
+$team: (
+  columns: 8,
+  gutter: $gutter,
+);
+
+$member: (
+  columns: 4,
+  gutter: $gutter,
+);
+
+section.team {
+  @include grid-column(8);
+  @include grid-push(2);
+  .collapse {
+    @include grid-collapse();
+  }
+  .member {
+    @include grid-column(4, $team);
+    margin-bottom: $baseline*4;
+  }
+  .profile {
+    @include grid-column(2, $member);
+  }
+  .details {
+    @include grid-column(2, $member);
+  }
+}

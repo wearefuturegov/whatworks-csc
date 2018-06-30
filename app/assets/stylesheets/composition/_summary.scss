@@ -1,0 +1,9 @@
+.summary, .action {
+  margin-top: $baseline*0.5;
+  margin-bottom: $baseline*0.5;
+}
+
+.summary {
+  @include grid-column(5);
+  @include grid-push(2);
+}

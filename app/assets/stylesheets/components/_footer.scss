@@ -1,17 +1,19 @@
-footer.footer {
-  color: $white;
+footer {
   background: $black;
-  nav.nav {
-    ul li {
-      margin-left: 0;
-      margin-right: $gutter;
+  .footer {
+    color: $white;
+    nav.nav {
+      ul li {
+        margin-left: 0;
+        margin-right: $gutter;
+      }
     }
-  }
-  nav.nav,
-  .signup,
-  .contact {
-    a, a:active, a:visited, p {
-      color: $white;
+    nav.nav,
+    .signup,
+    .contact {
+      a, a:active, a:visited, p {
+        color: $white;
+      }
     }
   }
 }

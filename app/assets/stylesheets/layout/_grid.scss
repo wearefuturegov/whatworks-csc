@@ -4,14 +4,17 @@ $neat-grid: (
 );
 
 body,
-header,
-footer,
+header .header,
+footer .footer,
 section  {
   @include grid-container;
 }
 
-.header,
+header .header,
+.sub nav.nav,
 .container,
-.footer {
-  @include grid-visual;
+footer .footer {
+  // @include grid-visual;
+  width: calc(100% - #{$gutter*8});
+  margin: 0 auto;
 }
