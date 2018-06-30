@@ -1,17 +1,20 @@
-footer .footer {
-  .signup, .contact {
-    margin-top: $baseline;
-    margin-bottom: $baseline;
-    @include grid-column(6);
-  }
-  .twitter {
-    margin-top: $baseline;
-    margin-bottom: $baseline;
-    min-height: 250px;
-    @include grid-column(6);
-  }
-  nav.nav {
-    @include grid-column(10);
+footer {
+  clear: both;
+  .footer {
+    .signup, .contact {
+      margin-top: $baseline;
+      margin-bottom: $baseline;
+      @include grid-column(6);
+    }
+    .twitter {
+      margin-top: $baseline;
+      margin-bottom: $baseline;
+      min-height: 250px;
+      @include grid-column(6);
+    }
+    nav.nav {
+      @include grid-column(10);
 
+    }
   }
 }
