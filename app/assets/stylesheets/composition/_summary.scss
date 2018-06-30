@@ -1,11 +1,13 @@
-.summary, .action {
-  margin-top: $baseline*0.5;
-  margin-bottom: $baseline*0.5;
-}
-
 .summary {
   @include grid-column(8);
   @include grid-push(2);
-  border-bottom: $style $thin $color;
-  padding-bottom: $baseline;
+  a {
+    display: block;
+    border-bottom: $style $thin $color;
+    padding-top: $baseline;
+    padding-bottom: $baseline;
+    &:hover {
+      border-color: $brand;
+    }
+  }
 }
