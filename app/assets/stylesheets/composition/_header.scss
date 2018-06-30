@@ -7,13 +7,10 @@ header {
       @include grid-column(10);
     }
   }
-  + .container {
-    margin-top: $baseline*4;
-  }
 }
 
-.sub nav.nav {
+.sub nav.nav, header {
   + .container {
-    margin-top: $baseline*4;
+    margin-top: $baseline*3;
   }
 }

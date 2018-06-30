@@ -4,7 +4,8 @@
   %section.page
     = @blog_post.decorate_date
     = @blog_post.decorate_author
-    %h4= @blog_post.decorate_subheading
+    %h4
+      = @blog_post.decorate_subheading
     = @blog_post.decorate_body
 
     - if @blog_post.comments.count > 0

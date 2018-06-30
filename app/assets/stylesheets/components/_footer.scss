@@ -1,19 +1,10 @@
 footer {
-  background: $black;
+  border-top: $thin $style $brand;
   .footer {
-    color: $white;
     nav.nav {
       ul li {
         margin-left: 0;
         margin-right: $gutter;
-      }
-    }
-    nav.nav,
-    .signup,
-    .contact {
-      a, a:active, a:visited, p {
-        color: $white;
-        border-color: $white;
       }
     }
   }
