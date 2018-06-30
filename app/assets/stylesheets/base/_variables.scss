@@ -7,8 +7,9 @@ $desktop-width: 960px;
 $body: 20px;
 $baseline: 1.4em;
 $gutter: 20px;
-
 $small: 16px;
+
+$logo: 135px;
 
 $black: #252125;
 $off-black: #1d1d1d;
@@ -30,13 +31,14 @@ $brand-b: #FFAA41; // mustard
 $brand-c: #E62D8C; // pink
 $brand-d: #28AFA0; // turquoise
 
-$logo: 135px;
+// transparancy
+$amount: 0.3;
 
+// border
 $thin: 1px;
 $medium: 2px;
 $thick: 10px;
 $style: solid;
-
-$amount: 0.3;
+$color: $black;
 
 $base-border-radius: 0;

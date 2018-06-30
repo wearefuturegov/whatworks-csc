@@ -6,6 +6,6 @@
 .summary {
   @include grid-column(8);
   @include grid-push(2);
-  border-bottom: $style $thin $black;
+  border-bottom: $style $thin $color;
   padding-bottom: $baseline;
 }
