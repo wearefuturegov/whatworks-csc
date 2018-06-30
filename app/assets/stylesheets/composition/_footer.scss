@@ -13,8 +13,8 @@ footer {
       @include grid-column(6);
     }
     nav.nav {
+      text-algn: left;
       @include grid-column(10);
-
     }
   }
 }

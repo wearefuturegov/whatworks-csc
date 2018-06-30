@@ -1,5 +1,6 @@
 section.page {
   margin-top: $baseline;
+  margin-bottom: $baseline;
   @include grid-column(8);
   @include grid-push(2);
 }
