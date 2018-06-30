@@ -1,5 +1,5 @@
 section.overview {
   @include grid-column(8);
   @include grid-push(2);
-  margin-bottom: $baseline*2;
+  margin-bottom: $baseline;
 }

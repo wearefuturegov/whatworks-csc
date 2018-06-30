@@ -40,7 +40,7 @@ h1 {
   font-size: $h1;
   font-weight: 900;
   line-height: calc(#{$h1} + #{$baseline*0.2});
-  margin-bottom: $baseline*0.125;
+  margin-bottom: $baseline*0.5;
 }
 
 h2 {
@@ -52,7 +52,8 @@ h2 {
 
 h3,
 .page h2,
-.page h3 {
+.page h3,
+.summary h2 {
   font-family: $stack;
   font-size: $h3;
   font-weight: 700;
