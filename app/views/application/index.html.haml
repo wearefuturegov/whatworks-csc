@@ -36,11 +36,8 @@
         =link_to blog_post_path(id: b.slug) do
           %h3
             =b.title
-        .sub_text
-          .author
-            =b.decorate.decorate_author
-          .date
-            =b.decorate.decorate_date
+        =b.decorate.decorate_date
+        =b.decorate.decorate_author
 
 
 

@@ -14,8 +14,8 @@ a {
   &:not(.button), a:active, a:visited  {
     color: $black;
     font-weight: 600;
-    text-decoration: none;
-    border-bottom: $medium $style transparentize($brand, $amount);
+    text-decoration: underline;
+    // border-bottom: $medium $style transparentize($brand, $amount);
   }
   &:hover {
     color: $brand;
@@ -24,6 +24,7 @@ a {
 }
 
 p {
+  color: $gray;
   margin-bottom: $baseline*0.5;
 }
 
@@ -40,7 +41,7 @@ h1 {
   font-size: $h1;
   font-weight: 900;
   line-height: calc(#{$h1} + #{$baseline*0.2});
-  margin-bottom: $baseline*0.5;
+  margin-bottom: $baseline*0.25;
 }
 
 h2 {
@@ -48,6 +49,16 @@ h2 {
   font-size: $h2;
   font-weight: 700;
   line-height: calc(#{$h2} + #{$baseline*0.05});
+}
+
+.impact {
+  h2 {
+    color: $gray;
+    line-height: 43px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
 }
 
 h3,
@@ -69,7 +80,7 @@ h4 {
   font-family: $stack;
   font-size: $h4;
   font-weight: 300;
-  line-height: calc(#{$h4} + #{$baseline*0.23});
+  line-height: calc(#{$h4} + #{$baseline*0.35});
   margin-bottom: $baseline*0.4;
 }
 
@@ -78,9 +89,6 @@ p + h2 {
 }
 
 blockquote {
-  border-top: $thin*0.25 $style $color;
-  padding: $baseline 0 0 0;
-  margin-top: $baseline*1.5;
   p {
     font-family: $stack-b;
     font-size: $body*1.5;
@@ -109,20 +117,6 @@ cite {
   margin-bottom: $baseline*1.5;
   &:before {
     content: "– ";
-  }
-}
-
-.impact {
-  h2 {
-    line-height: 43px;
-    margin-bottom: 40px;
-    font-weight: 500;
-    text-align: center;
-  }
-  p {
-    color: $brand;
-    font-size: $p * 2;
-    font-weight: 300;
   }
 }
 

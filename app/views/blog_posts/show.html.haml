@@ -2,9 +2,8 @@
   %section.title
     = @blog_post.decorate_title
   %section.page
-    %h3
-      = @blog_post.decorate_date
-      = @blog_post.decorate_author
+    = @blog_post.decorate_date
+    = @blog_post.decorate_author
     %h4= @blog_post.decorate_subheading
     = @blog_post.decorate_body
 
