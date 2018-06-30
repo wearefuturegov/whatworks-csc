@@ -1,9 +1,10 @@
 %section.container
-  %section.profile
-    = @team_member.decorate_image
   %section.details
     %h1
       = @team_member.name
+  %section.page
+    %section.profile
+      = @team_member.decorate_image
     %h4
       = @team_member.role
   %section.page
