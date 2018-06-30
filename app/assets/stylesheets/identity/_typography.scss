@@ -7,6 +7,7 @@ body {
 }
 
 strong {
+  color: $black;
   font-weight: 700;
 }
 
@@ -14,10 +15,6 @@ strong {
   display: inline;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.date {
-  font-size: $small;
 }
 
 a {
@@ -44,6 +41,17 @@ p {
   font-weight: 400;
 }
 
+// small
+.single p,
+.date,
+cite,
+blockquote + p,
+footer .footer p, .footer ul li {
+  font-size: $small;
+  font-weight: 400;
+  line-height: calc(#{$small} + #{$baseline*0.4});
+}
+
 h2, h3 {
   margin-bottom: $baseline*0.25;
 }
@@ -66,14 +74,16 @@ h2 {
   line-height: calc(#{$h2} + #{$baseline*0.05});
 }
 
-.impact {
-  h2 {
-    font-family: $stack;
-    color: $gray;
-    font-size: $h2*0.75;
-    font-weight: 300;
-    line-height: calc(#{$h2*0.75} + #{$baseline*0.2});
-  }
+.team h2 {
+  margin-bottom: $baseline;
+}
+
+.impact h2 {
+  font-family: $stack;
+  color: $gray;
+  font-size: $h2*0.75;
+  font-weight: 300;
+  line-height: calc(#{$h2*0.75} + #{$baseline*0.2});
 }
 
 h3,
@@ -101,11 +111,11 @@ h4 {
   font-weight: 300;
   line-height: calc(#{$h4} + #{$baseline*0.35});
   margin-top: 0;
-  margin-bottom: $baseline*2;
+  margin-bottom: $baseline;
   p.subheading {
     color: $gray;
     margin-top: 0;
-    margin-bottom: $baseline*2;
+    margin-bottom: $baseline;
   }
 }
 
@@ -131,19 +141,11 @@ blockquote {
 cite,
 blockquote + p {
   color: $gray;
-  font-size: $small;
   font-style: italic;
   display: block;
   padding-left: $gutter;
   margin-bottom: $baseline*3;
   &:before {
     content: "– ";
-  }
-}
-
-footer .footer {
-  p, ul li {
-    font-size: $small;
-    line-height: $baseline*0.9;
   }
 }

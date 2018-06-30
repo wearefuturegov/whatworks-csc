@@ -1,13 +1,23 @@
-header {
-  .header {
-    nav.nav {
-      @include grid-column(10);
-    }
+.sub nav.nav ul {
+  @include grid-column(12);
+}
+
+.sub nav.nav, header {
+  + .container {
+    margin-top: $baseline*4;
   }
 }
 
 .sub {
   + .container {
-    margin-top: $baseline*2;
+    margin-top: $baseline*1.75;
   }
+}
+
+.header nav.nav, .sub nav.nav {
+  text-align: right;
+}
+
+footer .footer nav.nav {
+  text-algn: left;
 }

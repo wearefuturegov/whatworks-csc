@@ -5,4 +5,12 @@
   .date, .author {
     display: block;
   }
+  a p {
+    @include ease;
+    color: $black;
+    &:hover {
+      @include ease;
+      color: $brand;
+    }
+  }
 }
