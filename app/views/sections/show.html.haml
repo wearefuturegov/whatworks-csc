@@ -7,5 +7,5 @@
   - if @pages.count > 0
     - @pages.each do |p|
       .summary
-        = link_to raw("<h2>#{p.title}</h2>"), section_page_path(@section.slug, p.slug), class: 'button'
+        = link_to raw("<h2>#{p.title}</h2>"), section_page_path(@section.slug, p.slug)
         = p.try(:summary)
