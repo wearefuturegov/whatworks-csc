@@ -6,7 +6,7 @@ section.hero {
   .intro {
     @include grid-column(8);
     .link {
-      margin-top: $baseline*4;
+      margin-top: $baseline*2;
     }
   }
 }

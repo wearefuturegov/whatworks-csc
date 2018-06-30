@@ -1,6 +1,8 @@
 .single {
-  .author {
-    margin-top: $baseline*0.5;
+  .date {
+    margin-top: $baseline;
+  }
+  .date, .author {
     display: block;
   }
 }

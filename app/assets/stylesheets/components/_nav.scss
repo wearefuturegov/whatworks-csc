@@ -9,17 +9,22 @@ nav.nav {
       white-space: nowrap;
       a {
         font-weight: 400;
+        text-decoration: none;
+      }
+      &.selected {
+        background: $brand;
+        margin-left: 0;
+        padding-left: $gutter;
+        a {
+          color: $white;
+        }
       }
     }
   }
 }
 
-.sub nav.nav {
-  line-height: $logo*0.5;
-}
-
-footer.footer {
+.sub, footer .footer {
   nav.nav {
-    line-height: $logo*0.75;
+    line-height: $logo*0.5;
   }
 }
