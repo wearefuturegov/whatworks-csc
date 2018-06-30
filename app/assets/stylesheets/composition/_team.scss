@@ -1,11 +1,3 @@
-.profile {
-  @include grid-column(2);
-  @include grid-push(2);
-}
-.details {
-  @include grid-column(6);
-}
-
 $team: (
   columns: 8,
   gutter: $gutter,

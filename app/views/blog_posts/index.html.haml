@@ -4,8 +4,8 @@
   %section.collection
     - @blog_posts.each_with_index do |b, i|
       .single{class: i == 0 ? "featured" : ""}
-        %h3
-          =link_to blog_post_path(id: b.slug) do
+        =link_to blog_post_path(id: b.slug) do
+          %h3
             =b.title
           =b.decorate.decorate_date
           =b.decorate.decorate_author

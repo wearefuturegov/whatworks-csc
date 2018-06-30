@@ -11,12 +11,6 @@ strong {
   font-weight: 700;
 }
 
-.date, .author {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 a {
   &:not(.button), a:active, a:visited  {
     color: $black;
