@@ -1,12 +1,30 @@
 .container
   %section.title
     %h1 Blog
-
-  %section.page
+  %section.collection
     - @blog_posts.each_with_index do |b, i|
       .single{class: i == 0 ? "featured" : ""}
         =link_to blog_post_path(id: b.slug) do
-          %h3=b.title
+          %h3
+            =b.title
+        .sub_text
+          .author
+            =b.decorate.decorate_author
+          .date
+            =b.decorate.decorate_date
+      .single
+        =link_to blog_post_path(id: b.slug) do
+          %h3
+            =b.title
+        .sub_text
+          .author
+            =b.decorate.decorate_author
+          .date
+            =b.decorate.decorate_date
+      .single
+        =link_to blog_post_path(id: b.slug) do
+          %h3
+            =b.title
         .sub_text
           .author=b.decorate.decorate_author
           .date=b.decorate.decorate_date

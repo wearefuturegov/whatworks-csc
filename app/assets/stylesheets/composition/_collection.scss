@@ -1,0 +1,12 @@
+section.collection {
+  margin-top: $baseline;
+  .single {
+    @include grid-column(3);
+    &.featured {
+      @include grid-column(6);
+    }
+  }
+  + section.collection {
+    margin-top: $baseline*4;
+  }
+}

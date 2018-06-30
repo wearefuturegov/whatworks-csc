@@ -1,49 +1,47 @@
-#whos-involved {
-
-  blockquote {
-    margin: 15px 0;
-    margin-top: 50px;
-    padding: 0;
-    border: none;
-    &:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-    ul {
-      @include grid-column(6);
-
-      li {
-        list-style-type: none;
-        vertical-align: middle;
-        margin-bottom: 15px;
-        color: rgba($black, 0.5);
-        u {
-          font-style: normal;
-          text-decoration: none;
-          min-width: 70px;
-          font-size: 35px;
-          color: rgba($black, 1);
-          font-weight: 300;
-          float: left;
-          display: block;
-          height: 30px;
-        }
-      }
-    }
-    p {
-      @include grid-column(6);
-      margin: 0;
-      padding: 0;
-      font-weight: 600;
-      margin-left: 0;
-
-      &:before {
-        content: none !important;
-      }
-      &:after {
-        content: none !important;
-      }
-    }
-  }
-}
+// #whos-involved {
+//   blockquote {
+//     margin: 15px 0;
+//     margin-top: 50px;
+//     padding: 0;
+//     border: none;
+//     &:after {
+//       clear: both;
+//       content: "";
+//       display: block;
+//     }
+//     ul {
+//       width: calc(50% - 10px);
+//       float: left;
+//       margin-left: 20px;
+//       li {
+//         list-style-type: none;
+//         vertical-align: middle;
+//         margin-bottom: 15px;
+//         color: rgba($black, 0.5);
+//         u {
+//           font-style: normal;
+//           text-decoration: none;
+//           min-width: $gutter*3;
+//           font-size: 35px;
+//           color: rgba($black, 1);
+//           font-weight: 300;
+//           float: left;
+//           display: block;
+//           height: 30px;
+//         }
+//       }
+//     }
+//     p {
+//       width: calc(50% - 10px);
+//       margin-left: 0;
+//       padding: 0;
+//       float: left;
+//       &:before {
+//         content: none !important;
+//       }
+//       &:after {
+//         content: none !important;
+//       }
+//     }
+//   }
+// }

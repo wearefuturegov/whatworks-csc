@@ -1,12 +1,14 @@
 .container
   %section.title
-    %h1= @section.title
+    %h1
+      = @section.title
   %section.overview
     = parse_markdown(@section.content)
   - if @pages.count > 0
     - @pages.each do |p|
       .summary
-        %h2=p.title
+        %h2
+          =p.title
         = p.try(:summary)
       .action
         = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'

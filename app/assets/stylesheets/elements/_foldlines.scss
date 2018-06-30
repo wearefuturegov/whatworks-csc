@@ -4,10 +4,11 @@ section.collection {
     &:before {
       content:"";
       position: absolute;
-      width: $gutter;
-      left: -$gutter;
-      top: -$baseline*0.5;
-      border-top: 3px solid $black;
+      width: $gutter*2.75;
+      left: -$gutter*2;
+      top: $baseline*0.125; //0.35em
+      border-top: $thick $style transparentize($brand, $amount);
+      z-index: -1000;
     }
   }
 }

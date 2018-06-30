@@ -1,7 +1,7 @@
 section.bar {
   padding-top: $baseline;
   padding-bottom: $baseline;
-  border: $border-style $border-width $black;
+  border: $style $thin $black;
   h2, p {
     font-weight: 700;
   }

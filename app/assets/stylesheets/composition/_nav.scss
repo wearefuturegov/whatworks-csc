@@ -1,18 +1,12 @@
 header {
   .header {
-    .logo {
-      @include grid-column(2);
-    }
     nav.nav {
       @include grid-column(10);
     }
   }
-  + .container {
-    margin-top: $baseline*2;
-  }
 }
 
-.sub nav.nav {
+.sub {
   + .container {
     margin-top: $baseline*2;
   }
