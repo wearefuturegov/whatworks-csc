@@ -40,6 +40,10 @@ p {
   margin-bottom: $baseline*0.5;
 }
 
+.summary p {
+  font-weight: 400;
+}
+
 h2, h3 {
   margin-bottom: $baseline*0.25;
 }
@@ -51,7 +55,7 @@ h1 {
   font-family: $stack-b;
   font-size: $h1;
   font-weight: 900;
-  line-height: calc(#{$h1} + #{$baseline*0.2});
+  line-height: calc(#{$h1} + #{$baseline*0.15});
   margin-bottom: $baseline*0.25;
 }
 
@@ -86,7 +90,7 @@ h3,
 .overview p {
   & + h2,
   & + h3 {
-    margin-top: $baseline;
+    margin-top: $baseline*1.5;
   }
 }
 
@@ -96,11 +100,12 @@ h4 {
   font-size: $h4;
   font-weight: 300;
   line-height: calc(#{$h4} + #{$baseline*0.35});
-  margin-bottom: $baseline;
+  margin-top: 0;
+  margin-bottom: $baseline*2;
   p.subheading {
     color: $gray;
-    margin-top: $baseline;
-    margin-bottom: $baseline*0.5;
+    margin-top: 0;
+    margin-bottom: $baseline*2;
   }
 }
 
