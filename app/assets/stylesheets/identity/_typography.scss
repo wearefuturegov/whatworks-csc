@@ -25,11 +25,13 @@ a {
     color: $black;
     font-weight: 600;
     text-decoration: underline;
+    @include ease;
     // border-bottom: $medium $style transparentize($brand, $amount);
   }
   &:hover {
     color: $brand;
     border-bottom-color: $white;
+    @include ease;
   }
 }
 
@@ -80,9 +82,12 @@ h3,
   line-height: calc(#{$h3} + #{$baseline*0.25});
 }
 
-.page p + h2,
-.page p + h3 {
-  margin-top: $baseline;
+.page p, 
+.overview p {
+  & + h2,
+  & + h3 {
+    margin-top: $baseline;
+  }
 }
 
 h4 {
@@ -91,25 +96,22 @@ h4 {
   font-size: $h4;
   font-weight: 300;
   line-height: calc(#{$h4} + #{$baseline*0.35});
-  margin-bottom: $baseline*0.4;
-  &.subheading {
-    color: $brand;
+  margin-bottom: $baseline;
+  p.subheading {
+    color: $gray;
     margin-top: $baseline;
     margin-bottom: $baseline*0.5;
   }
 }
 
-p + h2 {
-  margin-top: $baseline;
-}
-
 blockquote {
   p {
     font-family: $stack-b;
-    font-size: $body*1.5;
+    font-size: $body;
     line-height: $baseline;
     padding-left: $gutter;
     padding-right: $gutter;
+    border-left: $medium $style $color;
     &:before {
       content: "“";
       margin-right: $gutter*0.25;
@@ -121,15 +123,14 @@ blockquote {
   }
 }
 
-cite {
+cite,
+blockquote + p {
   color: $gray;
   font-size: $small;
   font-style: italic;
   display: block;
   padding-left: $gutter;
-  padding-bottom: $baseline;
-  border-bottom: $thin $style $color;
-  margin-bottom: $baseline*1.5;
+  margin-bottom: $baseline*3;
   &:before {
     content: "– ";
   }

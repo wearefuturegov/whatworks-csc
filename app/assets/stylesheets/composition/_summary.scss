@@ -2,12 +2,22 @@
   @include grid-column(8);
   @include grid-push(2);
   a {
+    @include ease;
     display: block;
     border-bottom: $style $thin $color;
     padding-top: $baseline;
     padding-bottom: $baseline;
+    & p {
+      @include ease;
+    }
     &:hover {
+      @include ease;
       border-color: $brand;
+      & h2,
+      & p  {
+        @include ease;
+        color: $brand;
+      }
     }
   }
 }

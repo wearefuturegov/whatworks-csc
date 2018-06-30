@@ -14,3 +14,10 @@
   margin-left: 0;
   width: initial;
 }
+
+@mixin ease {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;
+}
