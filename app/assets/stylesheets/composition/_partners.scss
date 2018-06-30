@@ -1,4 +1,6 @@
 section.partners {
+  margin-top: $baseline*6;
+  margin-bottom: $baseline*2;
   h2 {
     @include grid-column(12);
   }
@@ -9,8 +11,6 @@ section.partners {
     display: inline-block;
   }
   .development {
-    margin-top: $baseline*4;
-    margin-bottom: $baseline*2;
     @include grid-column(6);
     img {
       width: 18%;
@@ -18,8 +18,6 @@ section.partners {
     }
   }
   .research, .funders, .network {
-    margin-top: $baseline*4;
-    margin-bottom: $baseline*2;
     @include grid-column(2);
     img {
       width: 55%;

@@ -1,4 +1,4 @@
-.container
+%section.container
   %section.title
     %h1
       = @section.title
@@ -7,8 +7,5 @@
   - if @pages.count > 0
     - @pages.each do |p|
       .summary
-        %h2
-          =p.title
+        = link_to raw("<h2>#{p.title}</h2>"), section_page_path(@section.slug, p.slug), class: 'button'
         = p.try(:summary)
-      .action
-        = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'

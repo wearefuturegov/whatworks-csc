@@ -1,4 +1,4 @@
-.container
+%section.container
   %section.hero
     .intro
       %h1 Better outcomes for children and their families.
@@ -12,41 +12,40 @@
       %h2
         How we are setting up the new centre
     .single
-      %h3
-        Evidence and Research
+      = link_to raw('<h3>Evidence and Research</h3>'), section_path(id: 'evidence')
       %p
         Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
       = link_to "Learn about our evidence", section_path(id: 'evidence')
     .single
-      %h3
-        Co-designing services
+      = link_to raw('<h3>Co-designing services</h3>'), section_path(id: 'about-us')
       %p
         Working with local authorities and partners to co-design and test ways to generate, share and embed evidence.
       = link_to "Learn about our services", section_path(id: 'about-us')
     .single
-      %h3
-        Working with you
+      = link_to raw('<h3>Working with you</h3>'), section_path(id: 'working-with')
       %p
         Developing our strategy, services and team with children, young people, families, social workers,
       = link_to "Learn how we work with you", section_path(id: 'working-with')
 
-  %section.collection.border
+  %section.collection
     .single.title
       %h2
         What's new
     - @blog_posts.each do |b|
       .single
         =link_to blog_post_path(id: b.slug) do
-          %h3=b.title
+          %h3
+            =b.title
         .sub_text
-          .author=b.decorate.decorate_author
-          .date=b.decorate.decorate_date
+          .author
+            =b.decorate.decorate_author
+          .date
+            =b.decorate.decorate_date
 
 
 
-  %section.section.impact
+  %section.impact
     %h2
       The decisions that social care leaders and practitioners make can impact on children, young people and their families throughout their lives.
     %h2
       Basing those decisions on reliable evidence about what works is critical.
-

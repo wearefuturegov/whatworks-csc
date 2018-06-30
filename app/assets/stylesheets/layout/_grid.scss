@@ -13,6 +13,7 @@ section  {
 header .header,
 .sub nav.nav,
 .container,
+.partners,
 footer .footer {
   // @include grid-visual;
   width: calc(100% - #{$gutter*8});

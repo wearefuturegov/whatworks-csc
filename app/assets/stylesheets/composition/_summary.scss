@@ -4,6 +4,8 @@
 }
 
 .summary {
-  @include grid-column(5);
+  @include grid-column(8);
   @include grid-push(2);
+  border-bottom: $style $thin $black;
+  padding-bottom: $baseline;
 }
