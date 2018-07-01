@@ -1,0 +1,32 @@
+.sub nav.nav ul {
+  @include grid-column(3, $mobile);
+  @include grid-push(1, $mobile);
+}
+
+.sub nav.nav, header {
+  + .container {
+    margin-top: $baseline;
+  }
+}
+
+.sub {
+  + .container {
+    margin-top: $baseline*1.5;
+  }
+}
+
+.header nav.nav, .sub nav.nav {
+  ul li {
+    display: block;
+  }
+}
+
+.header nav.nav,
+.sub nav.nav {
+  @include grid-column(2, $mobile);
+  line-height: $baseline*1.5;
+}
+
+.sub nav.nav {
+  margin-left: 0;
+}

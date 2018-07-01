@@ -1,0 +1,15 @@
+section.collection {
+  .single {
+    @include grid-column(4, $mobile);
+    &.featured {
+      @include grid-column(4, $mobile);
+    }
+    margin-bottom: $baseline*0.5;
+    &.title {
+      margin-bottom: $baseline;
+    }
+  }
+  + section.collection {
+    margin-top: $baseline*2;
+  }
+}

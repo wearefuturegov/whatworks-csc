@@ -1,0 +1,15 @@
+section.team {
+  @include grid-column(4, $mobile);
+  .member {
+    @include grid-column(4, $mobile);
+    @include grid-push(1);
+    margin-bottom: $baseline*2;
+    margin-left: 0;
+  }
+  .profile {
+    @include grid-column(2, $mobile);
+  }
+  .details {
+    @include grid-column(4, $mobile);
+  }
+}

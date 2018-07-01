@@ -3,8 +3,5 @@ header {
     .logo {
       @include grid-column(2);
     }
-    nav.nav {
-      @include grid-column(10);
-    }
   }
 }

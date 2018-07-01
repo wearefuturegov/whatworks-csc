@@ -1,0 +1,5 @@
+section.title {
+  h1 {
+    @include grid-column(4, $mobile);
+  }
+}

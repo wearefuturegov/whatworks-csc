@@ -1,0 +1,12 @@
+section.hero {
+  margin-bottom: $baseline*4;
+  .tagline {
+    @include grid-column(4, $mobile);
+  }
+  .intro {
+    @include grid-column(4, $mobile);
+    .link {
+      margin-top: $baseline;
+    }
+  }
+}
