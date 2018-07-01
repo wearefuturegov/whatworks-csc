@@ -21,13 +21,13 @@
   %section.team.board
     %h2 Founding Board
     - @board_members.each do |bm|
-      =link_to board_member_path(id: bm.slug) do
+      =link_to board_member_path(id: bm.slug), class: "this" do
         .collapse
           .member
             .profile
               =bm.decorate.decorate_image
             .details
-              %h3
+              %strong
                 =bm.name
               .role
                 =bm.try(:role)

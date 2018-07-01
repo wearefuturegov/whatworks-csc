@@ -1,0 +1,22 @@
+form {
+  label {
+    abbr {
+      display: none;
+    }
+  }
+  input, textarea {
+    @include borderbox;
+    font-size: $body;
+    line-height: $baseline;
+    background: none;
+    border: none;
+    border-bottom: $style $thin $black;
+    line-height: $baseline;
+    padding: $baseline*0.125 $gutter*0.5;
+  }
+  textarea {
+    resize: none;
+    border: $style $thin $black;
+    height: $baseline*4;
+  }
+}

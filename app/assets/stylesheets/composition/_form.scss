@@ -1,0 +1,13 @@
+form {
+  label {
+    margin-top: $baseline;
+    margin-bottom: $baseline*0.125;
+  }
+  label, input, textarea {
+    float: left;
+    width: 100%;
+  }
+  textarea {
+    margin-bottom: $baseline;
+  }
+}
