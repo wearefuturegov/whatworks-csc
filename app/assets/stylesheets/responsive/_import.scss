@@ -1,1 +1,14 @@
-@import "*";
+$overlay: rgba(0, 212, 255, 0.25);
+$mobile: (
+  columns: 4,
+  gutter: $gutter,
+  color: $overlay,
+);
+
+@media only screen and (min-width:0) and (max-width:999px) {
+  @import "base/import";
+  @import "composition/import";
+  @import "elements/import";
+  @import "identity/import";
+  @import "layout/import";
+}

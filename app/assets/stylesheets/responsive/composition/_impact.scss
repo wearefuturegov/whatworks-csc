@@ -1,0 +1,4 @@
+section.impact {
+  margin-top: $baseline*3;
+  @include grid-column(4, $mobile);
+}

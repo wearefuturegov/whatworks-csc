@@ -1,0 +1,11 @@
+.profile {
+  @include grid-column(2, $mobile);
+  margin-left: 0;
+  + h4 {
+    @include grid-column(4, $mobile);
+    margin-left: 0;
+  }
+}
+.details {
+  @include grid-column(4, $mobile);
+}

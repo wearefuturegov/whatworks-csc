@@ -1,0 +1,17 @@
+section.partners {
+  margin-top: $baseline;
+  h2 {
+    @include grid-column(4, $mobile);
+  }
+  img {
+    max-width: 20%;
+    max-height: 20%;
+  }
+  .together {
+    img {
+      width: 20%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+}

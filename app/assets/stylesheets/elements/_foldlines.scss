@@ -1,14 +1,14 @@
-section.collection {
-  .title h2 {
-    position: relative;
-    &:before {
-      content:"";
-      position: absolute;
-      width: $gutter*2.75;
-      left: -$gutter*2;
-      top: $baseline*0.125; //0.35em
-      border-top: $thick $style transparentize($brand, $amount);
-      z-index: -1000;
-    }
-  }
-}
+// section.collection {
+//   .title h2 {
+//     position: relative;
+//     &:before {
+//       content:"";
+//       position: absolute;
+//       width: $gutter*2.75;
+//       left: -$gutter*2;
+//       top: $baseline*0.125; //0.35em
+//       border-top: $thick $style transparentize($brand, $amount);
+//       z-index: -1000;
+//     }
+//   }
+// }

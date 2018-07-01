@@ -1,0 +1,9 @@
+header {
+  padding-top: $baseline*0.5;
+  padding-bottom: $baseline*0.5;
+  .header {
+    .logo {
+      @include grid-column(2, $mobile);
+    }
+  }
+}

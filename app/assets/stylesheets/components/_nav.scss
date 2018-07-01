@@ -12,11 +12,11 @@ nav.nav {
         text-decoration: none;
       }
       &.selected {
-        background: $brand;
+        background: transparentize($brand, $amount);
         margin-left: 0;
         padding-left: $gutter;
         a {
-          color: $white;
+          color: $black;
         }
       }
     }
@@ -26,5 +26,15 @@ nav.nav {
 .sub, footer .footer {
   nav.nav {
     line-height: $logo*0.5;
+    ul li {
+      &.selected {
+        background: none;
+        margin-left: 0;
+        padding-left: $gutter;
+        a {
+          color: $brand;
+        }
+      }
+    }
   }
 }
