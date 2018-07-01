@@ -26,3 +26,8 @@ section.team {
     @include grid-column(4, $member);
   }
 }
+
+// temp. neat grid causes me a headache
+section.team.board .this:nth-child(4) .collapse .member {
+  clear: both;
+}

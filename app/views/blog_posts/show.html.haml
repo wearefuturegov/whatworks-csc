@@ -12,12 +12,8 @@
       %h3="#{pluralize(@blog_post.comments.count, 'comment')}:"
 
       = render partial: 'comments/comment', collection: CommentsDecorator.decorate_collection(@blog_post.comments), as: :comment
-      %br
 
-    .accordion#add_comment
-      .accord-single
-        %h4.accord-toggle
-          Add your comment
-
-        .accord-cont
-          = render 'comments/form'
+  %section.comments
+    %h2
+      Add your comment
+    = render 'comments/form'
