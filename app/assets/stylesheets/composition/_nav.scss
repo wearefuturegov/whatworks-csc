@@ -2,18 +2,6 @@
   @include grid-column(12);
 }
 
-.sub nav.nav, header {
-  + .container {
-    margin-top: $baseline*4;
-  }
-}
-
-.sub {
-  + .container {
-    margin-top: $baseline*1.75;
-  }
-}
-
 .header nav.nav, .sub nav.nav {
   text-align: right;
 }

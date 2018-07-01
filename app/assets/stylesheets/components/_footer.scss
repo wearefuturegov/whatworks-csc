@@ -5,6 +5,10 @@ footer {
       ul li {
         margin-left: 0;
         margin-right: $gutter;
+        a {
+          text-decoration: underline;
+          font-weight: 600;
+        }
       }
     }
   }

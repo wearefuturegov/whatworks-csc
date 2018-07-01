@@ -1,0 +1,11 @@
+.sub nav.nav, header {
+  + .container {
+    margin-top: $baseline*3;
+  }
+}
+
+.sub {
+  + .container {
+    margin-top: $baseline;
+  }
+}
