@@ -7,6 +7,8 @@
   width: auto;
   &:hover {
     cursor: pointer;
+  }
+  & a:hover {
     color: $black;
   }
 }
