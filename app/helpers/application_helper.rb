@@ -4,6 +4,7 @@ module ApplicationHelper
   
   def twitter
     tweet = WhatWorksCentre::Twitter.instance.latest_tweet
+    return nil unless tweet
     content_tag(:div, class: 'twitter') do
       content_tag(:p, tweet)
     end
