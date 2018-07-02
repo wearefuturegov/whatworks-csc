@@ -21,17 +21,17 @@
         list-style-type: none;
         vertical-align: middle;
         margin-bottom: 15px;
-        color: rgba($black, 0.5);
         u {
           font-style: normal;
+          font-family: $stack-b;
           text-decoration: none;
           min-width: 70px;
           font-size: 35px;
-          color: rgba($black, 1);
           font-weight: 300;
           float: left;
           display: block;
           height: 30px;
+          margin-top: -4px;
         }
       }
     }
