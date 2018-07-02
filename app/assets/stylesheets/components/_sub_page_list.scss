@@ -2,7 +2,7 @@
   margin-top: 75px;
 
   .single_sub_page {
-    border-top: $border-width solid $black;
+    border-top: 2px solid $black;
     margin-top: 45px;
     margin-bottom: 45px;
     padding-top: 45px;
@@ -11,28 +11,11 @@
       padding-bottom: 45px;
     }
     .summary {
-      max-width: 400px;
+      margin-bottom: 15px;
     }
     .title_container {
-      @include grid-column(8, $no_gutter_grid);
-      @include mobile {
-        @include grid-column(12);
-      }
-
       h2 {
         margin-top: 0;
-      }
-    }
-
-    .button_container {
-      @include grid-column(4, $no_gutter_grid);
-      @include mobile {
-        @include grid-column(12);
-      }
-
-      .button {
-        width: 100%;
-        margin-top: 25px;
       }
     }
   }

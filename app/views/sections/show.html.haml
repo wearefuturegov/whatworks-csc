@@ -13,5 +13,7 @@
               .title_container
                 %h2=p.title
                 .summary= p.try(:summary)
-              .button_container
-                = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug), class: 'button'
+
+                .chevron_link
+                  %span.chevron.r
+                  = link_to "View #{p.title.downcase}", section_page_path(@section.slug, p.slug)
