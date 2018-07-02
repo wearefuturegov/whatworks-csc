@@ -5,8 +5,7 @@
 }
 
 @mixin max-width {
-  margin: 0 auto;
-  width: 1800px;
+  max-width: 1600px;
 }
 
 @mixin grid-reset {
