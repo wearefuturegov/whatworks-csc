@@ -38,18 +38,19 @@
       =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
     .contact_details
       %h2 Contact us
-      %p
+      .chevron_link
         %span.chevron.r
         =mail_to "wwccsc@nesta.org.uk"
       %p
         For Press enquiries
         =mail_to "media@scie.org.uk"
       %p
-        =link_to "https://twitter.com/WhatWorksUK", target: "_blank" do
+        =link_to "https://twitter.com/whatworksCSC", target: "_blank" do
           =fa_icon "twitter"
           Follow us on Twitter
 
     .terms.right
-      Terms and conditions |
-      Privacy |
-      &copy; Nesta, 2018
+      %ul
+        %li= link_to "Terms & conditions", section_path(id: 'terms-and-conditions')
+        %li= link_to "Privacy Policy", section_path(id: 'privacy-policy')
+        %li &copy; Nesta, 2018

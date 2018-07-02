@@ -1,10 +1,11 @@
 .container.single_blog
   .blog_container.full_width
-    = @blog_post.decorate_title
-    .blog_details
-      %h3
-        = @blog_post.decorate_date
-        = @blog_post.decorate_author
+    .top_section
+      = @blog_post.decorate_title
+      .blog_details
+        %h3
+          = @blog_post.decorate_date
+          = @blog_post.decorate_author
     .indented
       .blog_sub_heading
         %h4= @blog_post.decorate_subheading

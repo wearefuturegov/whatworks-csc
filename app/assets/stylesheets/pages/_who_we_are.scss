@@ -1,5 +1,10 @@
 .members_list {
   padding: 30px 0;
+  @include mobile {
+    padding: 15px 0;
+    margin: 0;
+    width: 100%;
+  }
   a {
     color: $black !important;
   }
@@ -21,7 +26,8 @@
       margin-bottom: 10px;
 
       @include mobile {
-        @include grid-column(4);
+        @include grid-column(3, $no_gutter_grid);
+        margin-top: 15px;
       }
       @include hd-desktop {
         @include grid-column(4);
@@ -30,13 +36,13 @@
       display: inline-block;
       vertical-align: middle;
       height: auto;
-      border: $border-style $border-width $black;
+      border: $border-style 2px $black;
       border-radius: 100%;
     }
     .details {
       @include grid-column(12);
       @include mobile {
-        @include grid-column(8);
+        @include grid-column(9);
       }
       @include hd-desktop {
         @include grid-column(8);

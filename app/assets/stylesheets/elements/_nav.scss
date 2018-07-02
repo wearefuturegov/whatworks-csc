@@ -6,8 +6,9 @@ nav.nav {
       display: inline;
       margin: 0 15px;
       white-space: nowrap;
-      @include tablet {
-        margin: 0 4.5px;
+      @include mob_tab {
+        margin: 0;
+        margin-right: 15px;
       }
       &:last-child {
         margin-right: 0;
@@ -16,7 +17,6 @@ nav.nav {
       a {
         color: $black !important;
         text-decoration: none !important;
-        font-size: 20px;
         letter-spacing: 0.25px;
 
         &:hover {
@@ -27,6 +27,16 @@ nav.nav {
         font-weight: 600;
         a {
           letter-spacing: 0;
+          position: relative;
+          padding-bottom: 5px;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            border-top: 2px solid #000;
+          }
         }
       }
     }

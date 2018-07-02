@@ -20,5 +20,12 @@ footer.footer {
   }
   .terms {
     @include grid-column(12);
+    ul {
+      margin-bottom: 0;
+      li {
+        margin-right: 15px;
+        display: inline-block;
+      }
+    }
   }
 }

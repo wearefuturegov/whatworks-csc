@@ -1,11 +1,11 @@
 header.header {
   .logo {
     @include grid-column(2, $no_gutter_grid);
-    @include mobile {
-      @include grid-column(12);
+    margin-left: -9px;
+    @include mob_tab {
+      @include grid-column(12, $no_gutter_grid);
       text-align: center;
-      margin-top: 25px;
-      margin-bottom: 15px;
+      margin: 0;
       img {
         margin: 0 auto;
       }
@@ -13,10 +13,12 @@ header.header {
   }
   nav.nav {
     @include grid-column(10, $no_gutter_grid);
-    @include mobile {
-      @include grid-column(12);
+    @include mob_tab {
+      @include grid-column(12, $no_gutter_grid);
       text-align: center !important;
       line-height: 40px;
+      margin-left: 0px;
+      width: 100%;
     }
   }
 }

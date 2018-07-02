@@ -20,18 +20,34 @@
   }
   h2 {
     margin-top: 50px;
+    @include mobile {
+      margin-top: 25px;
+    }
   }
   h3 {
     margin-top: 25px;
+    @include mobile {
+      margin-top: 12px;
+    }
   }
 }
 
 .indented {
-  @include grid-column(11);
+  @include grid-column(10);
   @include grid-push(1);
 
   @include mobile {
     @include grid-column(12);
     @include grid-push(0);
+  }
+}
+
+
+.content_page {
+  h1 {
+    @include grid-column(11);
+    @include mobile {
+      @include grid-column(12);
+    }
   }
 }

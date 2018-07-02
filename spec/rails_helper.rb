@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
@@ -33,11 +32,11 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
-  
+
   config.after(:each, timecop: true) do
     Timecop.return
   end
-  
+
   config.after(contentful: true) do
     Contentful::Cleaner.instance.objects_to_delete.reject! do |i|
       begin

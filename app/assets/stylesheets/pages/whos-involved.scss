@@ -15,23 +15,25 @@
       @include mob_tab {
         @include grid-column(12);
         margin-left: 0;
+        padding: 0;
+        width: 100%;
       }
 
       li {
         list-style-type: none;
         vertical-align: middle;
         margin-bottom: 15px;
-        color: rgba($black, 0.5);
         u {
           font-style: normal;
+          font-family: $stack-b;
           text-decoration: none;
           min-width: 70px;
           font-size: 35px;
-          color: rgba($black, 1);
           font-weight: 300;
           float: left;
           display: block;
-          height: 30px;
+          height: 48px;
+          margin-top: -4px;
         }
       }
     }
@@ -40,6 +42,10 @@
       @include mob_tab {
         @include grid-column(12);
         margin-bottom: 50px;
+        margin-left: 0;
+        width: 100%;
+        font-size: 25px;
+        line-height: 35px;
       }
 
       margin: 0;
