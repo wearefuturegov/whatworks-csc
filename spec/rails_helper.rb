@@ -1,12 +1,12 @@
 # frozen_string_literal: true
-
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
-ENV['CONTENTFUL_ENVIRONMENT'] = 'test'
 
 require 'support/contentful_cleaner'
 
 require File.expand_path('../config/environment', __dir__)
+
+ENV['CONTENTFUL_ENVIRONMENT'] = 'test'
 
 # Remove the ActiveRecord constant, because it is autloaded by
 # ActiveStorage and not needed for our application. The presence
@@ -32,11 +32,11 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
-  
+
   config.after(:each, timecop: true) do
     Timecop.return
   end
-  
+
   config.after(contentful: true) do
     Contentful::Cleaner.instance.objects_to_delete.reject! do |i|
       begin
