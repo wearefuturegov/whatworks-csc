@@ -29,7 +29,7 @@ module ContentfulController
   end
     
   def preview_enabled?
-    params[:preview_token] == ENV['PREVIEW_TOKEN']
+    params[:preview_token] == ENV['PREVIEW_TOKEN'] || ENV['USE_PREVIEW_API']
   end
   
   def check_preview
