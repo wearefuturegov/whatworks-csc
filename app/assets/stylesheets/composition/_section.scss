@@ -97,13 +97,6 @@ section.twitter {
     margin: 0 auto;
     display: inline-block;
     padding: 15px 20px 15px 0px;
-    filter: grayscale(100%);
-    opacity: 0.8;
-
-    &:hover {
-      filter: grayscale(0%);
-      opacity: 1;
-    }
   }
   .development {
     img {
