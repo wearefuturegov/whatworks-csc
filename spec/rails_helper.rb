@@ -2,11 +2,12 @@
 
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
-ENV['CONTENTFUL_ENVIRONMENT'] = 'test'
 
 require 'support/contentful_cleaner'
 
 require File.expand_path('../config/environment', __dir__)
+
+ENV['CONTENTFUL_ENVIRONMENT'] = 'test'
 
 # Remove the ActiveRecord constant, because it is autloaded by
 # ActiveStorage and not needed for our application. The presence
