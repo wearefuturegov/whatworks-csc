@@ -27,6 +27,16 @@ nav.nav {
         font-weight: 600;
         a {
           letter-spacing: 0;
+          position: relative;
+          padding-bottom: 5px;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            border-top: 2px solid #000;
+          }
         }
       }
     }
