@@ -6,11 +6,8 @@ footer {
       margin-bottom: $baseline;
       @include grid-column(6);
     }
-    .twitter {
-      margin-top: $baseline;
-      margin-bottom: $baseline;
-      min-height: 250px;
-      @include grid-column(6);
+    .social {
+      margin-bottom: $baseline*0.5;
     }
     nav.nav {
       text-algn: left;
