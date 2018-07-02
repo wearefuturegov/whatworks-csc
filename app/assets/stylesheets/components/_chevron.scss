@@ -26,3 +26,22 @@
   left: 0.25em;
   transform: rotate(-135deg);
 }
+
+
+.chevron_link {
+
+  a {
+    padding-left: 1px;
+    -webkit-transition: padding 0.15s ease-out;
+    -moz-transition: padding 0.15s ease-out;
+    -o-transition: padding 0.15s ease-out;
+    transition: padding 0.15s ease-out;
+    &:hover {
+      padding-left: 10px;
+      -webkit-transition: padding 0.25s ease-out;
+      -moz-transition: padding 0.25s ease-out;
+      -o-transition: padding 0.25s ease-out;
+      transition: padding 0.25s ease-out;
+    }
+  }
+}
