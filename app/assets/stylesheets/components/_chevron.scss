@@ -32,6 +32,9 @@
 
   a {
     padding-left: 1px;
+    display: inline-block;
+    max-width: 88%;
+    vertical-align: middle;
     -webkit-transition: padding 0.15s ease-out;
     -moz-transition: padding 0.15s ease-out;
     -o-transition: padding 0.15s ease-out;
