@@ -1,7 +1,7 @@
 footer.footer {
   background: $black;
   color: $white;
-  a, a:visited, p {
+  a:not(.button), a:visited:not(.button), p {
     color: $white;
   }
   a:hover {
@@ -9,7 +9,7 @@ footer.footer {
   }
   .top {
     background: $brand;
-    height: $baseline;
+    height: $baseline*0.2;
   }
   ul {
     padding: 0;
