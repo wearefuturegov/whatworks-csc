@@ -1,7 +1,7 @@
 header.header {
   .logo {
     @include grid-column(2, $no_gutter_grid);
-    @include mobile {
+    @include mob_tab {
       @include grid-column(12);
       text-align: center;
       margin-top: 25px;
@@ -13,7 +13,7 @@ header.header {
   }
   nav.nav {
     @include grid-column(10, $no_gutter_grid);
-    @include mobile {
+    @include mob_tab {
       @include grid-column(12);
       text-align: center !important;
       line-height: 40px;
