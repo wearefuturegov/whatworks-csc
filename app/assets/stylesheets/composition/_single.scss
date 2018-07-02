@@ -7,6 +7,7 @@
   }
   a p {
     @include ease;
+    font-weight: 600;
     color: $black;
     &:hover {
       @include ease;
