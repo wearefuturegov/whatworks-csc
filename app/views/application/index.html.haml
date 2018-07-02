@@ -1,9 +1,10 @@
 %section.container
   %section.hero
     .tagline
-      %h1 Better outcomes for children and their families.
+      %h1 Better evidence, better outcomes
     .intro
-      %h4 The new What Works Centre for Children’s Social Care will help leaders and practitioners to make evidence-informed decisions about how they plan and deliver support to children, young people and families. We will help to generate, share and increase the use of reliable evidence across the public, private and voluntary sectors.
+      %h4 The What Works Centre for Children’s Social Care is a new initiative that seeks better outcomes for children, young people and families by helping practitioners and decision makers across the children’s social care sector to inform their work with the best possible evidence.
+      %h4 The Department for Education is funding the Centre’s development.
     %p.link.cta
       =link_to "Sign up for news, findings and opportunities to shape the Centre", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", target: '_blank'
 
@@ -12,20 +13,21 @@
       %h2
         How we are setting up the new centre
     .single
-      = link_to raw('<h3>Evidence and Research</h3>'), section_path(id: 'evidence')
+      = link_to raw('<h3>Working with the sector</h3>'), section_path(id: 'working-with')
       %p
-        Researching initial themes on safely reducing the need to enter care, and supervision. Consulting on evidence standards and outcomes.
-      = link_to raw('<p>Learn about our evidence</p>'), section_path(id: 'evidence')
+        Developing what we will do and how we will do it with children, young people, families, social workers, leaders and researchers
+      = link_to raw('<p>More on who we are working with and how to get involved</p>'), section_path(id: 'working-with')
     .single
-      = link_to raw('<h3>Co-designing services</h3>'), section_path(id: 'about-us')
+      = link_to raw('<h3>Generating Evidence</h3>'), section_path(id: 'evidence')
       %p
-        Working with local authorities and partners to co-design and test ways to generate, share and embed evidence.
-      = link_to raw('<p>Learn about our services</p>'), section_path(id: 'about-us')
+        Researching initial themes, such as safely reducing the need to enter care. Consulting on what evidence standards and outcomes matter, and developing an ‘evidence store’
+      = link_to raw('<p>More on our approach to research and evidence</p>'), section_path(id: 'evidence')
     .single
-      = link_to raw('<h3>Working with you</h3>'), section_path(id: 'working-with')
+      = link_to raw('<h3>Sharing and using evidence</h3>'), section_page_path('working-with', 'co-designing-with-partners')
       %p
-        Developing our strategy, services and team with children, young people, families, social workers,
-      = link_to raw('<p>Learn how we work with you</p>'), section_path(id: 'working-with')
+        Co-designing and testing ways to generate, share and embed evidence, in partnership with local authorities. Scaling up the use of reliable evidence.
+
+      = link_to raw('<p>More on sharing and using evidence</p>'), section_page_path('working-with', 'co-designing-with-partners')
 
   %section.collection
     .single.title
