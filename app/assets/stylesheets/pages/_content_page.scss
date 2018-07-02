@@ -27,7 +27,7 @@
 }
 
 .indented {
-  @include grid-column(11);
+  @include grid-column(10);
   @include grid-push(1);
 
   @include mobile {
