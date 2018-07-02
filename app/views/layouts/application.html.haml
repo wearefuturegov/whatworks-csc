@@ -19,7 +19,7 @@
           .full_width
             = content_tag :div, msg, :id => "flash_#{name}"
             #alert_close
-              = fa_icon "times"
+              X
     = yield
     = render template: "partials/footer"
     - if Rails.env.production? && ENV['GA_ANALYTICS_ID']
