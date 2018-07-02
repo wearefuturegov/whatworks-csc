@@ -50,6 +50,7 @@
           Follow us on Twitter
 
     .terms.right
-      Terms and conditions |
-      Privacy |
-      &copy; Nesta, 2018
+      %ul
+        %li= link_to "Terms & conditions", section_path(id: 'terms-and-conditions')
+        %li= link_to "Privacy Policy", section_path(id: 'privacy-policy')
+        %li &copy; Nesta, 2018
