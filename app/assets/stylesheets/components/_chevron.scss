@@ -32,6 +32,7 @@
 
   a {
     padding-left: 1px;
+    padding-right: 10px;
     display: inline-block;
     max-width: 88%;
     vertical-align: middle;
@@ -41,6 +42,7 @@
     transition: padding 0.15s ease-out;
     &:hover {
       padding-left: 10px;
+      padding-right: 1px;
       -webkit-transition: padding 0.25s ease-out;
       -moz-transition: padding 0.25s ease-out;
       -o-transition: padding 0.25s ease-out;
