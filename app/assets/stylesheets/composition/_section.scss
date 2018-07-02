@@ -88,6 +88,8 @@ section.twitter {
 }
 
 .involved_logos {
+  margin-left: -20px !important;
+  width: calc(100% + 40px) !important;
   h3 {
     text-align: left;
   }

@@ -35,3 +35,13 @@
     @include grid-push(0);
   }
 }
+
+
+.content_page {
+  h1 {
+    @include grid-column(11);
+    @include mobile {
+      @include grid-column(12);
+    }
+  }
+}

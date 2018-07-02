@@ -9,8 +9,9 @@ ul {
 }
 
 .container {
+  // @include grid-visual;
   @include desktop {
-    padding: $container-padding;
+    padding: $container-padding 0;
     max-width: $desktop-width + 200;
   }
   @include mobile {
@@ -19,4 +20,10 @@ ul {
   @include hd-desktop {
     max-width: $hd-desktop-width - 50;
   }
+}
+
+.inner_container {
+  margin-left: 0 !important;
+  margin-right: 0px;
+  width: 100%;
 }
