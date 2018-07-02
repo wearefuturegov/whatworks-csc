@@ -20,9 +20,15 @@
   }
   h2 {
     margin-top: 50px;
+    @include mobile {
+      margin-top: 25px;
+    }
   }
   h3 {
     margin-top: 25px;
+    @include mobile {
+      margin-top: 12px;
+    }
   }
 }
 

@@ -15,6 +15,8 @@
       @include mob_tab {
         @include grid-column(12);
         margin-left: 0;
+        padding: 0;
+        width: 100%;
       }
 
       li {
@@ -40,6 +42,10 @@
       @include mob_tab {
         @include grid-column(12);
         margin-bottom: 50px;
+        margin-left: 0;
+        width: 100%;
+        font-size: 25px;
+        line-height: 35px;
       }
 
       margin: 0;
