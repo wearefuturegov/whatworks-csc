@@ -4,4 +4,4 @@
       .logo
         = image_tag('logo.svg')
     = render template: "partials/nav"
-= render template: "partials/sub_nav" if @section
+= render template: "partials/sub_nav" if @section && @section.pages.count > 0
