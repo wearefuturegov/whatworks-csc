@@ -14,6 +14,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require reorder_subpages
 //= require geff/alerts
 //= require geff/accordion
 //= require public
