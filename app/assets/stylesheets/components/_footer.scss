@@ -1,5 +1,5 @@
 footer.footer {
-  background: $black;
+
   color: $white;
   a:not(.button), a:visited:not(.button) {
     color: $white;
@@ -7,9 +7,21 @@ footer.footer {
       color: $brand;
     }
   }
+  #main_cont, .top {
+    background-color: $black;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    @include mob_tab {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
   .top {
     background: $brand;
     height: $baseline*0.2;
+  }
+  #main_cont {
+    padding: 25px 15px;
   }
   ul {
     padding: 0;
