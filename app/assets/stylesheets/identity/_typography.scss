@@ -11,6 +11,12 @@ body {
   }
 }
 
+ol {
+  list-style-type: decimal;
+  margin-bottom: .75em;
+  padding-left: 1.5em;
+}
+
 a, a:hover, a:active, a:visited {
   &:not(.button) {
     color: $brand;
