@@ -3,9 +3,10 @@ require 'rails_helper'
 describe WhatWorksCentre::Twitter, vcr: true do
   
   let(:subject) { WhatWorksCentre::Twitter.instance }
+  let(:tweet) { subject.latest_tweet.attrs[:full_text] }
   
   it 'gets the latest tweet' do
-    expect(subject.latest_tweet.attrs[:full_text]).to eq("RT @FutureGov: Calling all Senior Service Designers in London &amp; the North - we're hiring passionate people who want to change public servic…")
+    expect(tweet).to match(/Calling all Senior Service Designers in London/)
   end
   
 end
