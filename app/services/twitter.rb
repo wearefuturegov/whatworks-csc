@@ -8,7 +8,7 @@ module WhatWorksCentre
     end
     
     def latest_tweet
-      CLIENT.user_timeline(ENV['TWITTER_USERNAME']).first&.full_text
+      CLIENT.user_timeline(ENV['TWITTER_USERNAME'], tweet_mode: :extended).first
     end
     
   end

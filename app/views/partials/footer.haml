@@ -31,7 +31,6 @@
 %footer.footer.container
   %section.top
   %section#main_cont
-    / = render template: "partials/footer_nav"
     .sign_up
       %h2 Sign up to keep updated
       %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
@@ -44,10 +43,12 @@
       %p
         For Press enquiries
         =mail_to "media@scie.org.uk"
-      %p
-        =link_to "https://twitter.com/whatworksCSC", target: "_blank" do
+
+      .twitter_feed
+        =twitter
+        .chevron_link
           =fa_icon "twitter"
-          Follow us on Twitter
+          =link_to "Follow us on Twitter", "https://twitter.com/whatworksCSC", target: "_blank"
 
     .terms.right
       %ul

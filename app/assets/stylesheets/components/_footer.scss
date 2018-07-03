@@ -64,4 +64,24 @@ footer.footer {
       border-color: $white;
     }
   }
+  .twitter_feed {
+    background-color: $white;
+    padding: 15px;
+    border-radius: 1.5px;
+    color: $off-black;
+    a:not(.button) {
+      color: $off-black;
+    }
+    .fa {
+      color: #1dcaff;
+    }
+  }
+  .twitter {
+    margin-bottom: 15px;
+  }
+  #tweet_cont a {
+    color: $off-black !important;
+    text-decoration: none;
+    margin-right: 15px;
+  }
 }
