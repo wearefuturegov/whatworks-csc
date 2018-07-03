@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require reorder_subpages
+//= require embed_vlogs
 //= require geff/alerts
 //= require geff/accordion
 //= require public
