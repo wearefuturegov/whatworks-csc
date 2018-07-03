@@ -18,6 +18,7 @@ class BlogPostDecorator < Draper::Decorator
   end
 
   def decorate_author
+    return nil unless defined?(object.author)
     h.content_tag :p, '', class: 'author' do
       h.link_to(object.author.name, object.author.path).to_s.html_safe
     end

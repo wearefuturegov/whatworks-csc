@@ -41,7 +41,7 @@
         =link_to blog_post_path(id: b.slug) do
           %h3=b.title
         .sub_text
-          .author=b.decorate.decorate_author
+          =b.decorate.decorate_author
           .date=b.decorate.decorate_date
 
 
@@ -51,4 +51,3 @@
       The decisions that social care leaders and practitioners make can impact on children, young people and their families throughout their lives.
     %h4
       Basing those decisions on reliable evidence about what works is critical.
-
