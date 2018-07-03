@@ -5,7 +5,7 @@ describe WhatWorksCentre::Twitter, vcr: true do
   let(:subject) { WhatWorksCentre::Twitter.instance }
   
   it 'gets the latest tweet' do
-    expect(subject.latest_tweet.full_text).to eq('Yes our very own @ThatGirlVim will be live on @DigiLeaders at 5pm today: Meet the young disruptors… https://t.co/YLiTQRb0hi')
+    expect(subject.latest_tweet.attrs[:full_text]).to eq("RT @FutureGov: Calling all Senior Service Designers in London &amp; the North - we're hiring passionate people who want to change public servic…")
   end
   
 end
