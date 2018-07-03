@@ -21,9 +21,10 @@
 
     .accordion#add_comment
       .accord-single
-        %h4.accord-toggle
-          =fa_icon "comment"
-          Add your comment
+        .accord-toggle
+          .chevron_link
+            %span.icon=fa_icon "comment"
+            %span.link_style Add your comment
 
         .accord-cont
           = render 'comments/form'
