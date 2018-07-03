@@ -20,8 +20,11 @@ module ContentfulController
   end
 
   def list_content
-    list = index_query.nil? ? class_name.all.load : class_name.params(index_query.call).load
     instance_variable_set("@#{controller_name}", list)
+  end
+  
+  def list
+    class_name.all.load
   end
 
   def class_name

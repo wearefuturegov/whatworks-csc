@@ -11,6 +11,10 @@ class BlogPostsController < ApplicationController
   
   private
   
+  def list
+    BlogPost.all.order(date: :desc).load
+  end
+  
   def fetch_section
     @section = Section.find_by(slug: 'whats-new').load.first
   end
