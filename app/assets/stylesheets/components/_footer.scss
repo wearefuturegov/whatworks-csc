@@ -76,4 +76,12 @@ footer.footer {
       color: #1dcaff;
     }
   }
+  .twitter {
+    margin-bottom: 15px;
+  }
+  #tweet_cont a {
+    color: $off-black !important;
+    text-decoration: none;
+    margin-right: 15px;
+  }
 }
