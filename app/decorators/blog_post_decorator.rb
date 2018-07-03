@@ -6,7 +6,10 @@ class BlogPostDecorator < Draper::Decorator
   end
 
   def decorate_subheading
-    h.content_tag :p, h.raw(object.subheading), class: 'subheading'
+    return nil unless defined?(object.subheading)
+    h.content_tag :div, '', class: 'blog_sub_heading' do
+      h.content_tag :h4, h.raw(object.subheading), class: 'subheading'
+    end
   end
 
   def decorate_date
