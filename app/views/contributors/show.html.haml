@@ -1,11 +1,1 @@
-.container.board_member
-  .single_person.full_width
-    .person_details.full_width
-      .inner_container
-        = @contributor.decorate_image
-
-        .text
-          %h1= @contributor.name
-
-    .person_bio.indented
-      = parse_markdown(@contributor.bio)
+= render 'shared/person', person: @contributor

@@ -1,0 +1,12 @@
+.container{ class: person.class.to_s.underscore }
+  .single_person.full_width
+    .person_details.full_width
+      .inner_container
+        = person.decorate_image
+
+        .text
+          = person.decorate_name
+          = person.decorate_role
+
+    .person_bio.indented
+      = person.decorate_bio
