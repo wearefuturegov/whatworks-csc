@@ -64,4 +64,16 @@ footer.footer {
       border-color: $white;
     }
   }
+  .twitter_feed {
+    background-color: $white;
+    padding: 15px;
+    border-radius: 3px;
+    color: $off-black;
+    a:not(.button) {
+      color: $off-black;
+    }
+    .fa {
+      color: #1dcaff;
+    }
+  }
 }

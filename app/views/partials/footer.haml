@@ -46,10 +46,9 @@
 
       .twitter_feed
         =twitter
-      %p
-        =link_to "https://twitter.com/whatworksCSC", target: "_blank" do
+        .chevron_link
           =fa_icon "twitter"
-          Follow us on Twitter
+          =link_to "Follow us on Twitter", "https://twitter.com/whatworksCSC", target: "_blank"
 
     .terms.right
       %ul
