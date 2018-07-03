@@ -19,16 +19,29 @@ footer.footer {
   }
 
   .sign_up, .contact_details {
-    padding-left: 75px;
+    // padding-left: 75px;
     position: relative;
 
-    &:before {
-      content:"";
-      position: absolute;
-      width: 25px;
-      left: 0;
-      top: 17px;
-      border-top: 3px solid $white;
+    // &:before {
+    //   content:"";
+    //   position: absolute;
+    //   width: 25px;
+    //   left: 0;
+    //   top: 17px;
+    //   border-top: 3px solid $white;
+    // }
+    h2 {
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 15px;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        left: 0;
+        bottom: 0;
+        border-top: 3px solid #fff;
+      }
     }
   }
 
