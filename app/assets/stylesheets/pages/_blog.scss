@@ -1,14 +1,23 @@
 section.collection.blog_list {
   .single {
     @include grid-column(4);
+    @include mobile {
+      @include grid-column(12, $no_gutter_grid);
+    }
     margin-bottom: 50px;
   }
   .featured {
     @include grid-column(8);
-
+    @include mobile {
+      @include grid-column(12, $no_gutter_grid);
+    }
     h3 {
       font-size: 34px;
       line-height: 44px;
+      @include mobile {
+        font-size: 25px;
+        line-height: 30px;
+      }
     }
   }
 }
