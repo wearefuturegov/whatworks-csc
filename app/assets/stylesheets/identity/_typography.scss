@@ -107,6 +107,9 @@ blockquote {
       content: "”";
       margin-left: $gutter*0.25;
     }
+    @include mobile {
+      font-size: 19px;
+    }
   }
 }
 
