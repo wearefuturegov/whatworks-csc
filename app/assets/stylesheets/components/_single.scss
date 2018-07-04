@@ -16,7 +16,7 @@ section.collection.border {
     min-height: 140px;
 
     @include mob_tab {
-      min-height: 30px;
+      min-height: 30px !important;
     }
   }
   .sub_text {
