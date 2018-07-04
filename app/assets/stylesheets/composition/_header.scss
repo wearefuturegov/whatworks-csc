@@ -5,6 +5,7 @@ header.header {
       @include grid-column(12, $no_gutter_grid);
       text-align: center;
       margin: 0;
+      margin-bottom: 10px;
       img {
         margin: 0 auto;
       }
