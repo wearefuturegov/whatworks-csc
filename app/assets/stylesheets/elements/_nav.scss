@@ -1,5 +1,5 @@
 nav.nav {
-  line-height: $logo;
+  line-height: 120px;
   ul {
     padding-left: 0;
     li {
@@ -40,11 +40,5 @@ nav.nav {
         }
       }
     }
-  }
-}
-
-footer.footer {
-  nav.nav {
-    line-height: $logo*0.75;
   }
 }
