@@ -89,15 +89,16 @@ h4 {
 }
 
 blockquote {
-  border-top: $border-width*0.25 $border-style $gray;
-  padding: $baseline 0 0 0;
-  margin-top: $baseline*1.5;
+  // border-top: $border-width*0.25 $border-style $gray;
+  // padding: $baseline 0 0 0;
+  // margin-top: $baseline*1.5;
+  border-left: $border-width*0.25 $border-style $brand;
   p {
     font-family: $stack-b;
     font-size: $body*1.5;
     line-height: $baseline;
-    padding-left: $gutter;
-    padding-right: $gutter;
+    margin-bottom: 10px;
+    padding: 0 $gutter;
     &:before {
       content: "“";
       margin-right: $gutter*0.25;
@@ -114,13 +115,17 @@ cite {
   font-size: $small;
   font-style: italic;
   display: block;
-  padding-left: $gutter;
-  padding-bottom: $baseline;
-  border-bottom: $border-width*0.25 $border-style $gray;
+  padding: 0 $gutter;
+  // padding-bottom: $baseline;
+  // border-bottom: $border-width*0.25 $border-style $gray;
   margin-bottom: $baseline*1.5;
   &:before {
     content: "– ";
   }
+}
+
+blockquote + cite  {
+  border-bottom: none;
 }
 
 
