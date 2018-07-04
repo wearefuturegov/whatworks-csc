@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function() {
   $('.accordion').each(function() { $(this).accordion() });
 
   var maxHeight = 0;
-  $('.blog .single h3').each(function(){
+  $('.collection.border .single h3').each(function(){
      maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
   });
   $('section.collection.border h3').css('min-height', maxHeight);
