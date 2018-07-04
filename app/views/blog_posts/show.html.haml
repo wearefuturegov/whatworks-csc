@@ -5,8 +5,7 @@
       .blog_details
         %h3
           = @blog_post.decorate_date
-          |
-          = @blog_post.decorate_author
+          = @blog_post.decorate_author(:long)
     .indented
       = @blog_post.decorate_subheading
       .blog_content

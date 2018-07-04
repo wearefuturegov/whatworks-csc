@@ -17,10 +17,19 @@ class BlogPostDecorator < Draper::Decorator
     h.content_tag :p, date.strftime('%e %B %Y'), class: 'date'
   end
 
-  def decorate_author
+  def decorate_author(type = :short)
     return nil unless defined?(object.author)
+    name = (type == :short ? object.author.name : author_name)
     h.content_tag :p, '', class: 'author' do
-      h.link_to(object.author.name, object.author.path).to_s.html_safe
+      h.link_to(name, object.author.path).to_s.html_safe
+    end
+  end
+
+  def author_name
+    if defined?(object.author.role) && object.author.role.present?
+      "#{object.author.name}, #{object.author.role}"
+    else
+      object.author.name
     end
   end
 
