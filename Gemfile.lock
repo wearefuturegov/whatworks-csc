@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/contentful/contentful_rails.git
-  revision: 9b9b051aa42667e6c969fb5cd55f7c37aaa3fffa
+  revision: bd0f7959a7c89d4683ed7d2b2889abad459e1333
   specs:
     contentful_rails (0.4.2)
       contentful_model (~> 1.0)
@@ -108,7 +108,7 @@ GEM
     contentful (2.8.0)
       http (> 0.8, < 3.0)
       multi_json (~> 1)
-    contentful-management (2.2.0)
+    contentful-management (2.2.1)
       http (> 1.0, < 3.0)
       json (~> 1.8)
       multi_json (~> 1)
@@ -219,7 +219,7 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     nio4r (2.3.1)
-    nokogiri (1.8.3)
+    nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
     parser (2.5.1.0)
