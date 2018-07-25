@@ -8,4 +8,8 @@ class Comment < ApplicationRecord
     CommentMailer.with(comment_id: comment.id).comment_alert.deliver_now
     comment
   end
+  
+  def contentful_url
+    "https://app.contentful.com/spaces/#{ENV['CONTENTFUL_SPACE_ID']}/entries/#{id}"
+  end
 end

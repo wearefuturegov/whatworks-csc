@@ -8,6 +8,7 @@
 = @comment.comment
 
 %p
-  To publish this comment, click the link below:
+  You can publish the comment in Contentful at the link below:
   
-%p= link_to("#{ENV['HOST_URL']}/comments/#{@comment.id}/publish", "#{ENV['HOST_URL']}/comments/#{@comment.id}/publish")
+//%p= link_to("#{ENV['HOST_URL']}/comments/#{@comment.id}/publish", "#{ENV['HOST_URL']}/comments/#{@comment.id}/publish")
+%p= link_to @comment.contentful_url, @comment.contentful_url
