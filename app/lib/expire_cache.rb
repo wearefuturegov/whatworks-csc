@@ -6,7 +6,7 @@ class ExpireCache
   end
 
   def perform
-    return unless topic_applicable?
+    return unless topic_applicable? && slug.present?
     clear_index_cache
     clear_content_cache(slug)
   end
@@ -31,7 +31,7 @@ class ExpireCache
   end
 
   def slug
-    @params[:fields][:slug].values.first
+    @slug ||= @params[:fields][:slug].try(:values).try(:first)
   end
 
   def topic_applicable?
