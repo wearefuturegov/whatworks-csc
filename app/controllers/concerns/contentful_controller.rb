@@ -8,6 +8,7 @@ module ContentfulController
     caches_action :index, :show, skip_digest: true, unless: :preview_enabled?
     before_action :list_content, only: :index
     before_action :load_content, only: :show
+    rescue_from Contentful::NotFound, with: -> { render_404 } unless Rails.application.config.consider_all_requests_local
   end
 
   private
