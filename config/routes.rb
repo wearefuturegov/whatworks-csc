@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root to: 'application#index'
   
   get 'whats-new', to: 'blog_posts#index'
+
+  get 'evidence-base', to: 'dashboard#index'
   
   resources :blog_posts, path: '/whats-new/blog', only: %i[index show] do
     resources :comments, only: %i[create]

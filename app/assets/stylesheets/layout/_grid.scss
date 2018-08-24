@@ -7,6 +7,6 @@ body,
 header,
 footer,
 section  {
-  // @include grid-visual;
+  @include grid-visual;
   @include grid-container;
 }
