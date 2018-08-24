@@ -2,4 +2,154 @@
   nav, #involved, .top, #main_cont {
     display: none;
   }
+  body {
+    font-family: $stack;
+    color: $black;
+    font-size: $body;
+    font-weight: 400;
+    line-height: $baseline;
+  }
+
+  strong {
+    color: $black;
+    font-weight: 700;
+  }
+
+  a {
+    &:not(.button), a:active, a:visited  {
+      color: $black;
+      font-weight: 600;
+      text-decoration: underline;
+      // @include ease;
+      // border-bottom: $medium $style transparentize($brand, $amount);
+    }
+    &:hover {
+      color: $brand;
+      border-bottom-color: $white;
+      // @include ease;
+    }
+  }
+
+  u {
+    text-decoration: none;
+  }
+
+  p {
+    color: $black;
+    margin-bottom: $baseline;
+  }
+
+  .summary p,
+  .role {
+    font-weight: 400;
+  }
+
+  // small
+  .single p,
+  .date,
+  cite,
+  blockquote + p,
+  footer .footer p, .footer ul li {
+    font-size: $small;
+    font-weight: 400;
+    line-height: calc(#{$small} + #{$baseline*0.3});
+  }
+
+  h2, h3 {
+    margin-bottom: $baseline*0.125;
+  }
+
+  // // these calculations are not complete, just placeholder for now.
+
+  h1 {
+    // color: $brand;
+    font-family: $stack-b;
+    font-size: $h1;
+    font-weight: 900;
+    line-height: calc(#{$h1} + #{$baseline*0.15});
+    margin-bottom: $baseline*0.25;
+  }
+
+  h2 {
+    font-family: $stack-b;
+    font-size: $h2;
+    font-weight: 700;
+    line-height: calc(#{$h2} + #{$baseline*0.05});
+  }
+
+  .team h2 {
+    margin-bottom: $baseline*0.5;
+  }
+
+  .impact h2 {
+    font-family: $stack;
+    color: $gray;
+    font-size: $h2*0.75;
+    font-weight: 300;
+    line-height: calc(#{$h2*0.75} + #{$baseline*0.2});
+  }
+
+  h3,
+  .page h2,
+  .page h3,
+  .summary h2,
+  .team h2 {
+    font-family: $stack;
+    font-size: $h3;
+    font-weight: 700;
+    line-height: calc(#{$h3} + #{$baseline*0.25});
+  }
+
+  .page p, 
+  .overview p {
+    & + h2,
+    & + h3 {
+      margin-top: $baseline;
+    }
+  }
+
+  h4 {
+    color: $gray;
+    font-family: $stack;
+    font-size: $h4;
+    font-weight: 300;
+    line-height: calc(#{$h4} + #{$baseline*0.24});
+    margin-top: 0;
+    margin-bottom: $baseline;
+    p.subheading {
+      color: $gray;
+      margin-top: 0;
+      margin-bottom: $baseline;
+    }
+  }
+
+  blockquote {
+    p {
+      font-family: $stack-b;
+      font-size: $body;
+      line-height: $baseline;
+      padding-left: $gutter;
+      padding-right: $gutter;
+      // border-left: $medium $style $brand;
+      &:before {
+        content: "“";
+        margin-right: $gutter*0.25;
+      }
+      &:after {
+        content: "”";
+        margin-left: $gutter*0.25;
+      }
+    }
+  }
+
+  cite {
+    color: $gray;
+    font-style: italic;
+    display: block;
+    padding-left: $gutter;
+    margin-bottom: $baseline*3;
+    &:before {
+      content: "– ";
+    }
+  }
 }
