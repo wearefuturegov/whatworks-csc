@@ -75,6 +75,7 @@
     font-size: $h2;
     font-weight: 700;
     line-height: calc(#{$h2} + #{$baseline*0.05});
+    margin-bottom: $baseline*0.5;
   }
 
   .team h2 {

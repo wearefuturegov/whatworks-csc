@@ -1,12 +1,17 @@
-$neat-grid: (
-  columns: 12,
-  gutter: $gutter,
-);
-
 body,
-header,
-footer,
+header .header,
+footer .footer,
 section  {
-  @include grid-visual;
   @include grid-container;
+}
+
+header .header,
+.sub nav.nav,
+.container,
+.partners,
+footer .footer {
+  @include grid-visual;
+  width: calc(100% - #{$gutter*4});
+  margin: 0 auto;
+  // @include max-width;
 }
