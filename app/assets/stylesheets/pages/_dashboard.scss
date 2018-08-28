@@ -6,6 +6,9 @@
     list-style: none;
     padding-left: 0;
   }
+  .date {
+    margin: $baseline*0.5 0 $baseline*0.25 0;
+  }
   .items {
     .tags {
       margin-top: $baseline*0.25;
@@ -26,11 +29,11 @@
     }
   }
   .item {
-    margin-bottom: $baseline*2;
+    margin-bottom: $baseline;
+    padding-bottom: $baseline;
+    border-bottom: 1px $border-style $gray;
     h2 {
       font-family: $stack;
-      // font-size: 22px;
-      // line-height: 24px;
       margin-bottom: $baseline*0.25;
     }
     .tags {
