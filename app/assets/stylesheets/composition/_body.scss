@@ -27,3 +27,12 @@ ul {
   margin-right: 0px;
   width: 100%;
 }
+
+.bump {
+  margin-top: $baseline;
+}
+
+.indent {
+  @include grid-column(10);
+  @include grid-push(1);
+}

@@ -10,7 +10,7 @@ header .header,
 .container,
 .partners,
 footer .footer {
-  @include grid-visual;
+  // @include grid-visual;
   width: calc(100% - #{$gutter*4});
   margin: 0 auto;
   // @include max-width;

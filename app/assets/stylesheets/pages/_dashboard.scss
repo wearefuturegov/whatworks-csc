@@ -1,6 +1,53 @@
-.dashboard {
+.evidence {
   nav, #involved, .top, #main_cont {
     display: none;
+  }
+  .no-bullet {
+    list-style: none;
+    padding-left: 0;
+  }
+  .items {
+    .tags {
+      margin-top: $baseline*0.25;
+      span {
+        font-size: 18px;
+        line-height: 20px;
+        display: inline-block;
+        margin-right: $gutter*0.25;
+        margin-bottom: $baseline*0.25;
+        border: 1px $border-style $black;
+        padding: $baseline*0.125 $baseline*0.25;
+        &.selected {
+          background: rgba($brand, 0.1);
+          border-color: $brand;
+          color: $brand;
+        }
+      }
+    }
+  }
+  .item {
+    margin-bottom: $baseline*2;
+    h2 {
+      font-family: $stack;
+      // font-size: 22px;
+      // line-height: 24px;
+      margin-bottom: $baseline*0.25;
+    }
+    .tags {
+      margin-top: $baseline*0.25;
+      span {
+        font-size: 14px;
+        line-height: 15px;
+        display: inline-block;
+        margin-right: $gutter*0.25;
+        margin-bottom: $baseline*0.25;
+        border: 1px $border-style $black;
+        padding: $baseline*0.125 $baseline*0.25;
+      }
+    }
+  }
+  button.update {
+    margin-top: $baseline;
   }
   body {
     font-family: $stack;
