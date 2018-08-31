@@ -18,11 +18,18 @@ class BlogPostDecorator < Draper::Decorator
   end
 
   def decorate_author(type = :short)
-    return nil unless defined?(object.author)
-    name = (type == :short ? object.author.name : author_name)
     h.content_tag :p, '', class: 'author' do
-      h.link_to(name, object.author.path).to_s.html_safe
+      if defined?(object.author)
+        link_to_author(type)
+      else
+        h.link_to('Press Release', h.section_page_path(section_id: 'whats-new', id: 'press'))
+      end.to_s.html_safe
     end
+  end
+  
+  def link_to_author(type)
+    name = (type == :short ? object.author.name : author_name)
+    h.link_to(name, object.author.path)
   end
 
   def author_name
