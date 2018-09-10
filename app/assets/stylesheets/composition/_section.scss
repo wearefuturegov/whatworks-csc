@@ -8,8 +8,21 @@ section.background {
   padding-top: $baseline;
   padding-bottom: $baseline;
   &.brand {
-    background: $brand-d;
-    h2, h3, p {
+    background: $brand;
+    // h2, h3, p {
+    //   color: $white;
+    // }
+    // h2, h3 {
+    //   font-weight: 600;
+    // }
+    // p {
+    //   font-weight: 300;
+    // }
+  }
+  &.gray {
+    background: $black;
+    color: $white;
+    h2, h3, p, a {
       color: $white;
     }
     h2, h3 {
@@ -18,9 +31,6 @@ section.background {
     p {
       font-weight: 300;
     }
-  }
-  &.gray {
-    background: $gray-b;
   }
   + section h2 {
     margin-top: $baseline*0.5;
