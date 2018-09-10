@@ -2,9 +2,18 @@
   nav, #involved, .top, #main_cont {
     display: none;
   }
+  // .indent {
+  //   border-bottom: 1px $border-style $black;
+  //   > h2 {
+  //     display: inline-block;
+  //   }
+  // }
   .no-bullet {
     list-style: none;
     padding-left: 0;
+  }
+  ul {
+    margin-bottom: $baseline;
   }
   .date {
     margin: $baseline*0.5 0 $baseline*0.25 0;
@@ -121,7 +130,7 @@
   }
 
   h2 {
-    font-family: $stack-b;
+    font-family: $stack;
     font-size: $h2;
     font-weight: 700;
     line-height: calc(#{$h2} + #{$baseline*0.05});

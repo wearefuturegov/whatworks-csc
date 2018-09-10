@@ -4,6 +4,16 @@ section.section {
   @include grid-column(12);
 }
 
+section.background {
+  background: $brand-b;
+  padding-top: $baseline;
+  padding-bottom: $baseline;
+  margin-bottom: $baseline;
+  h2, h3, p {
+    color: $white;
+  }
+}
+
 section.bar {
   margin-top: $baseline;
   margin-bottom: $baseline;
