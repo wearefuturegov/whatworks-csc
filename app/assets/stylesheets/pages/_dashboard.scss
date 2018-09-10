@@ -2,12 +2,25 @@
   nav, #involved, .top, #main_cont {
     display: none;
   }
-  // .indent {
-  //   border-bottom: 1px $border-style $black;
-  //   > h2 {
-  //     display: inline-block;
-  //   }
-  // }
+  .contents {
+    background: $gray-b;
+    ul {
+      list-style: none;
+      padding: $baseline;
+      margin: 0;
+      li a {
+        font-size: $small;
+        color: $gray;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+  .indent, .indent_c {
+    margin-top: $baseline;
+    margin-bottom: $baseline;
+  }
   .no-bullet {
     list-style: none;
     padding-left: 0;
@@ -126,7 +139,7 @@
     font-size: $h1;
     font-weight: 900;
     line-height: calc(#{$h1} + #{$baseline*0.15});
-    margin-bottom: $baseline*0.25;
+    margin-bottom: $baseline;
   }
 
   h2 {

@@ -5,12 +5,28 @@ section.section {
 }
 
 section.background {
-  background: $brand-b;
   padding-top: $baseline;
   padding-bottom: $baseline;
-  margin-bottom: $baseline;
-  h2, h3, p {
-    color: $white;
+  &.brand {
+    background: $brand-d;
+    h2, h3, p {
+      color: $white;
+    }
+    h2, h3 {
+      font-weight: 600;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+  &.gray {
+    background: $gray-b;
+  }
+  + section h2 {
+    margin-top: $baseline*0.5;
+  }
+  + section.background {
+    padding-top: 0;
   }
 }
 
