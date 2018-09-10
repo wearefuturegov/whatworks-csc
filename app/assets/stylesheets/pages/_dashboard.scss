@@ -4,11 +4,12 @@
   }
   .contents {
     ul {
-      @include off-brand;
+      padding: 0;
+      // @include off-brand;
+      // padding: $baseline;
       margin: 0;
       margin-bottom: $baseline*0.5;
       list-style: none;
-      padding: $baseline;
       & li:first-child {
         font-weight: 600;
         margin-bottom: $baseline*0.5;
@@ -20,7 +21,29 @@
       }
     }
   }
+  .spot {
+    width: $baseline;
+    height: $baseline;
+    background: $black;
+    display: block;
+    border-radius: 100%;
+    position: absolute;
+    left: -$baseline*1.5;
+    border: $border-width $border-style $gray-c;
+    &.positive {
+      border-color: $positive;
+      background: $positive;
+    }
+    &.neutral {
+      background: $neutral;
+    }
+    &.negative {
+      border-color: $negative;
+      background: $negative;
+    }
+  }
   .indent, .indent_c {
+    position: relative;
     margin-top: $baseline;
     margin-bottom: $baseline;
   }
