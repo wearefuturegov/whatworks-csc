@@ -4,34 +4,6 @@ section.section {
   // @include grid-column(12);
 }
 
-section.background {
-  padding-top: $baseline;
-  padding-bottom: $baseline;
-  background: $black;
-  color: $white;
-  h2, h3, p, a, a:visited {
-    color: $white;
-  }
-  h2, h3 {
-    font-weight: 600;
-  }
-  p, li, a, a:visited {
-    font-weight: 300;
-  }
-  &.brand {
-    background: $brand-d;
-  }
-  &.gray {
-    background: $gray-b;
-  }
-  + section h2 {
-    margin-top: $baseline*0.5;
-  }
-  + section.background {
-    padding-top: 0;
-  }
-}
-
 section.bar {
   margin-top: $baseline;
   margin-bottom: $baseline;

@@ -1,91 +1,131 @@
-.container.bump
-  .full_width
+%section.background.hero
+  .container
 
-    %h1
-      Evidence results list
-    %p
-      Some instruction and clarification on how to navigate the evidence results listed below
+%section.dashboard
+  .container
 
-/ .container
-/   .indent
-/     %strong
-/       Filter
-/     .items
-/       .tags
-/         %span
-/           Domestic abuse
-/         %span
-/           Drug or alcohol abuse
-/         %span
-/           Emotional abuse
-/         %span
-/           Exploitation and radicalisation
-/         %span.selected
-/           Gangs
-/         %span
-/           Mental health
-/         %span
-/           Neglect
-/         %span.selected
-/           Physical abuse
-/         %span
-/           Sexual abuse
-/         %span.selected
-/           Youth offending
-
-/     %button.update
-/       Update results
+    / .items
+    /   .tags
+    /     %span
+    /       Domestic abuse
+    /     %span
+    /       Drug or alcohol abuse
+    /     %span
+    /       Emotional abuse
+    /     %span
+    /       Exploitation and radicalisation
+    /     %span.selected
+    /       Gangs
+    /     %span
+    /       Mental health
+    /     %span
+    /       Neglect
+    /     %span.selected
+    /       Physical abuse
+    /     %span
+    /       Sexual abuse
+    /     %span.selected
+    /       Youth offending
 
 
-.container
-  .indent
-    .item
-      %h2
-        What is this?
-      %p
-        Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that works intensively with families to try to avoid out-of-home placement.
-      .date
-        19 May 2018
-      / .tags
-      /   %span
-      /     Gangs
-      /   %span
-      /     Physical abuse
-      /   %span
-      /     Youth offending
-    .item
-      %h2
-        What is this?
-      %p
-        Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that works intensively with families to try to avoid out-of-home placement.
-      .date
-        19 May 2018
-      / .tags
-      /   %span
-      /     Gangs
-      /   %span
-      /     Physical abuse
-    .item
-      %h2
-        What is this?
-      %p
-        Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that works intensively with families to try to avoid out-of-home placement.
-      .date
-        19 May 2018
-      / .tags
-      /   %span
-      /     Physical abuse
-      /   %span
-      /     Youth offending
-    .item
-      %h2
-        What is this?
-      %p
-        Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that works intensively with families to try to avoid out-of-home placement.
-      .date
-        19 May 2018
-      .date
-        4 Sept 2017
-      / .tags
-      /   %span
-      /     Youth offending
+    .indent
+      = link_to '', class: 'item' do
+        .item
+          .details
+            %h3
+              Intensive Family Preservation Programmes
+            %p
+              Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that work intensively with families to try to avoid out-of-home placement.
+          .measurement
+            .of-effect
+              %label
+                Effect
+              .spot.measure.fill
+              .spot.measure.fill
+              .spot.measure.fill
+            .negative
+              %label
+                Negative
+              .spot.measure
+            .of-evidence
+              %label
+                Evidence
+              .spot.measure.fill
+              .spot.measure.fill
+              .spot.measure
+
+      = link_to '', class: 'item' do
+        .item
+          .details
+            %h3
+              IFPP
+            %p
+              Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that work intensively with families to try to avoid out-of-home placement.
+          .measurement
+            .of-effect
+              %label
+                Effect
+              .spot.measure.fill
+              .spot.measure
+              .spot.measure
+            .negative.fill
+              %label
+                Negative
+              .spot.measure
+            .of-evidence
+              %label
+                Evidence
+              .spot.measure.fill
+              .spot.measure
+              .spot.measure
+
+      = link_to '', class: 'item' do
+        .item
+          .details
+            %h3
+              Family Preservation
+            %p
+              Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that work intensively with families to try to avoid out-of-home placement.
+          .measurement
+            .of-effect
+              %label
+                Effect
+              .spot.measure.fill
+              .spot.measure.fill
+              .spot.measure.fill
+            .negative
+              %label
+                Negative
+              .spot.measure
+            .of-evidence
+              %label
+                Evidence
+              .spot.measure.fill
+              .spot.measure.fill
+              .spot.measure.fill
+
+      = link_to '', class: 'item' do
+        .item
+          .details
+            %h3
+              Intensive Programmes
+            %p
+              Intensive Family Preservation Programmes (IFPPs) are interventions aimed at families in crisis, where there is an imminent risk of children entering care. They are programmes that work intensively with families to try to avoid out-of-home placement.
+          .measurement
+            .of-effect
+              %label
+                Effect
+              .spot.measure.fill
+              .spot.measure
+              .spot.measure
+            .negative.fill
+              %label
+                Negative
+              .spot.measure
+            .of-evidence
+              %label
+                Evidence
+              .spot.measure.fill
+              .spot.measure
+              .spot.measure
+
