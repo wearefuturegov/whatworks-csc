@@ -11,7 +11,7 @@ header .header,
 .partners,
 footer .footer {
   // @include grid-visual;
-  width: calc(100% - #{$gutter*4});
+  width: calc(100% - #{$gutter});
   margin: 0 auto;
   // @include max-width;
 }

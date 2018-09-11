@@ -68,9 +68,9 @@ footer.footer {
     background-color: $white;
     padding: 15px;
     border-radius: 1.5px;
-    color: $off-black;
+    color: $black;
     a:not(.button) {
-      color: $off-black;
+      color: $black;
     }
     .fa {
       color: #1dcaff;
@@ -80,7 +80,7 @@ footer.footer {
     margin-bottom: 15px;
   }
   #tweet_cont a {
-    color: $off-black !important;
+    color: $black !important;
     text-decoration: none;
     margin-right: 15px;
   }

@@ -4,14 +4,13 @@ $stack-b: 'Playfair Display', serif;
 $hd-desktop-width: 1360px;
 $desktop-width: 960px;
 
-$body: 20px;
+$body: 19px;
 $baseline: 1.45em;
-$gutter: 20px;
+$gutter: 40px;
 
 $small: 16px;
 
-$black: #000;
-$off-black: #1d1d1d;
+$black: #333;
 $white: #fff;
 $gray: #666;
 $gray-b: #f0f0f0;
@@ -20,7 +19,7 @@ $gray-c: #bbbbbb;
 $h1: 50px;
 $h2: 32px;
 $h3: 20px;
-$h4: 32px;
+$h4: 28px;
 $p: $body;
 
 $brand: #FFAA41; // mustard
@@ -39,6 +38,10 @@ $border-width: 3px;
 $border-style: solid;
 
 $base-border-radius: 0;
+
+$neat-grid: (
+  gutter: $gutter,
+);
 
 $no_gutter_grid: (
   columns: 12,

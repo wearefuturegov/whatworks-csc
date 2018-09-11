@@ -1,15 +1,21 @@
 .evidence {
+  section.section {
+    margin-top: $baseline*2.5;
+    margin-bottom: $baseline*2.5;
+  }
   nav, #involved, .top, #main_cont {
     display: none;
   }
   .contents {
     ul {
       padding: 0;
-      // @include off-brand;
-      // padding: $baseline;
+      @include off-brand;
+      padding: $baseline;
       margin: 0;
-      margin-bottom: $baseline*0.5;
       list-style: none;
+      li {
+        margin-bottom: $baseline*0.125;
+      }
       & li:first-child {
         font-weight: 600;
         margin-bottom: $baseline*0.5;
@@ -21,15 +27,39 @@
       }
     }
   }
+  .measurement {
+    margin-top: 0;
+    margin-bottom: $baseline;
+    label {
+      display: inline-block;
+      float: left;
+      line-height: $baseline;
+      margin-right: $gutter*0.25;
+    }
+    .of-evidence, .of-intervention {
+      display: inline-block;
+      margin-right: $gutter;
+    }
+  }
   .spot {
     width: $baseline;
     height: $baseline;
-    background: $black;
-    display: block;
+    // background: $gray-c;
+    display: inline-block;
     border-radius: 100%;
-    position: absolute;
     left: -$baseline*1.5;
     border: $border-width $border-style $gray-c;
+    &.fill {
+      background: $brand-d;
+      border-color: $brand-d;
+    }
+    &.measure {
+      width: $baseline;
+      height: $baseline;
+    }
+    &.positive, &.neutral, &.negative {
+      position: absolute;
+    }
     &.positive {
       border-color: $positive;
       background: $positive;
@@ -42,7 +72,7 @@
       background: $negative;
     }
   }
-  .indent, .indent_c {
+  .indent, .indent_b, .col_9 {
     position: relative;
     margin-top: $baseline;
     margin-bottom: $baseline;
@@ -116,7 +146,6 @@
   a {
     &:not(.button), a:active, a:visited  {
       color: $black;
-      font-weight: 600;
       text-decoration: underline;
       // @include ease;
       // border-bottom: $medium $style transparentize($brand, $amount);
@@ -212,7 +241,7 @@
     font-family: $stack;
     font-size: $h4;
     font-weight: 300;
-    line-height: calc(#{$h4} + #{$baseline*0.24});
+    line-height: calc(#{$h4} + #{$baseline*0.15});
     margin-top: 0;
     margin-bottom: $baseline;
     p.subheading {

@@ -7,5 +7,5 @@
 $amount: 0.07;
 
 @mixin off-brand {
-  background: rgba($brand, $amount);
+  background: rgba($brand-d, $amount);
 }

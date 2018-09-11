@@ -4,15 +4,19 @@ body {
 
 ul {
   list-style-type: disc;
-  margin-bottom: .75em;
-  padding-left: 1.5em;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  li {
+    margin-bottom: $baseline*0.25;
+  }
 }
 
 .container {
   // @include grid-visual;
   @include desktop {
     padding: $container-padding 0;
-    max-width: $desktop-width + 200;
+    // max-width: $desktop-width + 200;
+    max-width: 100%;
   }
   @include mobile {
     padding: 5px;
@@ -38,13 +42,8 @@ ul {
   @include grid-push(1);
 }
 
-.indent_b {
+.indent_b, .col_9 {
   @include grid-column(9);
-}
-
-.indent_c {
-  @include grid-column(9);
-  @include grid-push(3);
 }
 
 .contents {
