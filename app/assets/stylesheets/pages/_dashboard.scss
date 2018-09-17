@@ -96,7 +96,7 @@
     display: inline-block;
     border-radius: 100%;
     left: -$baseline*1.5;
-    border: $border-width $border-style $gray-c;
+    border: $border-width-thin $border-style $gray-c;
     &.fill {
       background: $brand-d;
       border-color: $brand-d;

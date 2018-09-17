@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'evidence', to: 'evidence#index'
   get 'evidence-list', to: 'evidence#list'
+  get 'maternal-child', to: 'evidence#maternal-child'
   
   resources :blog_posts, path: '/whats-new/blog', only: %i[index show] do
     resources :comments, only: %i[create]
