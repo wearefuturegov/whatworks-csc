@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   
   get 'whats-new', to: 'blog_posts#index'
 
-  get 'evidence', to: 'evidence#index'
+  get 'intensive-family', to: 'evidence#index'
   get 'evidence-list', to: 'evidence#list'
+  get 'dashboard', to: 'evidence#dashboard'
   get 'maternal-child', to: 'evidence#maternal-child'
   
   resources :blog_posts, path: '/whats-new/blog', only: %i[index show] do

@@ -21,7 +21,7 @@
       font-weight: 300;
     }
     &.hero {
-      background: $brand-d;
+      background: $brand;
     }
     &.brand {
       background: $brand-d;
@@ -60,54 +60,36 @@
       }
     }
   }
-  .measurement {
-    margin-top: 0;
-    margin-bottom: $baseline;
-    label {
-      display: inline-block;
-      float: left;
-      line-height: $baseline;
-      margin-right: $gutter*0.25;
-    }
-    .negative {
-      display: inline-block;
-      label {
-        color: $gray-c;
-      }
-      &.fill {
-        label {
-          color: $black;
-        }
-        .spot {
-          border-color: $negative;
-          background: $negative;
-        }
-      }
-    }
-    .of-evidence, .of-effect, .negative {
-      display: inline-block;
-      margin-right: $gutter;
-    }
+  .effect, .evidence {
+    float: left;
+  }
+  .effect {
+    margin-right: $gutter;
   }
   .spot {
-    width: $baseline;
-    height: $baseline;
+    width: $baseline*0.75;
+    height: $baseline*0.75;
     // background: $gray-c;
     display: inline-block;
     border-radius: 100%;
     left: -$baseline*1.5;
-    border: $border-width-thin $border-style $gray-c;
+    background: $gray-b;
+    border: $border-width-thin $border-style $gray-b;
     &.fill {
       background: $brand-d;
       border-color: $brand-d;
+      &.negative {
+        border-color: $negative;
+        background: $negative;
+        // margin: 0;
+        // margin-right: $gutter*0.125;
+        // position: relative;
+        // left: 0;
+      }
     }
-    &.measure {
-      width: $baseline;
-      height: $baseline;
-    }
-    &.positive, &.neutral, &.negative {
-      position: absolute;
-    }
+    // &.positive, &.neutral, &.negative {
+    //   position: absolute;
+    // }
     &.positive {
       border-color: $positive;
       background: $positive;
@@ -154,11 +136,40 @@
       }
     }
   }
-  a.item {
+  .item {
+    float: left;
     display: block;
     background: $white;
-    margin-bottom: $baseline;
+    margin-bottom: $baseline*0.125;
     padding: $baseline $gutter*0.5;
+    .details {
+      float: left;
+      width: calc(50% - #{$gutter*0.5});
+      // width: calc(41.6666666667% - #{$gutter});
+      // margin-left: 0;
+      margin-right: $gutter;
+    }
+    .outcome_wrap {
+      float: left;
+      width: calc(50% - #{$gutter*0.5});
+      // width: calc(58.3333333333%);
+      // margin-left: 0;
+    }
+    .outcome {
+      float: left;
+      width: 50%;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .score {
+      float: left;
+      width: 50%;
+      .effect, .evidence {
+        margin: $baseline*0.5 $gutter*0.5;
+        width: calc(50% - #{$gutter});
+      }
+    }
     &:not(.button), a:active, a:visited {
       color: $black;
       text-decoration: none;
@@ -167,19 +178,10 @@
       color: $black;
       text-decoration: none;
     }
-    &:hover {
-      -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
-      -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
-      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
-      cursor: pointer;
-    }
-    .measurement {
-      margin-top: $baseline*1.5;
-      margin-bottom: 0;
-    }
     h3 {
       font-family: $stack;
-      font-size: $h2*0.75;
+      font-size: $h2*0.8;
+      line-height: calc(#{$h3} + #{$baseline*0.2});
       margin-bottom: $baseline*0.25;
     }
     p {
@@ -196,6 +198,26 @@
         margin-bottom: $baseline*0.25;
         border: 1px $border-style $black;
         padding: $baseline*0.125 $baseline*0.25;
+      }
+    }
+  }
+  a.item {
+    &:hover {
+      -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+      -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+      cursor: pointer;
+    }
+  }
+  .menu {
+    float: left;
+    background: $white;
+    padding: $baseline*0.5 $gutter*0.5;
+    margin-top: $baseline;
+    .score {
+      .effect, .evidence {
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
   }
