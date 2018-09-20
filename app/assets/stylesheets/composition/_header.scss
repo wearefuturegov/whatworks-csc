@@ -1,6 +1,6 @@
 header.header {
   .logo {
-    @include grid-column(2, $no_gutter_grid);
+    @include grid-column(1, $no_gutter_grid);
     @include mob_tab {
       @include grid-column(12, $no_gutter_grid);
       text-align: center;

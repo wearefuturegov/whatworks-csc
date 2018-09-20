@@ -81,15 +81,8 @@
       &.negative {
         border-color: $negative;
         background: $negative;
-        // margin: 0;
-        // margin-right: $gutter*0.125;
-        // position: relative;
-        // left: 0;
       }
     }
-    // &.positive, &.neutral, &.negative {
-    //   position: absolute;
-    // }
     &.positive {
       border-color: $positive;
       background: $positive;
@@ -156,9 +149,11 @@
       // margin-left: 0;
     }
     .outcome {
+      font-size: $small;
       float: left;
       width: 50%;
       p {
+        font-size: $smaller;
         margin-bottom: 0;
       }
     }
@@ -185,7 +180,7 @@
       margin-bottom: $baseline*0.25;
     }
     p {
-      font-size: $small;
+      font-size: $smaller;
       line-height: $baseline*0.9;
     }
     .tags {
@@ -209,11 +204,17 @@
       cursor: pointer;
     }
   }
-  .menu {
+  .menu.item {
     float: left;
     background: $white;
     padding: $baseline*0.5 $gutter*0.5;
     margin-top: $baseline;
+    color: $gray;
+    .details, .outcome, .effect, .evidence {
+      font-size: $smaller;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
     .score {
       .effect, .evidence {
         margin-top: 0;
