@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :board_members, path: 'board', only: %i[show]
   resources :contributors, only: %i[show]
   resources :news, only: %i[index show]
+  resources :research_reports, only: %i[show]
 
   get 'contact-us', to: 'contact_forms#new', as: :new_contact_forms
   post 'contact-us', to: 'contact_forms#create', as: :contact_forms

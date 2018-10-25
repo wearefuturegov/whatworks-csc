@@ -42,6 +42,20 @@ module ContentfulSteps
     Page.find(page.id)
   end
   
+  def create_research_report # rubocop:disable Metrics/MethodLength
+    report = ResearchReport.create(
+      title: 'My Report',
+      slug: 'my-report',
+      summary: 'Summary goes here',
+      objectives: 'Objective goes here',
+      how_we_went_about_it: 'How we went about it',
+      key_findings: 'Some stuff about findings',
+      what_next: 'What next?'
+    )
+    report.save && report.publish
+    ResearchReport.find(report.id)
+  end
+  
   step 'there is a blog post with the title :title' do |title|
     create_blog_post(title)
   end
