@@ -56,6 +56,19 @@ module ContentfulSteps
     ResearchReport.find(report.id)
   end
   
+  def create_prototype
+    prototype = Prototype.create(
+      title: 'My prototype',
+      slug: 'my-prototype',
+      what_we_want_to_achieve: 'What we want to achieve',
+      who_we_are_working_with: 'Who we are working with',
+      what_stage_are_we_at_now: 'What stage are we at now',
+      what_are_the_next_steps: 'What are the next steps'
+    )
+    prototype.save && prototype.publish
+    Prototype.find(prototype.id)
+  end
+  
   step 'there is a blog post with the title :title' do |title|
     create_blog_post(title)
   end

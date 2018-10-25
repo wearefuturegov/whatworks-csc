@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :contributors, only: %i[show]
   resources :news, only: %i[index show]
   resources :research_reports, only: %i[show]
+  resources :prototypes, only: %i[show]
 
   get 'contact-us', to: 'contact_forms#new', as: :new_contact_forms
   post 'contact-us', to: 'contact_forms#create', as: :contact_forms
