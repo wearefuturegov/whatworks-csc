@@ -1,0 +1,20 @@
+.container.content_page
+
+  %h1= @research_report.title
+
+  .indented
+    .full_width.inner_container
+      %h2 Summary
+      = parse_markdown(@research_report.summary)
+      
+      %h2 Objectives
+      = parse_markdown(@research_report.objectives)
+      
+      %h2 How we went about it
+      = parse_markdown(@research_report.how_we_went_about_it)
+
+      %h2 Key findings
+      = parse_markdown(@research_report.key_findings)
+
+      %h2 What next
+      = parse_markdown(@research_report.what_next)

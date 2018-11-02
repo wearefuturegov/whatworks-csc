@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
   include ContentfulController
+  
+  prepend_before_action :fetch_research_reports, if: -> { params[:id] == 'research-topics' }
+  prepend_before_action :fetch_prototypes, if: -> { params[:id] == 'co-designing-with-partners' }
 
   def show; end
   
@@ -16,5 +19,13 @@ class PagesController < ApplicationController
     content = @section.pages.find { |p| p.slug == params[:id] }
     raise(ActionController::RoutingError, 'Not Found') if content.nil?
     @page = content.decorate
+  end
+  
+  def fetch_research_reports
+    @research_reports = ResearchReport.all.load
+  end
+  
+  def fetch_prototypes
+    @prototypes = Prototype.all.load
   end
 end
