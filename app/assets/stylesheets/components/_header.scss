@@ -1,10 +1,13 @@
 header.header {
-  padding-top: 10px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
   .logo {
 
   }
   nav.nav {
     text-align: right;
+    ul {
+      margin-bottom: 0;
+    }
   }
 }

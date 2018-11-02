@@ -1,9 +1,12 @@
 footer.background {
   background-color: $black;
 }
-
 .footer {
   color: $white;
+  p {
+    font-size: 14px;
+    font-weight: 300;
+  }
   a:not(.button), a:visited:not(.button) {
     color: $white;
     &:hover {
@@ -45,17 +48,17 @@ footer.background {
     //   border-top: 3px solid $white;
     // }
     h2 {
-      margin-bottom: 15px;
+      margin-bottom: $baseline*0.5;
       position: relative;
-      padding-bottom: 15px;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 25px;
-        left: 0;
-        bottom: 0;
-        border-top: 3px solid #fff;
-      }
+      // padding-bottom: 15px;
+      // &:after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 25px;
+      //   left: 0;
+      //   bottom: 0;
+      //   border-top: 3px solid #fff;
+      // }
     }
   }
 
