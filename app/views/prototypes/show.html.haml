@@ -1,3 +1,15 @@
 .container.content_page
 
   %h1= @prototype.title
+  
+  %h2 What we want to achieve
+  = parse_markdown(@prototype.what_we_want_to_achieve)
+  
+  %h2 Who we are working with
+  = parse_markdown(@prototype.who_we_are_working_with)
+  
+  %h2 What stage we are at now
+  = parse_markdown(@prototype.what_stage_are_we_at_now)
+
+  %h2 What are the next steps
+  = parse_markdown(@prototype.what_are_the_next_steps)
