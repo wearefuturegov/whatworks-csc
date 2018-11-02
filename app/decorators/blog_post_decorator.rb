@@ -43,4 +43,9 @@ class BlogPostDecorator < Draper::Decorator
   def decorate_body
     h.parse_markdown(object.body)
   end
+  
+  def type_tag
+    type = defined?(object.author) ? 'Blog Post' : 'News'
+    h.content_tag(:span, type, class: 'type_tag')
+  end
 end
