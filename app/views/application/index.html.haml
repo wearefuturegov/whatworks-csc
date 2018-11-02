@@ -7,6 +7,20 @@
       %span.chevron.r
       =link_to "Sign up for news, findings and opportunities to shape the Centre", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", target: '_blank'
 
+
+  %section.collection.border
+    .single.title
+      %h2
+        What's new
+    - @blog_posts.each do |b|
+      .single
+        =link_to blog_post_path(id: b.slug) do
+          %h3=b.title
+        = b.decorate.decorate_image
+        .sub_text
+          =b.decorate.decorate_author
+          =b.decorate.decorate_date
+
   %section.collection
     .single.title
       %h2
@@ -31,21 +45,6 @@
       .chevron_link
         %span.chevron.r
         = link_to "How we co-design", section_page_path('working-with', 'co-designing-with-partners')
-
-  %section.collection.border
-    .single.title
-      %h2
-        What's new
-    - @blog_posts.each do |b|
-      .single
-        =link_to blog_post_path(id: b.slug) do
-          %h3=b.title
-        = b.decorate.decorate_image
-        .sub_text
-          =b.decorate.decorate_author
-          =b.decorate.decorate_date
-
-
 
   %section.section.impact
     %h4
