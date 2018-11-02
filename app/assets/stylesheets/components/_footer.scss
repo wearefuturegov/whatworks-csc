@@ -3,6 +3,8 @@ footer.background {
 }
 .footer {
   color: $white;
+  padding-top: $baseline;
+  padding-bottom: $baseline;
   p {
     font-size: 14px;
     font-weight: 300;
@@ -13,20 +15,9 @@ footer.background {
       color: $brand;
     }
   }
-  #main_cont, .top {
-    width: calc(100% - 40px);
-    margin-left: 20px;
-    @include mob_tab {
-      width: 100%;
-      margin-left: 0px;
-    }
-  }
   .top {
     background: $brand;
     height: $baseline*0.2;
-  }
-  #main_cont {
-    padding: 25px 15px;
   }
   ul {
     padding: 0;
