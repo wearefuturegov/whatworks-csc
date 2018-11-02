@@ -1,6 +1,7 @@
 section.collection.border {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  width: 100%; 
   a {
     color: $black;
     text-decoration: none;

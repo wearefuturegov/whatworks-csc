@@ -1,5 +1,8 @@
-footer.footer {
+footer.background {
+  background-color: $black;
+}
 
+.footer {
   color: $white;
   a:not(.button), a:visited:not(.button) {
     color: $white;
@@ -8,7 +11,6 @@ footer.footer {
     }
   }
   #main_cont, .top {
-    background-color: $black;
     width: calc(100% - 40px);
     margin-left: 20px;
     @include mob_tab {
