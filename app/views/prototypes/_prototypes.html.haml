@@ -2,4 +2,4 @@
 
 %ul
   - prototypes.each do |prototype|
-    = render partial: 'prototype', prototype: prototype
+    = render partial: 'prototypes/prototype', locals: { prototype: prototype }

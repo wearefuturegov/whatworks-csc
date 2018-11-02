@@ -1,4 +1,1 @@
-%h3 Research Reports
-
-%ul
-  = render partial: research_reports
+%li= link_to research_report.title, research_report_path(id: research_report.slug)
