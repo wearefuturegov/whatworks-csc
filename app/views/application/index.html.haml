@@ -40,6 +40,7 @@
       .single
         =link_to blog_post_path(id: b.slug) do
           %h3=b.title
+        = b.decorate.decorate_image
         .sub_text
           =b.decorate.decorate_author
           =b.decorate.decorate_date
