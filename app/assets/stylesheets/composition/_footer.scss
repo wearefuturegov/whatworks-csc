@@ -23,7 +23,7 @@
     ul {
       margin-bottom: 0;
       li {
-        margin-right: 15px;
+        margin-right: $gutter*0.5;
         display: inline-block;
       }
     }
