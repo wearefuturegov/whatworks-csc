@@ -4,6 +4,11 @@ class BlogPostDecorator < Draper::Decorator
   def decorate_title
     h.content_tag :h1, object.title
   end
+  
+  def decorate_image
+    return unless defined?(object.image)
+    h.image_tag object.image.resize(200, 200).thumbnail_focused_on('face').load
+  end
 
   def decorate_subheading
     return nil unless defined?(object.subheading)

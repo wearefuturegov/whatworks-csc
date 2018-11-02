@@ -1,4 +1,7 @@
-footer.footer {
+footer.background {
+  background-color: $black;
+}
+.footer {
   color: $white;
   p {
     font-size: 14px;
@@ -11,7 +14,6 @@ footer.footer {
     }
   }
   #main_cont, .top {
-    background-color: $black;
     width: calc(100% - 40px);
     margin-left: 20px;
     @include mob_tab {
