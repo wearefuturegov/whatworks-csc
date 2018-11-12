@@ -9,7 +9,7 @@
           %h3=b.title
         = b.decorate.decorate_image
         .sub_text
-          =b.decorate.decorate_author
+          =b.decorate.decorate_author(:short, false)
           .date=b.decorate.decorate_date
         
         = b.decorate.type_tag
