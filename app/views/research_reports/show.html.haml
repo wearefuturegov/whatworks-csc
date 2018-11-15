@@ -1,11 +1,1 @@
-.container.content_page
-
-  = @research_report.decorate_title
-
-  .indented
-    .full_width.inner_container
-      = @research_report.decorate_summary
-      = @research_report.decorate_objectives
-      = @research_report.decorate_how_we_went_about_it
-      = @research_report.decorate_key_findings
-      = @research_report.decorate_what_next
+= render 'shared/report', report: @research_report

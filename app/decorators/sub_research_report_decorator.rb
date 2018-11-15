@@ -1,0 +1,2 @@
+class SubResearchReportDecorator < ResearchReportDecorator
+end
