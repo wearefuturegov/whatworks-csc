@@ -1,23 +1,27 @@
-footer.background {
-  background-color: $black;
-}
-.footer {
+footer.footer {
+
   color: $white;
-  padding-top: $baseline;
-  padding-bottom: $baseline;
-  p {
-    font-size: 14px;
-    font-weight: 300;
-  }
   a:not(.button), a:visited:not(.button) {
     color: $white;
     &:hover {
       color: $brand;
     }
   }
+  #main_cont, .top {
+    background-color: $black;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    @include mob_tab {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
   .top {
     background: $brand;
     height: $baseline*0.2;
+  }
+  #main_cont {
+    padding: 25px 15px;
   }
   ul {
     padding: 0;
@@ -39,17 +43,17 @@ footer.background {
     //   border-top: 3px solid $white;
     // }
     h2 {
-      margin-bottom: $baseline*0.5;
+      margin-bottom: 15px;
       position: relative;
-      // padding-bottom: 15px;
-      // &:after {
-      //   content: "";
-      //   position: absolute;
-      //   width: 25px;
-      //   left: 0;
-      //   bottom: 0;
-      //   border-top: 3px solid #fff;
-      // }
+      padding-bottom: 15px;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        left: 0;
+        bottom: 0;
+        border-top: 3px solid #fff;
+      }
     }
   }
 

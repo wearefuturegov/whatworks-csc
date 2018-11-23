@@ -1,2 +1,0 @@
-class SubResearchReportDecorator < ResearchReportDecorator
-end

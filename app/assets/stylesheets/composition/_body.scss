@@ -10,15 +10,15 @@ ul {
 
 .container {
   // @include grid-visual;
-  padding: 0;
   @include desktop {
-    max-width: 1310px;
+    padding: $container-padding 0;
+    max-width: $desktop-width + 200;
   }
   @include mobile {
-    max-width: 1310px;
+    padding: 5px;
   }
   @include hd-desktop {
-    max-width: 1310px;
+    max-width: $hd-desktop-width - 50;
   }
 }
 

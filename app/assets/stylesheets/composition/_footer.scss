@@ -1,4 +1,4 @@
-.footer {
+footer.footer {
   padding: 0;
 
   .sign_up {
@@ -23,7 +23,7 @@
     ul {
       margin-bottom: 0;
       li {
-        margin-right: $gutter*0.5;
+        margin-right: 15px;
         display: inline-block;
       }
     }

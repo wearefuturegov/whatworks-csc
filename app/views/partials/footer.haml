@@ -29,28 +29,30 @@
         %h3 Network
         =image_tag "partners/4.png"
 
-%footer.background
-  .footer.container
-    %section#main_cont
-      .sign_up
-        %h2 Sign up to keep updated
-        %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
-        =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
-      .contact_details
-        %h2 Contact us
+%footer.footer.container
+  %section.top
+  %section#main_cont
+    .sign_up
+      %h2 Sign up to keep updated
+      %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
+      =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", class: 'button', target: '_blank'
+    .contact_details
+      %h2 Contact us
+      .chevron_link
+        %span.chevron.r
         =mail_to "wwccsc@nesta.org.uk"
-        %p
-          For Press enquiries
-          =mail_to "guy.goodwin@nesta.org.uk"
+      %p
+        For Press enquiries
+        =mail_to "guy.goodwin@nesta.org.uk"
 
-        .twitter_feed
-          =twitter
-          .chevron_link
-            =fa_icon "twitter"
-            =link_to "Follow us on Twitter", "https://twitter.com/whatworksCSC", target: "_blank"
+      .twitter_feed
+        =twitter
+        .chevron_link
+          =fa_icon "twitter"
+          =link_to "Follow us on Twitter", "https://twitter.com/whatworksCSC", target: "_blank"
 
-      .terms.right
-        %ul
-          %li= link_to "Terms & conditions", section_path(id: 'terms-and-conditions')
-          %li= link_to "Privacy Policy", section_path(id: 'privacy-policy')
-          %li &copy; Nesta, 2018
+    .terms.right
+      %ul
+        %li= link_to "Terms & conditions", section_path(id: 'terms-and-conditions')
+        %li= link_to "Privacy Policy", section_path(id: 'privacy-policy')
+        %li &copy; Nesta, 2018

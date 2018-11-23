@@ -1,6 +1,4 @@
 header.header {
-  margin-top: $baseline*0.5;
-  margin-bottom: $baseline*0.5;
   .logo {
     @include grid-column(2, $no_gutter_grid);
     @include mob_tab {
