@@ -4,6 +4,11 @@ class BlogPostDecorator < Draper::Decorator
   def decorate_title
     h.content_tag :h1, object.title
   end
+  
+  def decorate_image
+    return unless defined?(object.image)
+    h.image_tag object.image.resize(200, 200).thumbnail_focused_on('face').load
+  end
 
   def decorate_subheading
     return nil unless defined?(object.subheading)
@@ -17,14 +22,15 @@ class BlogPostDecorator < Draper::Decorator
     h.content_tag :p, date.strftime('%e %B %Y'), class: 'date'
   end
 
-  def decorate_author(type = :short)
-    h.content_tag :p, '', class: 'author' do
-      if defined?(object.author)
-        link_to_author(type)
-      else
-        h.link_to('Press Release', h.section_page_path(section_id: 'whats-new', id: 'press'))
-      end.to_s.html_safe
-    end
+  def decorate_author(type = :short, show_press_release = true)
+    body = if defined?(object.author)
+             link_to_author(type)
+           elsif show_press_release == true
+             h.link_to('Press Release', h.section_page_path(section_id: 'whats-new', id: 'press'))
+           end
+    
+    return unless body
+    h.content_tag(:p, body, class: 'author').html_safe
   end
   
   def link_to_author(type)
@@ -42,5 +48,10 @@ class BlogPostDecorator < Draper::Decorator
 
   def decorate_body
     h.parse_markdown(object.body)
+  end
+  
+  def type_tag
+    type = defined?(object.author) ? 'Blog Post' : 'News'
+    h.content_tag(:span, type, class: 'type_tag')
   end
 end

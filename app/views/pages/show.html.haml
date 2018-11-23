@@ -6,3 +6,6 @@
     / -if @page.try(:summary)
     /   %h4=@page.summary
     = parse_markdown(@page.content)
+    
+    = render(partial: 'prototypes/prototypes', locals: { prototypes: @prototypes }) if @prototypes
+    = render(partial: 'research_reports/research_reports', locals: { research_reports: @research_reports }) if @research_reports

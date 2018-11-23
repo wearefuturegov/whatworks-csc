@@ -7,6 +7,9 @@
       .single{class: i == 0 ? "featured" : ""}
         =link_to blog_post_path(id: b.slug) do
           %h3=b.title
+        = b.decorate.decorate_image
         .sub_text
-          =b.decorate.decorate_author
+          =b.decorate.decorate_author(:short, false)
           .date=b.decorate.decorate_date
+        
+        = b.decorate.type_tag

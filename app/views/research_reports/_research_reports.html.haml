@@ -1,0 +1,5 @@
+%h2 Research Reports
+
+%ul
+  - research_reports.each do |research_report|
+    = render partial: 'research_reports/research_report', locals: { research_report: research_report }

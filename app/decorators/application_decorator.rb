@@ -13,4 +13,13 @@ class ApplicationDecorator < Draper::Decorator
         value
     end
   end
+  
+  def body_with_subheading(body, subheading)
+    body = object.try(body)
+    return if body.nil?
+    output = ''
+    output << h.content_tag(:h2, subheading)
+    output << h.parse_markdown(body)
+    output.html_safe
+  end
 end
