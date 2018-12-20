@@ -7,7 +7,7 @@ class BlogPostDecorator < Draper::Decorator
   
   def decorate_image
     return unless defined?(object.image)
-    h.image_tag object.image.resize(200, 200).thumbnail_focused_on('face').load
+    h.image_tag object.image.resize(200, 200).load
   end
 
   def decorate_subheading
