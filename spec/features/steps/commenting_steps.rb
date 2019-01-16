@@ -51,10 +51,6 @@ module CommentingSteps
     expect(page.body).to match(/#{@comment[:comment]}/)
   end
   
-  step 'I add something to the website field' do
-    fill_in 'comment_website', with: 'Some text', visible: false
-  end
-  
 end
 
 RSpec.configure do |config|

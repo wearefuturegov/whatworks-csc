@@ -5,11 +5,6 @@ class BlogPostDecorator < Draper::Decorator
     h.content_tag :h1, object.title
   end
 
-  def decorate_image
-    return unless defined?(object.image)
-    h.image_tag object.image.resize(200, 200).load
-  end
-
   def decorate_subheading
     return nil unless defined?(object.subheading)
     h.content_tag :div, '', class: 'blog_sub_heading' do
@@ -31,7 +26,7 @@ class BlogPostDecorator < Draper::Decorator
       end.to_s.html_safe
     end
   end
-
+  
   def link_to_author(type)
     name = (type == :short ? object.author.name : author_name)
     h.link_to(name, object.author.path)

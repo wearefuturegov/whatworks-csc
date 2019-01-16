@@ -27,9 +27,3 @@ Feature: Commenting
     And I leave a comment
     And the comment is approved
     Then my comment should show underneath the blog post
-  
-  Scenario: Spam honeypot field inputted
-    Given I access the blog post 'example-blog-post'
-    And I add something to the website field
-    And I leave a comment
-    Then the comment should not be stored

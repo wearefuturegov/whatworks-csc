@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment)
-          .permit(:name, :email, :organisation, :comment, :website)
+          .permit(:name, :email, :organisation, :comment)
           .merge(associated_record: blog_post)
   end
 
