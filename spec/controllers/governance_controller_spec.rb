@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'features/steps/contentful_steps'
 
-RSpec.describe WhoWeAreController, type: :controller, vcr: true, contentful: true, cache: true do
+RSpec.describe GovernanceController, type: :controller, vcr: true, contentful: true, cache: true do
   describe '#show' do
     include ContentfulSteps
 
@@ -9,7 +9,7 @@ RSpec.describe WhoWeAreController, type: :controller, vcr: true, contentful: tru
     let!(:board_members) { Array.new(3) { create_board_member } }
     let!(:stakeholder_panels) { Array.new(4) { create_stakeholder_panel } }
 
-    let(:page) { Page.create(title: 'Governance', slug: 'who-we-are', content: 'Blah').publish }
+    let(:page) { Page.create(title: 'Governance', slug: 'governance', content: 'Blah').publish }
     let(:slug) { page.slug }
 
     it 'gets the correct page' do
