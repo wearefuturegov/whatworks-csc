@@ -1,0 +1,2 @@
+class ResearchPartnerDecorator < PersonDecorator
+end

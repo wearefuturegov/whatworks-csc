@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :comments, only: %i[create]
   end
   resources :team_members, path: 'team', only: %i[show]
+  resources :research_partners, path: 'partner', only: %i[show]
   resources :board_members, path: 'board', only: %i[show]
   resources :contributors, only: %i[show]
   resources :news, only: %i[index show]
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
 
   get 'about-us/governance', to: 'governance#show'
   get 'about-us/meet-the-team', to: 'meet_the_team#show'
+  get 'about-us/our-research-partners', to: 'our_research_partners#show'
 
   resources :sections, path: '/', only: :show do
     resources :pages, path: '/', only: :show

@@ -1,0 +1,16 @@
+.container.content_page#our_research_partners
+  %h1= @page.title
+
+  .indented
+    = parse_markdown(@page.content)
+
+    .team.members_list.full_width
+      .inner_container
+        - @research_partners.sort_by(&:"name").each do |tm|
+          =link_to research_partner_path(id: tm.slug), class: 'single_member_container' do
+            .single_member
+              .inner_container
+                =tm.decorate.decorate_image
+                .details
+                  %h3=tm.name
+                  .role=tm.try(:role)
