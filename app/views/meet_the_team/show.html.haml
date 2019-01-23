@@ -6,8 +6,6 @@
 
     .team.members_list.full_width
       .inner_container
-        %h2 Our team
-
         - @team_members.sort_by(&:"name").each do |tm|
           =link_to team_member_path(id: tm.slug), class: 'single_member_container' do
             .single_member
