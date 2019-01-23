@@ -15,16 +15,22 @@ $.fn.reorderSubpages = function(childElements) {
     'what-you-told-us': 2,
     'co-designing-with-partners': 3,
     'evidence': 0,
-    'research-topics': 1,
+    'research': 1,
     'standard': 2,
     'outcomes-framework': 3,
-    'evidence-store': 4
+    'evidence-store': 4,
+    'current-research': 5,
+    'published-research': 6
   }
 
   $.each(subnavs, function(k, v) {
     $item = $target.find(childElements +'.' + k)
     if ($item.length > 0) {
       children[v] = $item
+    }
+
+    if (k == 'current-research' || k == 'published-research') {
+      $item.hide();
     }
   })
 
