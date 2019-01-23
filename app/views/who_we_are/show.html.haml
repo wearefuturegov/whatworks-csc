@@ -9,7 +9,7 @@
         %h2 Development Team and Research Partner
 
         - @team_members.each do |tm|
-          =link_to team_member_path(id: tm.slug) do
+          =link_to team_member_path(id: tm.slug), class: 'single_member_container' do
             .single_member
               .inner_container
                 =tm.decorate.decorate_image
@@ -23,7 +23,7 @@
         %h2 Founding Board
 
         - @board_members.each do |bm|
-          =link_to board_member_path(id: bm.slug) do
+          =link_to board_member_path(id: bm.slug), class: 'single_member_container' do
             .single_member
               .inner_container
                 =bm.decorate.decorate_image
