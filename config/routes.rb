@@ -3,9 +3,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'application#index'
-  
+
   get 'whats-new', to: 'blog_posts#index'
-  
+
   resources :blog_posts, path: '/whats-new/blog', only: %i[index show] do
     resources :comments, only: %i[create]
   end
@@ -20,13 +20,14 @@ Rails.application.routes.draw do
 
   get 'contact-us', to: 'contact_forms#new', as: :new_contact_forms
   post 'contact-us', to: 'contact_forms#create', as: :contact_forms
-  
+
   get 'comments/:id/publish', to: 'comments#publish'
-  
+
   post :expire_cache, to: 'application#expire_cache'
-  
-  get 'about-us/who-we-are', to: 'who_we_are#show'
-  
+
+  get 'about-us/governance', to: 'governance#show'
+  get 'about-us/meet-the-team', to: 'meet_the_team#show'
+
   resources :sections, path: '/', only: :show do
     resources :pages, path: '/', only: :show
   end

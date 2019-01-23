@@ -5,17 +5,29 @@
     margin: 0;
     width: 100%;
   }
+  h3 {
+    margin-top: 0;
+  }
   a {
     color: $black !important;
   }
-  .single_member {
+  .single_member_container {
+    display: inline-block;
+    margin: 15px 0;
+    padding-right: 15px;
+
     @include grid-column(4);
     @include mobile {
       @include grid-column(12, $no_gutter_grid);
     }
-    margin: 15px 0;
-    padding-right: 15px;
-
+    &:nth-child(4n+1){
+      clear:left
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .single_member {
     .role {
       color: rgba($black, 0.6);
     }
