@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   post :expire_cache, to: 'application#expire_cache'
 
-  get 'about-us/who-we-are', to: 'who_we_are#show'
+  get 'about-us/governance', to: 'governance#show'
   get 'about-us/meet-the-team', to: 'meet_the_team#show'
 
   resources :sections, path: '/', only: :show do

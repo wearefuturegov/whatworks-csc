@@ -12,9 +12,7 @@ class MeetTheTeamController < PagesController
   private
 
   def load_additional_content
-    @board_members = BoardMember.all.load
     @team_members = TeamMember.all.load
-    @stakeholder_panels = StakeholderPanel.all.load
   end
 
 end

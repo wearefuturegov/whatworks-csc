@@ -7,7 +7,7 @@ $.fn.reorderSubpages = function(childElements) {
   var subnavs = {
     'about-us': 0,
     'setting-up-the-centre': 1,
-    'who-we-are': 2,
+    'governance': 2,
     'meet-the-team': 3,
     'contact-us': 4,
     'working-with': 0,
