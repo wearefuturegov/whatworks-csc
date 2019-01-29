@@ -20,7 +20,7 @@
     @include mobile {
       @include grid-column(12, $no_gutter_grid);
     }
-    &:nth-child(4n+1){
+    &:nth-child(3n+1){
       clear:left
     }
     &:hover {
