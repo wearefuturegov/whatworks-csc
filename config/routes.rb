@@ -30,8 +30,7 @@ Rails.application.routes.draw do
   get 'about-us/meet-the-team', to: 'meet_the_team#show'
   get 'about-us/our-research-partners', to: 'our_research_partners#show'
 
-  get 'evidence/evidence-store', to: '/evidence-store'
-  get '/evidence-store', to: redirect('https://wwc-evidence.herokuapp.com/')
+  get 'evidence/evidence-store', to: redirect('https://wwc-evidence.herokuapp.com/')
 
   resources :sections, path: '/', only: :show do
     resources :pages, path: '/', only: :show
